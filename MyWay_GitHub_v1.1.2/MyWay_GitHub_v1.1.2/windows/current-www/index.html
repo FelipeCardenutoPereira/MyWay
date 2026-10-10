@@ -1,0 +1,1966 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport">
+<meta content="#20384f" name="theme-color">
+<meta content="MyWay — sistema pessoal para rotina, foco, estudos, metas e progresso." name="description">
+<title>MyWay</title>
+<script>if(location.hash==="#sticky"){document.documentElement.classList.add("sticky-boot");document.title="MyWay Notes"}</script>
+<link href="data:image/png;base64,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eY9ki5n6mpqo4VjppG01ZIpNycT24UF4bN8+eun7f0V9fX3049dem9Q1LLMRziSlriwRa+vDbyZbXP191FpVSR2XL0/bRnacDct/8EH/LiwshK8//lBshjETzNhuKbcDHM5xty/7pztdIAz7jBunTonHTBKTlalao8JhE3unmWJWtaXMJvb96Z/RkiVLxPeb8PesgOmBEwacFRsNtXgW4eJosPUw03JNM/bJsxju0+KdGnmTh7OnT4eUFQMTg0M95bqT2bCp95wMt7hO85cv/7XYZpVrIb/9r7dU2a4nn32WChctFjs9vvP22zN6rbcz9pQUytl+v9g/mP1EQ+lRkWQIBtdY5q1e419KzMt0b5w5PeObes/JmeRPHt8nNuvmjBfXUZ748ydp7+PfFK/t2LWL9jwyso/vB4cPzQkvMhVYbDbK2nSPqOBzFTw+J5dy7tsRtC+Mq+ML7t3ir5Jz42XDiWOG1sBPNXNyJtGmnHkF4uP79lFbawvt//Z3RVqaxfGfv/nNjF3j7Y7FalUtlmK4a5jF0nlZ/Y1kkckplLNtm9hnbFQgzafLRT1mNjAnReLTaQ/Pzcunn//il8KH3Ghqot++9dZt+XUOswWf1yuaMFXzhslEKUuXi9CLF3bZU1OESY8Ts/qtjbmvlx6l7mvXZs2Xm85JkRz9/Ijo81LuCs/dAZbISLE38Ou//KdJ7/Sda7idTmqpOEdZ925RbXrHrSvLn3w64HiePRyXL1NT+clp+TqFUJizxcQnn36W9j3xBKXc3Fitr7eXSo8eoTd//YbYDBtMDhEJCZRaXEwx8zPIGmX3zxji67Kdg+RsbyNHbS311F+X7jk8U8xZkQBglDmZ3QIgFCASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRAEBj8//8zMrW6wLWVwAAAABJRU5ErkJggg==" rel="icon" type="image/png"><link href="data:image/png;base64,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eY9ki5n6mpqo4VjppG01ZIpNycT24UF4bN8+eun7f0V9fX3049dem9Q1LLMRziSlriwRa+vDbyZbXP191FpVSR2XL0/bRnacDct/8EH/LiwshK8//lBshjETzNhuKbcDHM5xty/7pztdIAz7jBunTonHTBKTlalao8JhE3unmWJWtaXMJvb96Z/RkiVLxPeb8PesgOmBEwacFRsNtXgW4eJosPUw03JNM/bJsxju0+KdGnmTh7OnT4eUFQMTg0M95bqT2bCp95wMt7hO85cv/7XYZpVrIb/9r7dU2a4nn32WChctFjs9vvP22zN6rbcz9pQUytl+v9g/mP1EQ+lRkWQIBtdY5q1e419KzMt0b5w5PeObes/JmeRPHt8nNuvmjBfXUZ748ydp7+PfFK/t2LWL9jwyso/vB4cPzQkvMhVYbDbK2nSPqOBzFTw+J5dy7tsRtC+Mq+ML7t3ir5Jz42XDiWOG1sBPNXNyJtGmnHkF4uP79lFbawvt//Z3RVqaxfGfv/nNjF3j7Y7FalUtlmK4a5jF0nlZ/Y1kkckplLNtm9hnbFQgzafLRT1mNjAnReLTaQ/Pzcunn//il8KH3Ghqot++9dZt+XUOswWf1yuaMFXzhslEKUuXi9CLF3bZU1OESY8Ts/qtjbmvlx6l7mvXZs2Xm85JkRz9/Ijo81LuCs/dAZbISLE38Ou//KdJ7/Sda7idTmqpOEdZ925RbXrHrSvLn3w64HiePRyXL1NT+clp+TqFUJizxcQnn36W9j3xBKXc3Fitr7eXSo8eoTd//YbYDBtMDhEJCZRaXEwx8zPIGmX3zxji67Kdg+RsbyNHbS311F+X7jk8U8xZkQBglDmZ3QIgFCASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRACABIgFAAkQCgASIBAAJEAkAEiASACRAJABIgEgAkACRAEBj8//8zMrW6wLWVwAAAABJRU5ErkJggg==" rel="apple-touch-icon">
+<link href="app.css" rel="stylesheet">
+</head>
+<body>
+<div aria-live="polite" role="status" class="app-preloader myway-loading60" id="appPreloader"><div class="loading-frames60" aria-hidden="true"><img class="loading-frame60" src="assets/loading60/frame-1.png" alt="" width="1920" height="1080" fetchpriority="high"><img class="loading-frame60" src="assets/loading60/frame-2.png" alt="" width="1920" height="1080" fetchpriority="high"><img class="loading-frame60" src="assets/loading60/frame-3.png" alt="" width="1920" height="1080" fetchpriority="high"><img class="loading-frame60" src="assets/loading60/frame-4.png" alt="" width="1920" height="1080" fetchpriority="high"></div><span id="preloaderCaption" hidden="">Preparando sua área de trabalho</span></div>
+<div aria-hidden="true" class="grain"></div>
+<div class="auth-gate" id="authGate">
+<div class="auth-shell">
+<section class="auth-brand-panel">
+<div class="auth-brand-mark editorial52" aria-label="MyWay">My<em>Way.</em></div>
+<p>MYWAY / PERSONAL OS</p>
+<h1>Seu sistema.<br><em>Do seu jeito.</em></h1>
+<small>Rotina, estudos, projetos, conteúdo, finanças e progresso em um único workspace configurável.</small>
+</section>
+<section class="auth-card" id="authLoadingPanel">
+<p class="eyebrow">MYWAY</p>
+<h2>Carregando seu workspace.</h2>
+<p>Verificando perfil e dados sincronizados.</p>
+</section>
+<section class="auth-card login-card" hidden="" id="loginPanel"><p class="eyebrow">SUA CONTA MYWAY</p><div id="cloudAuthHost56"></div><div id="legacyLogin56" hidden="">
+<p class="eyebrow">ENTRAR</p>
+<div class="login-profile-card">
+<div class="login-profile-avatar"><span id="loginProfileInitials">MW</span><img alt="Foto do perfil" hidden="" id="loginProfilePhoto"></div>
+<div class="login-profile-copy"><small>WORKSPACE</small><b id="loginProfileName">MyWay</b><span id="loginProfileRole">Seu workspace pessoal</span></div>
+</div>
+<h2>Continuar.</h2>
+<p id="loginProfileHint">Entre no seu workspace.</p>
+<div class="login-session-meta"><span id="loginLastAccess">Último acesso: —</span><span id="loginDeviceStatus">Este dispositivo ainda não foi lembrado.</span></div>
+<label class="auth-field"><span>Usuário ou e-mail</span><input autocomplete="username" id="loginUser"></label>
+<label class="auth-field"><span>Senha / PIN</span><div class="password-field"><input autocomplete="current-password" id="loginPassword" type="password"><button aria-label="Mostrar ou ocultar senha" id="loginPasswordToggle" type="button">mostrar</button></div></label>
+<label class="auth-remember"><input checked="" id="loginRemember" type="checkbox"> confiar neste computador e entrar automaticamente</label>
+<div class="auth-login-actions"><button class="primary auth-primary" id="loginSubmit">Entrar no MyWay</button><button class="ghost auth-create" id="loginCreateAccount">Criar uma conta</button><span hidden="" id="loginCooldown"></span></div>
+<p class="note">Acesso interno com seu usuário e senha / PIN.</p>
+<p class="auth-error" id="loginError"></p>
+<div class="auth-help-row"><button class="text-button" id="loginResetLocal">Problemas para entrar?</button><small>O MyWay não envia sua senha para um servidor.</small></div>
+</div></section>
+<section class="onboarding-card" hidden="" id="onboardingPanel">
+<header class="onboarding-head">
+<div><p class="eyebrow">CONFIGURAÇÃO INICIAL</p><h2>Monte seu <span class="editorial52">My<em>Way.</em></span></h2></div>
+<span id="onboardingStepLabel">1 / 8</span>
+</header>
+<div class="onboarding-progress"><i id="onboardingProgress"></i></div>
+
+
+
+
+
+
+
+<div class="onboarding-step active" data-onboard-step="1">
+<p class="onboard-kicker">VOCÊ E SEUS INTERESSES</p><h3>Como quer organizar sua vida?</h3>
+<div class="onboard-grid two">
+<label class="auth-field"><span>Seu nome</span><input id="onboardName" placeholder="Seu nome"></label>
+<label class="auth-field"><span>Função / foco</span><input id="onboardRole" placeholder="Ex.: Marketing, estudante, criador"></label>
+
+
+</div>
+
+<h3>Escolha seus interesses.</h3>
+<p class="onboard-note">Isso alimenta a área Inspiração. Você pode mudar tudo depois.</p>
+<div class="interest-chip-grid" id="onboardInterestPresets">
+<button data-interest="Design" type="button">Design</button>
+<button data-interest="Cinema" type="button">Cinema</button>
+<button data-interest="Games" type="button">Games</button>
+<button data-interest="Tecnologia" type="button">Tecnologia</button>
+<button data-interest="Marketing" type="button">Marketing</button>
+<button data-interest="Casa e interiores" type="button">Casa &amp; interiores</button>
+<button data-interest="Viagens" type="button">Viagens</button>
+<button data-interest="Moda" type="button">Moda</button>
+<button data-interest="Fotografia" type="button">Fotografia</button>
+<button data-interest="Arquitetura" type="button">Arquitetura</button>
+<button data-interest="Livros" type="button">Livros</button>
+<button data-interest="Fitness" type="button">Fitness</button>
+<button data-interest="Carreira" type="button">Carreira</button>
+<button data-interest="Arte" type="button">Arte</button>
+</div>
+<label class="auth-field full onboard-interest-custom"><span>Outros interesses</span><input id="onboardInterests" placeholder="Separe por vírgulas: carros, tatuagem, café, trilhas..."></label>
+</div><div class="onboarding-step" data-onboard-step="2"><fieldset class="onboard-goals38"><legend>O que você mais quer melhorar agora?</legend><p>Escolha sua meta principal. As ferramentas mais úteis já ficam selecionadas; você pode mudar depois.</p><div class="workspace-options38" id="onboardGoals38"></div><p id="onboardGoalHint38" role="status"></p></fieldset>
+<p class="onboard-kicker">SUA ROTINA</p><h3>O que deve se adaptar a você?</h3>
+<p class="setup-note35">As respostas são opcionais. Você pode mudar ou remover suas escolhas depois.</p>
+<div class="onboard-grid two">
+<label class="auth-field"><span>Você faz academia?</span><select id="onboardGym35"><option value="">Escolher depois</option><option value="yes">Sim, já treino</option><option value="start">Quero começar</option><option value="no">Não, não é meu foco</option><option value="private">Prefiro não responder</option></select></label>
+<label class="auth-field"><span>Você tem TDAH?</span><select id="onboardAdhd35"><option value="">Escolher depois</option><option value="yes">Sim</option><option value="no">Não</option><option value="unsure">Não sei / estou investigando</option><option value="private">Prefiro não responder</option></select></label>
+<label class="auth-field"><span>Quer organizar relacionamentos?</span><select id="onboardRelationship35"><option value="">Escolher depois</option><option value="yes">Sim, quero incluir essa área</option><option value="no">Não agora</option></select></label>
+<label hidden=""><input type="hidden" id="onboardFocusMinutes35" value="25"></label><p class="note">Seu bloco de foco começa em 25 minutos. Ajuste a duração no botão de configurações do Pomodoro, no painel ou em Estudos.</p>
+</div>
+<fieldset class="setup-checks35"><legend>Em que você quer ajuda?</legend><label><input data-focus-need35="starting" type="checkbox">Começar tarefas</label><label><input data-focus-need35="distractions" type="checkbox">Reduzir distrações</label><label><input data-focus-need35="planning" type="checkbox">Organizar próximos passos</label><label><input checked="" id="onboardGames35" type="checkbox">Incluir jogos curtos de raciocínio e foco</label></fieldset>
+<details class="setup-details35"><summary>Resiliência: o que deseja acompanhar? (opcional)</summary><p class="setup-note35">Escolha somente os assuntos que fazem sentido para você. Os nomes ficam ocultos no dashboard.</p><div class="setup-checks35" id="onboardResilienceGoals35"></div><label class="auth-field"><span>Lembretes de como você está</span><select id="onboardWellbeing35"><option value="0">Desativados</option><option value="120">A cada 2 horas com o app aberto</option><option value="180">A cada 3 horas com o app aberto</option><option value="240">A cada 4 horas com o app aberto</option></select></label></details>
+<details class="setup-details35"><summary>Sons, movimento e comemorações</summary><div class="onboard-grid two"><label class="auth-field"><span>Som ao registrar uma conquista</span><select id="onboardSound35"><option value="off">Sem som</option><option value="on">Som suave</option></select></label><label class="auth-field"><span>Comemoração</span><select id="onboardEffects35"><option value="quiet">Discreta</option><option value="confetti">Confetes</option></select></label><label class="auth-field"><span>Movimento na interface</span><select id="onboardMotion35"><option value="full">Animações suaves</option><option value="reduced">Reduzir movimento</option></select></label></div></details>
+</div><div class="onboarding-step" data-onboard-step="3">
+<p class="onboard-kicker">MÓDULOS</p><h3>Seu jeito de usar o MyWay.</h3>
+
+<div class="onboard-grid two setup-panel35"><label class="auth-field"><span>Nome do seu painel</span><input id="onboardDashboardTitle35" maxlength="60" placeholder="Ex.: Meu próximo passo"></label><label class="auth-field"><span>Espaçamento</span><select id="onboardDensity35"><option value="compact">Compacto</option><option value="normal">Normal</option><option value="roomy">Mais espaço</option></select></label></div>
+<fieldset class="onboard-modes34">
+<legend>Como quer usar o MyWay?</legend>
+<div class="onboard-mode-grid34">
+<label><input checked="" name="onboardNavigationMode" type="radio" value="simple"><span><strong>Essencial</strong><small>Um painel limpo, com até três prioridades à vista.</small></span></label>
+<label><input name="onboardNavigationMode" type="radio" value="full"><span><strong>Completo</strong><small>Todas as áreas e ferramentas. Gratuito nesta fase, sem cartão.</small></span></label>
+</div>
+<p>Troque de modo a qualquer momento pelos botões no topo.</p>
+</fieldset>
+<div id="onboardPriorities34">
+<p class="onboard-kicker">SUAS PRIORIDADES NO ESSENCIAL</p>
+<div class="onboard-grid three">
+<label class="auth-field"><span>Prioridade 1</span><select data-onboard-priority34="" id="onboardPriorityFirst34"></select></label>
+<label class="auth-field"><span>Prioridade 2</span><select data-onboard-priority34="" id="onboardPrioritySecond34"></select></label>
+<label class="auth-field"><span>Prioridade 3</span><select data-onboard-priority34="" id="onboardPriorityThird34"></select></label>
+</div>
+<p class="onboard-note">Escolha só o que ajuda agora. Resiliência, notas e recompensas continuam à mão. As outras áreas ficam no modo Completo.</p>
+</div>
+<details class="onboard-other34" id="onboardOtherModules34"><summary>Outras áreas (opcional)</summary><div class="onboard-module-grid" id="onboardModules">
+<label><input type="checkbox" value="gym"><span>Academia</span></label>
+<label><input checked="" type="checkbox" value="work"><span>Trabalho</span></label>
+<label><input checked="" type="checkbox" value="puc"><span>Estudos</span></label>
+<label><input checked="" type="checkbox" value="habits"><span>Hábitos</span></label>
+<label><input checked="" type="checkbox" value="future"><span>Conquistas e metas</span></label>
+<label><input checked="" type="checkbox" value="finance"><span>Finanças</span></label>
+<label><input checked="" type="checkbox" value="english"><span>Idiomas</span></label>
+<label><input type="checkbox" value="meditation"><span>Meditação</span></label>
+<label><input checked="" type="checkbox" value="notes"><span>Notas</span></label>
+<label><input checked="" type="checkbox" value="journal"><span>Diário</span></label>
+<label><input checked="" type="checkbox" value="inspiration"><span>Inspiração</span></label>
+
+<label><input checked="" type="checkbox" value="reports"><span>Relatórios</span></label>
+<label><input checked="" type="checkbox" value="reminders"><span>Lembretes</span></label>
+<label><input checked="" type="checkbox" value="games"><span>Jogos de raciocínio e foco</span></label><label><input type="checkbox" value="ana"><span>Relacionamentos</span></label><label><input type="checkbox" value="culture" checked=""><span>Cultura · filmes, séries, livros e jogos</span></label></div></details>
+</div><div class="onboarding-step" data-onboard-step="4">
+<p class="onboard-kicker">APARÊNCIA</p><h3>Você prefere o modo claro ou escuro?</h3>
+<fieldset class="onboard-theme37"><legend>Escolha o fundo que prefere. Você pode trocar depois no topo.</legend><div><label><input type="radio" name="onboardTheme37" value="light" checked=""><span><strong>☀ Modo claro</strong><small>Fundo claro e texto escuro.</small></span></label><label><input type="radio" name="onboardTheme37" value="dark"><span><strong>☾ Modo escuro</strong><small>Fundo escuro e texto claro.</small></span></label></div></fieldset>
+<div class="onboard-theme-preview37" id="onboardThemePreview37" data-preview-theme37="light"><b>Prévia do modo claro</b><p>Uma coisa de cada vez.</p><span>Exemplo de um campo legível</span></div>
+<details class="onboard-appearance-details37"><summary>Personalizar cores e fonte · opcional</summary>
+<div class="theme-preset-grid" id="onboardThemePresets"></div>
+<div class="onboard-grid three custom-color-row">
+<label class="auth-field"><span>Cor principal</span><input id="onboardPrimaryColor" type="color"></label>
+<label class="auth-field"><span>Cor de destaque</span><input id="onboardAccentColor" type="color"></label>
+<label class="auth-field"><span>Fonte</span><select id="onboardFontPreset"></select></label>
+</div>
+</details>
+</div><div class="onboarding-step" data-onboard-step="5">
+<p class="onboard-kicker">ESTUDOS</p><h3>Configure sua instituição de ensino.</h3>
+<div class="onboard-grid two">
+<label class="auth-field"><span>Nome da instituição</span><input id="onboardInstitution" placeholder="Ex.: PUC, USP, Alura, escola, curso livre"></label>
+<label class="auth-field"><span>Curso / programa</span><input id="onboardProgram" placeholder="Ex.: Marketing e Experiência do Cliente"></label>
+<label class="auth-field"><span>Nome do módulo no menu</span><input id="onboardEducationLabel" placeholder="Ex.: Faculdade, Pós, Estudos"></label>
+<label class="auth-field"><span>Como as aulas são organizadas?</span><select id="onboardStudyStructure"><option value="subjects">Matérias / disciplinas</option><option value="modules">Módulos</option><option value="courses">Cursos independentes</option><option value="custom">Personalizado</option></select></label>
+</div>
+<p class="onboard-note">Você poderá adicionar matérias, datas, trilhas e sessões depois. O MyWay não fica preso à PUC.</p>
+</div><div class="onboarding-step" data-onboard-step="6">
+<p class="onboard-kicker">CREATOR STUDIO</p><h3>Configure seu canal ou projeto de conteúdo.</h3>
+<div class="onboard-grid two">
+<label class="auth-field"><span>Nome do canal / projeto</span><input id="onboardChannelName" placeholder="Ex.: Meu Canal"></label>
+<label class="auth-field"><span>@ / identificador</span><input id="onboardChannelHandle" placeholder="@meucanal"></label>
+<label class="auth-field"><span>Plataforma principal</span><select id="onboardChannelPlatform"><option>YouTube</option><option>TikTok</option><option>Instagram</option><option>Twitch</option><option>Podcast</option><option>Outro</option></select></label>
+<label class="auth-field"><span>Pilares / categorias</span><input id="onboardChannelPillars" placeholder="Cinema, Games, Tecnologia"></label>
+<label class="auth-field full"><span>Posicionamento / descrição</span><input id="onboardChannelTagline" placeholder="Uma frase que define o projeto"></label>
+</div>
+</div><div class="onboarding-step" data-onboard-step="7">
+<p class="onboard-kicker">REVISÃO</p><h3>Confira suas escolhas.</h3>
+<div class="onboard-summary" id="onboardSummary"></div>
+<p class="onboard-note">Na próxima etapa você cria seu acesso. Depois poderá mudar tudo em Personalizar ou Controle.</p>
+</div><div class="onboarding-step" data-onboard-step="8"><p class="onboard-kicker">CRIAR ACESSO</p><h3>Agora, proteja seu MyWay.</h3><p class="setup-note35">Sua personalização está pronta. Crie o acesso interno para salvar e entrar no aplicativo.</p><div class="onboard-grid two" id="onboardCredentials35"><label class="auth-field"><span>Usuário ou e-mail</span><input autocomplete="username" id="onboardUser" placeholder="seu@email.com"></label><label class="auth-field"><span>Senha / PIN</span><input autocomplete="new-password" id="onboardPassword" placeholder="mínimo 4 caracteres" type="password"></label></div></div><footer class="onboarding-actions">
+<button class="ghost" disabled="" id="onboardBack">Voltar</button>
+<button class="primary" id="onboardNext">Continuar</button>
+</footer><button class="text-button" id="onboardExisting35" type="button">Já tenho acesso</button>
+<p class="auth-error" id="onboardError"></p>
+</section>
+</div>
+</div>
+<div aria-hidden="true" class="native-chrome" id="nativeChrome">
+<div class="native-drag" id="nativeDrag"><span>MYWAY · v40</span></div>
+<div class="native-window-actions">
+<button aria-label="Alternar tema" id="nativeTheme" title="Alternar tema">◐</button>
+<button aria-label="Tela cheia" id="nativeFullscreen" title="Tela cheia">⛶</button>
+<button aria-label="Minimizar" id="nativeMinimize" title="Minimizar">—</button>
+<button aria-label="Maximizar" id="nativeMaximize" title="Maximizar / restaurar">□</button>
+<button aria-label="Fechar" class="native-close" id="nativeClose" title="Fechar janela e manter em segundo plano">×</button>
+</div>
+</div>
+<div class="app-shell">
+<aside class="sidebar">
+<button aria-label="Fixar ou liberar menu" class="sidebar-collapse-button" id="sidebarCollapseButton" title="Fixar menu aberto">●</button>
+<button aria-label="Abrir painel de controle" class="brand profile-brand" data-view-target="control" title="Painel de controle">
+<img alt="Foto de perfil" hidden="" id="profileNavPhoto">
+<span id="profileNavInitials">FC</span>
+</button>
+<nav aria-label="Navegação principal" class="nav">
+<button class="nav-item active" data-view-target="today"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5v8.2H15v-5.4H9v5.4H3z"></path></svg></span><span>Hoje</span></button>
+<button class="nav-item" data-view-target="work"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M8 7V5h8v2m-13 3h18v10H3zM3 13h18"></path></svg></span><span>Trabalho</span></button>
+<button class="nav-item" data-feature-nav="puc" data-view-target="puc"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5"></path></svg></span><span id="educationNavLabel">Estudos</span></button>
+<button class="nav-item" data-view-target="habits"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M7 3v6a5 5 0 0 0 10 0V3M5 21h14M9 16v5m6-5v5"></path><path d="M4 8h3m10 0h3"></path></svg></span><span>Hábitos</span></button>
+<button class="nav-item" data-view-target="future"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v4m10 6h-4"></path></svg></span><span>Casa</span></button><button class="nav-item" data-view-target="culture" id="cultureNav40"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"></rect><path d="M3 10h18M8 5v5M16 5v5m-6 4 5 3-5 2z"></path></svg></span><span>Cultura</span></button>
+<button class="nav-item finance-nav-item" data-view-target="finance"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 7h16v12H4zM7 4h10v3M7 11h6m-6 4h10"></path><circle cx="17" cy="11" r="1"></circle></svg></span><span>Finanças</span></button>
+<button class="nav-item ana-nav-item" data-view-target="ana"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 20.5 4.6 13.4C1.2 10.2 2.2 5 6.6 4.1 8.8 3.6 10.7 4.7 12 6.4c1.3-1.7 3.2-2.8 5.4-2.3 4.4.9 5.4 6.1 2 9.3z"></path></svg></span><span id="relationshipNavLabel">Relacionamentos</span></button>
+<button class="nav-item" data-view-target="english"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 5h8v14H4zM12 7h8v12h-8M6 9h4M6 13h4m5-2 2-3 2 3m-4 3h4"></path></svg></span><span>Inglês</span></button>
+<button class="nav-item" data-view-target="meditation"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"></circle><path d="M7 20c1-4 3-6 5-6s4 2 5 6M6 12c2 1 4 1 6-1 2 2 4 2 6 1M12 7v7"></path></svg></span><span id="wellnessNavLabel">Meditação</span></button>
+<button class="nav-item" data-view-target="notes"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M5 3h14v14l-4 4H5zM15 17h4M8 8h8M8 12h8"></path></svg></span><span>Notas</span></button>
+<button class="nav-item journal-nav-item" data-view-target="journal"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M5 4h12l2 2v14H5zM8 9h8M8 13h8M8 17h5"></path><path d="M17 4v3h3"></path></svg></span><span>Diário</span></button>
+<button class="nav-item inspiration-nav-item" data-view-target="inspiration"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="m12 2 1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8zM18 15l.9 2.6L21.5 19l-2.6.9L18 22.5l-.9-2.6-2.6-.9 2.6-.9z"></path></svg></span><span>Inspiração</span></button>
+<button class="nav-item nv-nav-item" data-view-target="novanilla"><span class="nav-icon nv-image-icon"><img alt="" src="assets/nv-icon-user.png"></span><span id="channelNavLabel">Canal</span></button>
+<button class="nav-item" data-view-target="reports"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10h4v10zm6 0V4h4v16zm6 0v-7h4v7z"></path></svg></span><span>Relatórios</span></button>
+<button class="nav-item" data-view-target="reminders"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M6 17h12l-2-3V9a4 4 0 0 0-8 0v5zM10 20h4"></path></svg></span><span>Lembretes</span></button>
+<button class="nav-item" data-view-target="resilience"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-9-5-9-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 7-9 12-9 12z"></path></svg></span><span>Resiliência</span></button>
+<button class="nav-item" data-view-target="gym"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 8v8M6 5v14M6 12h12M18 5v14M21 8v8"></path></svg></span><span>Academia</span></button>
+<button class="nav-item" data-view-target="rewards"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M8 3h8v8c0 5-8 5-8 0V3M8 5H4v4c0 3 4 3 4 3M16 5h4v4c0 3-4 3-4 3M12 15v6M8 21h8"></path></svg></span><span>Recompensas</span></button>
+<button class="nav-item" data-view-target="games"><span class="nav-icon">◈</span><span>Jogos de raciocínio</span></button><button class="nav-item control-nav-item" data-view-target="control"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.6v-.2h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1z"></path></svg></span><span>Controle</span></button>
+<button class="nav-item" data-view-target="data"><span class="nav-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v6c0 2 16 2 16 0V5M4 11v6c0 2 16 2 16 0v-6"></path></svg></span><span>Dados</span></button>
+</nav>
+<div class="sidebar-foot">
+<span class="save-dot"></span>
+<span id="saveStatus">salvo</span>
+</div>
+</aside>
+<main class="main">
+<div class="navigation-access34"><span id="xpTop36" role="status"></span><button class="ghost" id="focusMode36">Modo foco</button><span id="focusTime36" hidden=""></span><button class="ghost" id="vagabundoMode49" type="button">Modo Vagabundo</button><button class="ghost" id="voiceCommand49" type="button" aria-label="Dar um comando por voz">Voz</button><button class="ghost" id="profileHelp49" type="button">Ajuda para meu dia</button>
+<span>Modo</span>
+<div aria-label="Modo de navegação" class="navigation-modes34" role="group">
+<button aria-pressed="true" data-navigation-mode34="simple" type="button">Essencial</button>
+<button aria-pressed="false" data-navigation-mode34="full" type="button">Completo</button>
+</div>
+<button class="ghost" id="quickPersonalize35" type="button">Personalizar</button></div>
+<header class="topbar">
+<div class="topbar-left">
+<div>
+<p class="eyebrow reveal">PAINEL PESSOAL · 2026</p>
+<h1 class="app-title reveal">My<em>Way.</em></h1>
+</div>
+<button class="header-routine" data-view-target="habits" id="globalRoutineStrip" title="Abrir rotina">
+<span class="header-routine-clock"><small>WINDOWS</small><b id="globalRoutineClock">--:--</b></span>
+<span class="header-routine-copy">
+<small id="globalRoutineMode">PRÓXIMO</small>
+<strong id="globalRoutineTitle">Nenhum horário próximo.</strong>
+<i id="globalRoutineWhen">Defina sua rotina em Hábitos.</i>
+</span>
+<span class="header-routine-progress"><u id="globalRoutineProgress"></u></span>
+</button>
+</div>
+<div class="date-tools">
+<div class="daily-quote" id="dailyQuote">
+<span>FRASE DO DIA</span>
+<blockquote id="dailyQuoteText">—</blockquote>
+<small id="dailyQuoteAuthor">—</small>
+</div>
+<div class="date-tools-row">
+<label class="field compact">
+<span>DATA ATIVA</span>
+<input id="activeDate" type="date">
+</label>
+<button class="text-button" id="goToday">Hoje</button>
+</div>
+</div>
+<div class="top-account-menu" id="topAccountMenu">
+<button aria-expanded="false" class="top-account-button" id="topAccountButton" title="Conta">
+<span class="top-account-avatar"><span id="topAccountInitials">MW</span><img alt="" hidden="" id="topAccountPhoto"></span>
+<span class="top-account-copy"><b id="topAccountName">MyWay</b><small id="topAccountRole">perfil</small></span>
+<span class="top-account-chevron">⌄</span>
+</button>
+<div class="top-account-dropdown" hidden="" id="topAccountDropdown">
+<div class="account-dropdown-head"><b id="accountDropdownName">MyWay</b><span id="accountDropdownLogin">—</span></div>
+<button id="accountMenuControl">Painel de controle</button>
+<button id="accountMenuLock">Bloquear agora</button>
+<button class="danger" id="accountMenuLogout">Sair neste dispositivo</button>
+</div>
+</div>
+</header>
+<!-- HOJE -->
+<section class="view active" id="view-today"><section id="workspaceHome38" class="workspace-home38"></section>
+<article class="resilience-dashboard34 resilience-reservoir34 reveal" id="resilienceDashboard34"><div class="resilience-head34"><div><p class="eyebrow">RESILIÊNCIA · UMA PAUSA CONTA</p><h3>Reservatório de Dopamina</h3></div><button class="ghost" id="resilienceOpen34">Abrir resiliência</button></div><div aria-label="Reservatório: progresso das pausas registradas" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="reservoir-track34" role="progressbar"><i data-reservoir-fill=""></i></div><div class="resilience-bar-caption34"><b data-reservoir-label="">0%</b><span data-reservoir-copy=""></span></div><p class="v34-help">Progresso simbólico das suas escolhas. Não é uma medição de dopamina.</p><div id="resilienceToday34"></div><div class="v34-item-actions"><button class="primary" id="resilienceQuick34">Como foi sua escolha?</button><button class="text-button" id="resilienceCustomize34">Escolher assuntos e efeitos</button></div></article>
+<section class="daily-direction reveal">
+<div class="direction-copy"><p class="eyebrow">COMECE PEQUENO</p><h3 id="focusCoachTitle">Defina uma ação que caiba em um bloco.</h3><p id="focusCoachText">Evite “terminar o projeto”. Prefira “abrir o arquivo e escrever o primeiro parágrafo”.</p></div>
+<div class="direction-tip"><span>DICA DE FOCO</span><b id="focusTipText">Reduza a tarefa até ela ficar fácil de começar.</b><button class="text-button" id="focusTipNext">outra dica</button></div>
+</section>
+<article class="focus-dock reveal">
+<div>
+<p class="eyebrow">FOCO / 25 MIN</p>
+<input class="focus-input" data-day="focusTask" id="focusTask" placeholder="Qual é a única coisa deste bloco?">
+</div>
+<div class="timer" id="timerDisplay">25:00</div>
+<div class="timer-controls">
+<button class="primary" id="timerStart">Começar</button>
+<button class="ghost" id="timerPause">Pausar</button>
+<button class="text-button" id="timerReset">Resetar</button>
+</div>
+</article>
+<article class="cbt-day-card reveal">
+<div class="card-head"><div><p class="eyebrow">TCC / AUTOGESTÃO</p><h3>Três microtarefas para hoje.</h3><p class="note">Ferramentas de organização inspiradas em TCC. Não substituem acompanhamento profissional.</p></div><span class="index">03</span></div>
+<div class="cbt-day-grid">
+<label><input data-day="cbtFiveMinute" type="checkbox"><span><b>Comecei por 5 minutos</b><small>Começar vem antes de ter vontade.</small></span></label>
+<label><input data-day="cbtThoughtCheck" type="checkbox"><span><b>Separei pensamento de fato</b><small>“Estou atrasado” é fato; “sou incapaz” é interpretação.</small></span></label>
+<label><input data-day="cbtIfThen" type="checkbox"><span><b>Criei um plano “se → então”</b><small>Se eu abrir o YouTube no horário de foco, então fecho e volto por 5 minutos.</small></span></label>
+</div>
+<button class="text-button" data-view-target="journal">abrir registro de pensamento</button>
+</article>
+<article class="cover-hero reveal" id="coverHero">
+<img alt="" id="coverImage" src="assets/cover-default.jpg">
+<div class="cover-shade"></div>
+<div class="cover-copy">
+<p class="eyebrow light">MYWAY / PERSONAL OS</p>
+<h2>Visão geral.</h2>
+<p>Trabalho, estudo, finanças e rotina no mesmo painel.</p>
+</div>
+<div class="cover-controls">
+<label class="cover-upload">Trocar capa<input accept="image/*" id="coverUpload" type="file"></label>
+<button class="cover-reset" id="coverReset">restaurar</button>
+</div>
+</article>
+<article class="attention-rail reveal" id="todayAttentionRail">
+<div><span>ATENÇÃO DO MOMENTO</span><strong id="todayAttentionTitle">Colete alguns dias de dados.</strong></div>
+<p id="todayAttentionText">O MyWay aponta tendências que merecem sua atenção sem transformar isso em julgamento.</p>
+<button class="text-button" data-view-target="reports">ver diagnóstico</button>
+</article>
+<!-- Compact overview, expanded only when requested. -->
+<section class="v34-overview reveal" id="overview34">
+<div class="v34-overview-head"><div><p class="eyebrow">SEU PAINEL</p><h3 id="dashboardTitle34">Uma coisa de cada vez.</h3></div><button class="ghost" id="customize34">Personalizar painel</button></div>
+<div class="v34-quick-actions"><button class="primary" id="quickTask34">Adicionar tarefa</button><button class="ghost" id="quickGym34">Registrar treino</button><button class="ghost" id="quickIdea34">Salvar ideia do canal</button><button class="ghost" id="showModules34">Ver módulos</button></div>
+<div class="v34-reward-strip"><div><b id="rewardSummary34">0 XP acumulados</b><small id="rewardNext34">Primeira recompensa em 100 XP.</small></div><button class="text-button" id="openRewards34">Ver recompensas</button></div>
+<div class="v34-inspiration" hidden="" id="dashboardInspiration34"></div>
+</section>
+<section class="daily-gamebar reveal" id="dailyGamebar">
+<div class="gamebar-level"><span>NÍVEL</span><strong id="dailyLevel">1</strong></div>
+<div class="gamebar-progress"><div><b id="dailyXPLabel">0 XP hoje</b><small id="dailyStreakLabel">0 dias de sequência</small></div><div class="gamebar-track"><i id="dailyXPBar"></i></div></div>
+<div class="gamebar-score"><span>CHECKLIST</span><strong id="dailyCompletion">0%</strong></div>
+</section>
+<article class="adhd-guide reveal legacy-execution-guide" hidden="">
+<div class="adhd-guide-head"><div><p class="eyebrow">MODO EXECUÇÃO</p><h3>Próximo passo, não projeto inteiro.</h3></div><span class="adhd-badge">baixo atrito</span></div>
+<div class="adhd-guide-grid">
+<label><span>Qual é a próxima ação física?</span><input id="adhdNextAction" placeholder="Ex.: abrir o PDF e ler só a primeira página"></label>
+<label><span>Energia agora</span><select id="adhdEnergyNow"><option value="">—</option><option value="1">Baixa · tarefa mecânica</option><option value="2">Média · bloco curto</option><option value="3">Boa · tarefa difícil</option></select></label>
+<div class="adhd-actions"><button class="primary" id="adhdFiveMinute">Só 5 minutos</button><button class="ghost" id="adhdParkDistraction">Estacionar distração</button></div>
+</div>
+<div class="adhd-distraction-row" hidden="" id="adhdDistractionRow"><input id="adhdDistractionInput" placeholder="Anote a distração para não precisar segui-la agora"><button class="ghost" id="adhdDistractionSave">guardar</button></div>
+<div class="adhd-parking-lot" id="adhdParkingLot"></div>
+</article>
+<section aria-label="Aplicações do MyWay" class="today-launcher reveal">
+<button data-view-target="puc"><span class="launcher-icon"><svg viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5"></path></svg></span><b id="educationLauncherLabel">Estudos</b><small id="educationLauncherSub">instituição / curso</small></button>
+<button data-view-target="habits"><span class="launcher-icon"><svg viewBox="0 0 24 24"><path d="M7 3v6a5 5 0 0 0 10 0V3M5 21h14M9 16v5m6-5v5"></path></svg></span><b>Hábitos</b><small>água + caminhada + leitura</small></button>
+<button data-view-target="english"><span class="launcher-icon"><svg viewBox="0 0 24 24"><path d="M4 5h8v14H4zM12 7h8v12h-8M6 9h4M6 13h4m5-2 2-3 2 3m-4 3h4"></path></svg></span><b>Inglês</b><small>English Lab</small></button>
+<button data-view-target="meditation"><span class="launcher-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"></circle><path d="M7 20c1-4 3-6 5-6s4 2 5 6M6 12c2 1 4 1 6-1 2 2 4 2 6 1M12 7v7"></path></svg></span><b id="wellnessLauncherLabel">Meditação</b><small id="wellnessLauncherSub">práticas + sessões</small></button>
+<button data-view-target="future"><span class="launcher-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v4m10 6h-4"></path></svg></span><b>Casa</b><small>reserva + imóvel</small></button>
+<button class="launcher-finance" data-view-target="finance"><span class="launcher-icon"><svg viewBox="0 0 24 24"><path d="M4 7h16v12H4zM7 4h10v3M7 11h6m-6 4h10"></path><circle cx="17" cy="11" r="1"></circle></svg></span><b>Finanças</b><small>saldo + gastos + reserva</small></button>
+<button class="launcher-ana" data-view-target="ana"><span class="launcher-icon"><svg viewBox="0 0 24 24"><path d="M12 20.5 4.6 13.4C1.2 10.2 2.2 5 6.6 4.1 8.8 3.6 10.7 4.7 12 6.4c1.3-1.7 3.2-2.8 5.4-2.3 4.4.9 5.4 6.1 2 9.3z"></path></svg></span><b id="relationshipLauncherLabel">Relacionamentos</b><small id="relationshipLauncherSub">planos + viagens</small></button>
+<button data-view-target="notes"><span class="launcher-icon"><svg viewBox="0 0 24 24"><path d="M5 3h14v14l-4 4H5zM15 17h4M8 8h8M8 12h8"></path></svg></span><b>Notas</b><small>trabalho + vida</small></button>
+<button class="launcher-journal" data-view-target="journal"><span class="launcher-icon"><svg viewBox="0 0 24 24"><path d="M5 4h12l2 2v14H5zM8 9h8M8 13h8M8 17h5"></path><path d="M17 4v3h3"></path></svg></span><b>Diário</b><small>desabafo + reflexão</small></button>
+<button class="launcher-inspiration" data-view-target="inspiration"><span class="launcher-icon"><svg viewBox="0 0 24 24"><path d="m12 2 1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8zM18 15l.9 2.6L21.5 19l-2.6.9L18 22.5l-.9-2.6-2.6-.9 2.6-.9z"></path></svg></span><b>Inspiração</b><small>ideias + referências</small></button>
+<button class="launcher-nv" data-view-target="novanilla"><span class="launcher-icon nv-image-icon"><img alt="" src="assets/nv-icon-user.png"></span><b id="channelLauncherLabel">Canal</b><small>creator studio</small></button>
+<button data-view-target="reports"><span class="launcher-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10h4v10zm6 0V4h4v16zm6 0v-7h4v7z"></path></svg></span><b>Relatórios</b><small>progressão mensal</small></button>
+</section>
+<section class="today-habits reveal">
+<button data-view-target="habits"><span>ÁGUA</span><strong id="todayWater">0</strong><small>copos</small></button>
+<button data-view-target="habits"><span>CAMINHADA</span><strong id="todayWalk">0</strong><small>min</small></button>
+<button data-view-target="habits"><span>LEITURA</span><strong id="todayPages">0</strong><small>páginas</small></button>
+<button data-view-target="habits"><span>ALIMENTAÇÃO PROTEICA</span><strong id="todayProtein49">0</strong><small>refeições hoje</small></button>
+<button data-view-target="meditation"><span>MEDITAÇÃO</span><strong id="todayMeditation">—</strong><small>hoje</small></button>
+</section>
+<article class="routine-now reveal" data-view-target="habits">
+<div><span>ROTINA / HORÁRIO DO WINDOWS</span><strong id="routineClock">--:--</strong></div>
+<p><b id="routineNextTitle">Nenhum próximo item.</b><small id="routineNextTime">Defina sua rotina em Hábitos.</small></p>
+<button class="text-button" data-view-target="habits">editar rotina</button>
+</article>
+<article class="dashboard-notes reveal">
+<div class="dashboard-notes-head"><div><p class="eyebrow">NOTAS / DRAG &amp; DROP</p><h3>Notas rápidas.</h3></div><button class="text-button" data-view-target="notes">gerenciar notas</button></div>
+<div class="dashboard-notes-grid" id="dashboardNotes"></div>
+</article>
+<div class="hero-grid">
+<article class="hero-copy panel-plain reveal">
+<p class="eyebrow">HOJE / DIREÇÃO</p>
+<h2 id="todayHeadline">Plano de hoje.</h2>
+<p class="lead" id="todayGuidance"></p>
+<div class="hero-actions">
+<button class="primary" id="startQuickFocus">Começar bloco de 25 min</button>
+<button class="ghost" data-view-target="reports">Ver minha evolução</button>
+</div>
+</article>
+<article class="daily-score dark-card reveal">
+<span class="mini-label">RETORNOS DE HOJE</span>
+<div class="score-number" id="returnsToday">0</div>
+<p>Quantas vezes você percebeu a fuga e voltou para a tarefa.</p>
+<div class="score-actions">
+<button class="light-button" id="returnPlus">+ voltei</button>
+<button aria-label="Diminuir retorno" class="icon-button" id="returnMinus">−</button>
+</div>
+</article>
+</div>
+<div class="metric-strip reveal">
+<div>
+<span>CHEGADA</span>
+<strong id="todayArrivalMetric">—</strong>
+<small id="todayArrivalSub">registre quando chegar</small>
+</div>
+<div>
+<span id="todayStudyLabel">ESTUDOS</span>
+<strong id="todayStudyMetric">0 min</strong>
+<small>estudo registrado</small>
+</div>
+<div>
+<span>BANCO</span>
+<strong id="todayBankMetric">−14h</strong>
+<small>saldo informado</small>
+</div>
+<div>
+<span>ENERGIA</span>
+<strong id="todayEnergyMetric">—/5</strong>
+<small>ao chegar em casa</small>
+</div>
+</div>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">CHECK-IN RÁPIDO</p>
+<h3>Check-in do dia.</h3>
+</div>
+<span class="index">01</span>
+</div>
+<div class="form-grid">
+<label class="field">
+<span>Cheguei ao trabalho</span>
+<input data-day="arrivalTime" id="arrivalTime" type="time">
+</label>
+<label class="field">
+<span>Energia ao chegar em casa</span>
+<select data-day="energy" id="energy">
+<option value="">—</option>
+<option value="1">1 · esgotado</option>
+<option value="2">2 · baixo</option>
+<option value="3">3 · funcional</option>
+<option value="4">4 · bom</option>
+<option value="5">5 · ótimo</option>
+</select>
+</label>
+<label class="field">
+<span>Vontade de fugir / anestesiar</span>
+<select data-day="escapeUrge" id="escapeUrge">
+<option value="">—</option>
+<option value="1">1 · baixa</option>
+<option value="2">2</option>
+<option value="3">3 · média</option>
+<option value="4">4</option>
+<option value="5">5 · muito alta</option>
+</select>
+</label>
+<label class="field">
+<span id="studyMinutesLabel">Minutos de estudo hoje</span>
+<input data-day="studyMinutes" id="studyMinutes" min="0" placeholder="0" step="5" type="number">
+</label>
+</div>
+<label class="field full">
+<span>O que mais drenou minha energia?</span>
+<textarea data-day="drainNote" id="drainNote" placeholder="Tarefa mecânica, reunião, cobrança, tédio, ansiedade..."></textarea>
+</label>
+<label class="field full">
+<span>Minha resposta possível</span>
+<textarea data-day="responseNote" id="responseNote" placeholder="O que depende de mim agora, mesmo que seja pequeno?"></textarea>
+</label>
+</article>
+<article class="paper-card reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">MÍNIMO VIÁVEL</p>
+<h3>Mínimo do dia.</h3>
+</div>
+<span class="index">02</span>
+</div>
+<div class="check-list">
+<label class="check-row">
+<input data-day="morningNoScroll" type="checkbox">
+<span><b>Sem feed antes de me vestir</b><small>Reduzir o atrito antes do trabalho.</small></span>
+</label>
+<label class="check-row">
+<input data-day="studyMinimum" type="checkbox">
+<span><b>Fiz o mínimo da pós</b><small>25 min — ou a live de quarta-feira.</small></span>
+</label>
+<label class="check-row">
+<input data-day="careerAction" type="checkbox">
+<span><b>Fiz uma ação de saída</b><small>Algo que aumenta empregabilidade, renda ou portfólio.</small></span>
+</label>
+<label class="check-row">
+<input data-day="preparedTomorrow" type="checkbox">
+<span><b>Preparei amanhã</b><small>Roupa, mochila e próximo passo definidos.</small></span>
+</label>
+</div>
+<div class="protocol">
+<span>PROTOCOLO DE FUGA</span>
+<ol>
+<li>Percebi.</li>
+<li>Fecho o estímulo.</li>
+<li>Levanto, água ou banheiro.</li>
+<li>Abro a tarefa correta.</li>
+<li>Faço <strong>5 minutos</strong>.</li>
+</ol>
+</div>
+</article>
+</div>
+</section>
+<!-- TRABALHO -->
+<section class="view" id="view-work">
+<header class="section-head reveal">
+<p class="eyebrow">TRABALHO</p>
+<h2>Trabalho e ponto.</h2>
+<p>Você não precisa gostar do trabalho para proteger sua pontualidade, seu banco de horas e sua estratégia de saída.</p>
+</header>
+<div class="work-view-tools35"><div aria-label="Visualização do trabalho" class="navigation-modes34" role="group"><button aria-pressed="true" data-work-view35="kanban" type="button">Kanban</button><button aria-pressed="false" data-work-view35="list" type="button">Lista e prazos</button></div><button class="primary" id="workAddCard35">Adicionar atividade</button></div>
+<section class="work-kanban35" id="workKanban35"><div class="kanban-toolbar35"><label><span>Buscar atividade</span><input id="workKanbanSearch35" placeholder="Título ou descrição" type="search"></label><label><span>Projeto</span><select id="workKanbanProject35"><option value="">Todos os projetos</option></select></label><label class="kanban-all35"><input id="workKanbanAll35" type="checkbox">Todos os status</label></div><p class="v34-help">Arraste os cartões para mudar de coluna. No celular, use o campo de status. Os cartões são as mesmas atividades das notas e dos relatórios.</p><div class="kanban-board35" id="workKanbanBoard35"></div><p class="v34-help" id="workKanbanResult35" role="status"></p></section>
+
+<section class="work-command reveal">
+<div class="work-command-head"><div><p class="eyebrow">CENTRAL DE TRABALHO</p><h3>O que precisa da sua atenção.</h3></div><button class="primary" id="workAddTaskTop">+ atividade</button></div>
+<div class="work-kpis">
+<button data-work-filter="current"><span>AGORA</span><strong id="workCurrentCount">0</strong><small>fazendo / atenção</small></button>
+<button data-work-filter="week"><span>SEMANA</span><strong id="workWeekCount">0</strong><small>com prazo nesta semana</small></button>
+<button data-work-filter="month"><span>MÊS</span><strong id="workMonthCount">0</strong><small>com prazo neste mês</small></button>
+<button data-work-filter="overdue"><span>ATRASADAS</span><strong id="workOverdueCount">0</strong><small>precisam de decisão</small></button>
+</div>
+<div class="work-now-board" id="workNowBoard"></div>
+</section>
+<article class="work-planner reveal">
+<div class="card-head"><div><p class="eyebrow">MURAL DE PRAZOS</p><h3>Semana e mês.</h3><p class="note">As notas de trabalho aparecem organizadas por data. Arraste o prazo no card pela própria data quando precisar replanejar.</p></div><span class="index" id="workPlannerMonthLabel">—</span></div>
+<div class="work-planner-grid">
+<section><header><span>PRÓXIMOS 7 DIAS</span><b id="workWeekLabel">—</b></header><div class="work-deadline-board" id="workWeekBoard"></div></section>
+<section><header><span>RESTO DO MÊS</span><b id="workMonthLabel">—</b></header><div class="work-deadline-board" id="workMonthBoard"></div></section>
+</div>
+</article>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">CHEGADA</p><h3>Pontualidade.</h3></div><span class="index">01</span></div>
+<div class="triple-grid">
+<label class="field"><span>Horário contratual</span><input data-setting="workStart" type="time" value="08:00"></label>
+<label class="field"><span>Meta desta fase</span><input data-setting="phaseArrival" type="time" value="08:20"></label>
+<label class="field"><span>Chegada na data ativa</span><input data-day="arrivalTime" type="time"></label>
+</div>
+<div class="status-message" id="arrivalAnalysis"></div>
+<p class="note">“Cheguei atrasado” descreve um comportamento. “Sou um fracasso” não produz informação útil nem corrige o comportamento.</p>
+</article>
+<article class="dark-card reveal">
+<p class="eyebrow light">BANCO DE HORAS</p>
+<h3 class="dark-title">Banco de horas.</h3>
+<label class="field dark-field">
+<span>Saldo atual</span>
+<div class="input-unit"><input data-setting="bankHours" id="bankHours" step=".25" type="number"><b>h</b></div>
+</label>
+<label class="field dark-field">
+<span>Recuperados hoje</span>
+<div class="input-unit"><input id="bankRecoveryInput" min="0" placeholder="15" step="5" type="number"><b>min</b></div>
+</label>
+<button class="light-button" id="addBankRecovery">Registrar recuperação</button>
+<div class="progress-line"><i id="bankProgress"></i></div>
+<small id="bankProjection"></small>
+</article>
+</div>
+<article class="paper-card work-notes-panel reveal work-legacy-list35">
+<div class="card-head">
+<div><p class="eyebrow">MURAL DE NOTAS</p><h3>Atividades e contexto.</h3><p class="note">Status, prazo e conteúdo ficam sincronizados com Notas e MyWay Notes.</p></div>
+<span class="index" id="workQuickNotesCount">0</span>
+</div>
+<div class="work-note-add">
+<input id="workQuickNoteTitle" placeholder="Título da atividade">
+<select id="workQuickNoteStatus">
+<option value="todo">A Fazer</option><option value="doing">Fazendo</option><option value="waiting">Aguardando</option><option value="attention">Precisa de Atenção</option><option value="tomorrow">Para Amanhã</option><option value="done">Feito</option><option value="later">Sem Pressa / Por Último</option><option value="cancelled">Cancelado</option>
+</select>
+<button class="primary" id="workQuickNoteAdd">+ nota</button>
+</div>
+<div class="notes-grid work-notes-grid" id="workQuickNotes"></div>
+</article>
+<article class="work-report-card reveal">
+<div class="card-head"><div><p class="eyebrow">RELATÓRIO DE TRABALHO</p><h3>Relatório de trabalho.</h3><p class="note">Gera o relatório a partir das atividades, prazos e registros do próprio MyWay.</p></div><span class="index">R</span></div>
+<div class="work-report-actions"><button class="primary" id="workReportDay">Gerar relatório do dia</button><button class="ghost" id="workReportMonth">Gerar relatório do mês</button><button class="ghost" disabled="" id="workReportDownload">Baixar HTML</button><button class="primary" disabled="" id="workReportShare34">Enviar relatório</button></div>
+<div class="work-report-output" id="workReportOutput"><p class="note">Escolha um período para montar o relatório.</p></div>
+</article>
+<article class="timeline-card reveal">
+<div class="card-head"><div><p class="eyebrow">HISTÓRICO</p><h3>Últimas chegadas registradas.</h3></div><span class="index">03</span></div>
+<div class="history-list" id="arrivalHistory"></div>
+</article>
+<details class="workspace-advanced38"><summary>Planos de carreira · opcional</summary><article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">CARREIRA</p><h3>Próximo passo.</h3></div><span class="index">05</span></div>
+<label class="field"><span>Eixo dos próximos 30 dias</span>
+<select data-setting="careerProject">
+<option value="">Selecione...</option>
+<option>Portfólio audiovisual / edição</option>
+<option>Growth Marketing</option>
+<option>Power BI / dados</option>
+<option>Wix Studio / web</option>
+<option>Freelas / prospecção</option>
+<option>Estudos / formação</option>
+<option>Outro</option>
+</select>
+</label>
+<label class="field full"><span>Próxima ação concreta</span><textarea data-setting="careerNext"></textarea></label>
+</article></details></section><section class="view" id="view-games"><header class="section-head reveal games-head35"><p class="eyebrow">JOGOS CURTOS</p><h2>Raciocínio, foco e resiliência.</h2><p>Escolha um desafio, sem cobrança de velocidade. Estes jogos não medem QI nem fazem diagnóstico.</p></header><div class="games-catalog35">
+<article><span class="game-symbol35">123</span><h3>Padrões e lógica</h3><p>Descubra a regra de uma sequência. Cinco perguntas, com explicação e novas tentativas.</p><button class="primary" data-start-game35="logic">Jogar lógica</button></article>
+<article><span class="game-symbol35">● ◆</span><h3>Foco e memória</h3><p>Observe uma sequência curta e repita no seu ritmo. Você pode assistir novamente.</p><button class="primary" data-start-game35="memory">Jogar memória</button></article>
+<article><span class="game-symbol35">★</span><h3>Atenção por etapas</h3><p>Uma instrução por vez. Encontre os símbolos pedidos e avance em três rodadas.</p><button class="primary" data-start-game35="attention">Jogar atenção</button></article>
+<article><span class="game-symbol35">↻</span><h3>Pausa e próxima escolha</h3><p>Pratique alternativas para distrações, ansiedade e imprevistos do dia a dia.</p><button class="primary" data-start-game35="resilience">Jogar resiliência</button></article>
+</div><article class="paper-card game-session35" hidden="" id="gameSession35"><div class="card-head"><h3 id="gameTitle35"></h3><button class="ghost" id="gameExit35">Encerrar desafio</button></div><p class="v34-help" id="gameProgress35"></p><div id="gameContent35"></div><p id="gameFeedback35" role="status"></p><button class="primary" hidden="" id="gameNext35">Próxima etapa</button></article><article class="paper-card"><div class="card-head"><h3>Seu histórico</h3><span id="gamesXP35"></span></div><p class="v34-help">Cada desafio concluído reconhece 10 XP, até duas vezes por jogo e data. Você pode continuar praticando depois.</p><div id="gamesHistory35"></div></article></section>
+
+<!-- PUC -->
+<section class="view" id="view-puc">
+<header class="section-head reveal">
+<p class="eyebrow" id="educationEyebrow">ESTUDOS</p>
+<h2 id="educationHeading">Estudos.</h2>
+<p id="educationDescription">Organize disciplinas, módulos, aulas, leituras e sessões de estudo conforme sua instituição ou curso.</p>
+</header>
+<section class="puc-week-kpis reveal">
+<div><span>AULAS / VÍDEOS NA SEMANA</span><strong id="pucWeekLessons">0</strong></div>
+<div><span>MINUTOS NA SEMANA</span><strong id="pucWeekMinutes">0</strong></div>
+<div><span>SESSÕES NA SEMANA</span><strong id="pucWeekSessions">0</strong></div>
+</section>
+<article class="puc-courses-panel reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">MINHAS MATÉRIAS</p>
+<h3 id="educationTimelineTitle">Cronograma.</h3>
+<p class="note" id="educationTimelineNote">Adicione matérias e organize as tarefas. O progresso é calculado automaticamente.</p>
+</div>
+<div class="education-panel-actions"><button class="text-button" id="educationAddCourse">Adicionar matéria</button><span class="index" id="pucCurrentPeriod">cronograma</span></div>
+</div>
+<div class="puc-course-grid" id="pucCoursesBoard"></div>
+</article>
+<article class="puc-track-panel reveal">
+<div class="card-head">
+<div><p class="eyebrow">ESTUDOS</p><h3 id="pucTrackTitle">Trilha atual</h3><p class="note" id="pucTrackCourse">Nenhuma matéria selecionada.</p></div>
+<strong class="puc-track-percent" id="pucTrackPercent">0%</strong>
+</div>
+<div class="track-progress-control">
+<div class="study-progress-summary"><span>PROGRESSO DAS TAREFAS</span><progress aria-label="Progresso das tarefas da trilha" id="pucTrackProgressRange" max="100" value="0">0%</progress><b id="pucTrackProgressValue">0%</b></div>
+<button class="primary" disabled="" id="pucTrackAddTask" type="button">Adicionar tarefa</button>
+</div>
+<p aria-live="polite" class="note" id="pucTrackSummary">Adicione uma matéria para começar.</p>
+<div class="puc-track-modules" id="pucTrackModules"></div>
+</article>
+<section class="study-toolkit reveal">
+<article class="study-pomodoro">
+<div class="study-tool-head"><div><p class="eyebrow">POMODORO</p><h3>Estudo em ciclos.</h3></div><span id="studyPomodoroPhase">FOCO</span></div>
+<input id="studyPomodoroTask" placeholder="Uma tarefa para este ciclo">
+<div class="study-pomodoro-clock" id="studyPomodoroClock">25:00</div>
+<div class="study-pomodoro-controls"><button class="primary" id="studyPomodoroStart">Começar</button><button class="ghost" id="studyPomodoroPause">Pausar</button><button class="text-button" id="studyPomodoroReset">Resetar</button></div>
+<small id="studyPomodoroSessions">0 ciclos de foco hoje</small>
+</article>
+<article class="study-flashcards">
+<div class="study-tool-head"><div><p class="eyebrow">FLASH CARDS</p><h3>Revisão ativa.</h3></div><button class="text-button" id="flashcardAdd">+ cartão</button></div>
+<div class="flashcard-stage flash-stage52" id="flashcardStage" role="button" tabindex="0" aria-label="Virar cartão" aria-pressed="false"><div class="flash-inner52"><div class="flash-face52 flash-front52" id="flashFront52"><span>PERGUNTA</span><b id="flashcardQuestion">Crie seu primeiro cartão.</b><small>Toque para ver a resposta</small></div><div class="flash-face52 flash-back52" id="flashBack52" aria-hidden="true" inert=""><span>RESPOSTA</span><p id="flashcardAnswer"></p><small>Toque para voltar à pergunta</small></div></div></div>
+<div class="flashcard-controls"><button class="ghost" id="flashcardReveal">mostrar resposta</button><button class="ghost" id="flashcardAgain">rever</button><button class="primary" id="flashcardKnow">acertei</button></div>
+<div class="flashcard-list" id="flashcardList"></div>
+</article>
+</section>
+<article class="study-youtube reveal">
+<div class="card-head"><div><p class="eyebrow">YOUTUBE / REFERÊNCIAS</p><h3>Conteúdos salvos.</h3><p class="note">Guarde aulas, entrevistas e vídeos para rever junto da matéria.</p></div><span class="index" id="studyYoutubeCount">0</span></div>
+<div class="study-youtube-add"><input id="studyYoutubeUrl" placeholder="Cole um link do YouTube"><input id="studyYoutubeTitle" placeholder="Título opcional"><button class="primary" id="studyYoutubeAdd">Salvar vídeo</button></div>
+<div class="study-youtube-list" id="studyYoutubeList"></div>
+</article>
+<article class="week-card reveal">
+<div class="week-grid" id="weekGrid"></div>
+</article>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow">MATÉRIA ATUAL</p><h3>Aulas e leituras.</h3></div>
+<button class="text-button" id="newSubject">Adicionar matéria</button>
+</div>
+<label class="field">
+<span>Nome da matéria</span>
+<input data-setting="subjectName" id="subjectName" placeholder="Ex.: Estratégias de Negócios">
+</label>
+<p class="note form-save-note">Esses registros são salvos automaticamente. Marque as tarefas na trilha acima para atualizar o percentual.</p>
+<div class="series-list">
+<div class="series-row" data-series="1">
+<div><span>BLOCO 01</span><strong id="series1Text">0 / 4 vídeos</strong></div>
+<input data-setting="series1Done" id="series1Done" max="5" min="0" type="range" value="0">
+<label class="mini-check"><input data-setting="series1Reading" type="checkbox"> leitura</label>
+<label class="field inline"><span>Total vídeos</span><input data-setting="series1Total" max="5" min="3" type="number" value="4"></label>
+</div>
+<div class="series-row" data-series="2">
+<div><span>BLOCO 02</span><strong id="series2Text">0 / 4 vídeos</strong></div>
+<input data-setting="series2Done" id="series2Done" max="5" min="0" type="range" value="0">
+<label class="mini-check"><input data-setting="series2Reading" type="checkbox"> leitura</label>
+<label class="field inline"><span>Total vídeos</span><input data-setting="series2Total" max="5" min="3" type="number" value="4"></label>
+</div>
+<div class="series-row" data-series="3">
+<div><span>BLOCO 03</span><strong id="series3Text">0 / 4 vídeos</strong></div>
+<input data-setting="series3Done" id="series3Done" max="5" min="0" type="range" value="0">
+<label class="mini-check"><input data-setting="series3Reading" type="checkbox"> leitura</label>
+<label class="field inline"><span>Total vídeos</span><input data-setting="series3Total" max="5" min="3" type="number" value="4"></label>
+</div>
+</div>
+<div class="live-row">
+<span>ENCONTROS / LIVES</span>
+<label><input data-setting="live1" type="checkbox"> 01</label>
+<label><input data-setting="live2" type="checkbox"> 02</label>
+<label><input data-setting="live3" type="checkbox"> 03</label>
+</div>
+<label class="field full">
+<span>Próximo passo exato</span>
+<input data-setting="nextLesson" placeholder="Ex.: Bloco 2 · vídeo 3 + leitura de 5 páginas">
+</label>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">SESSÃO</p><h3>Registrar estudo.</h3></div><span class="index">02</span></div>
+<label class="field">
+<span>Minutos estudados (obrigatório)</span>
+<input id="sessionMinutes" min="5" step="5" type="number" value="25">
+</label>
+<label class="field">
+<span>O que foi feito (opcional)</span>
+<input id="sessionDescription" placeholder="Ex.: 2 aulas do bloco 1">
+</label>
+<label class="field">
+<span>Aulas / vídeos concluídos (opcional)</span>
+<input id="sessionLessons" min="0" step="1" type="number" value="0">
+</label>
+<button class="primary" id="logStudySession">Registrar sessão</button>
+<div class="history-list compact-list" id="studyHistory"></div>
+</article>
+</div>
+</section>
+<section class="view" id="view-resilience">
+<header class="section-head reveal"><p class="eyebrow">RESILIÊNCIA</p><h2>Uma pausa também é uma conquista.</h2><p>Observe o que te tira do caminho e registre alternativas possíveis, sem julgamento.</p></header>
+<article class="resilience-reservoir34 paper-card"><div class="card-head"><div><p class="eyebrow">SUAS ESCOLHAS</p><h3>Reservatório de Dopamina</h3></div><b data-reservoir-label="">0%</b></div><div aria-label="Progresso simbólico das escolhas" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="reservoir-track34" role="progressbar"><i data-reservoir-fill=""></i></div><p class="v34-help" data-reservoir-copy=""></p><small class="v34-help">É uma metáfora de progresso. Não mede dopamina nem a saúde do cérebro.</small></article>
+<div class="v34-two-col"><article class="paper-card"><div class="card-head"><h3>Como foi essa escolha?</h3><button class="text-button" id="resilienceFeeling34">Como você está?</button></div><form class="v34-form" id="resilienceCheckin34"><label><span>O que você está acompanhando?</span><select id="resilienceGoal34" required=""></select></label><label><span>Data</span><input id="resilienceDate34" required="" type="date"></label><label><span>O que aconteceu?</span><select id="resilienceOutcome34"><option value="pause">Fiz uma pausa / escolhi uma alternativa</option><option value="hard">Não consegui desta vez</option><option value="none">Não houve esse gatilho</option></select></label><label><span>Gatilho ou contexto (opcional)</span><input id="resilienceTrigger34" maxlength="140" placeholder="Ex.: ansiedade depois do trabalho"></label><label><span>O que ajudou ou pode ajudar? (opcional)</span><textarea id="resilienceStrategy34" maxlength="1000" placeholder="Ex.: conversar com alguém, afastar a compra, ocupar as mãos"></textarea></label><p class="v34-help" hidden="" id="resilienceContext34"></p><button class="primary" type="submit">Enviar check-in</button><p class="v34-help" id="resilienceResult34" role="status"></p></form></article>
+<article class="paper-card"><h3>Seu plano para a próxima vontade</h3><p class="v34-help">Escolha uma ação pequena e uma pessoa ou serviço de apoio. Buscar ajuda também é uma escolha possível.</p><form class="v34-form" id="resiliencePlan34"><label><span>Minha alternativa possível</span><textarea id="resilienceAlternative34" maxlength="1000" placeholder="Ex.: fechar o carrinho e revisar a compra amanhã"></textarea></label><label><span>Meu apoio (opcional)</span><input id="resilienceSupport34" maxlength="140" placeholder="Ex.: amigo, terapeuta ou serviço de saúde"></label><button class="ghost" type="submit">Salvar meu plano</button></form><details class="resilience-support34"><summary>Quando procurar apoio profissional</summary><p>Preocupações com a aparência e cutucar a pele não são falta de força de vontade. Se isso causa sofrimento, ferimentos ou atrapalha sua rotina, procure avaliação profissional.</p><p hidden="" id="resilienceAlcoholNote34">Se houver dependência de álcool, parar abruptamente pode ser perigoso. Procure orientação médica antes de reduzir ou interromper o consumo.</p><a href="https://www.nhs.uk/mental-health/conditions/skin-picking-disorder/" rel="noopener" target="_blank">Cuidados com cutucar a pele</a><a href="https://www.nhs.uk/mental-health/conditions/body-dysmorphia/" rel="noopener" target="_blank">Apoio para imagem corporal</a><a href="https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps/caps/caps" rel="noopener" target="_blank">Conheça os CAPS</a><p>O app registra escolhas e não substitui tratamento ou faz diagnóstico.</p></details></article></div>
+<article class="paper-card" id="resilienceSettingsCard34"><div class="card-head"><h3>O que quero cuidar agora</h3><small>Você escolhe seus assuntos</small></div><p class="v34-help">Ative apenas o que faz sentido para você. A prioridade muda o reconhecimento: 8, 12 ou 18 XP pela primeira pausa registrada naquele assunto e dia.</p><form class="v34-form" id="resilienceSettings34"><div class="resilience-goals34" id="resilienceGoals34"></div><label><span>Som das conquistas</span><select id="resilienceSound34"><option value="off">Silencioso</option><option value="on">Som suave</option></select></label><button class="ghost" id="resilienceTestSound34" type="button">Ouvir prévia do som</button><label><span>Efeito visual</span><select id="resilienceEffects34"><option value="quiet">Discreto</option><option value="confetti">Confetes e brilho</option><option value="gif">Meu GIF desbloqueado</option><option value="off">Sem efeito</option></select></label><label><span>Perguntas ocasionais enquanto o app está aberto</span><select id="resiliencePrompt34"><option value="0">Desativadas</option><option value="120">A cada 2 horas</option><option value="180">A cada 3 horas</option><option value="240">A cada 4 horas</option></select></label><label class="v34-check"><input id="resiliencePrivate34" type="checkbox">Mostrar nomes dos assuntos no dashboard</label><button class="primary" type="submit">Salvar preferências de resiliência</button></form></article>
+<article class="paper-card"><h3>Gatilhos e escolhas registrados</h3><div class="v34-list" id="resilienceHistory34"></div></article><article class="paper-card"><h3>Seus check-ins de bem-estar</h3><div class="v34-list" id="resilienceWellbeing34"></div></article>
+</section>
+<section class="view" id="view-gym">
+<header class="section-head reveal"><p class="eyebrow">ACADEMIA</p><h2>Treino, no seu ritmo.</h2><p>Use a ficha orientada pelo seu professor. Registre o que conseguiu fazer hoje.</p></header>
+<section class="v34-kpis"><div><span>TREINOS NA SEMANA</span><b id="gymWeek34">0</b></div><div><span>META PESSOAL</span><b id="gymGoal34">3</b></div><div><span>MINUTOS NA SEMANA</span><b id="gymMinutes34">0</b></div></section>
+<div class="v34-two-col"><article class="paper-card"><div class="card-head"><h3>Check-in do treino</h3></div><form class="v34-form" id="gymCheckinForm34"><label><span>Treino ou ficha (opcional)</span><select id="gymPlan34"></select></label><label><span>Data do treino</span><input id="gymDate34" required="" type="date"></label><label><span>Duração em minutos (opcional)</span><input id="gymDuration34" max="600" min="0" placeholder="Ex.: 40" step="1" type="number"></label><label><span>Como foi (opcional)</span><select id="gymEnergy34"><option value="">Selecionar</option><option>Leve</option><option>Moderado</option><option>Intenso</option></select></label><label><span>Observações (opcional)</span><textarea id="gymNote34" maxlength="1000" placeholder="O que funcionou, o que ajustar..."></textarea></label><button class="primary" type="submit">Registrar treino</button><p class="v34-help" id="gymCheckinResult34" role="status"></p></form></article>
+<article class="paper-card"><div class="card-head"><h3>Minhas fichas</h3><button class="ghost" id="gymAddPlan34">Adicionar ficha</button></div><p class="v34-help">Copie os exercícios indicados pelo seu professor. O app acompanha os registros; não prescreve um treino.</p><div class="v34-list" id="gymPlans34"></div><div class="v34-tip"><b id="gymTipTitle34">Comece de um tamanho possível.</b><p id="gymTipText34"></p><button class="text-button" id="gymNextTip34">Outra dica</button><a href="https://www.who.int/news-room/fact-sheets/detail/physical-activity" rel="noopener" target="_blank">Orientações da OMS</a></div></article></div>
+<article class="paper-card"><div class="card-head"><h3>Histórico de treinos</h3><button class="text-button" id="gymSettings34">Ajustar meta semanal</button></div><div class="v34-list" id="gymHistory34"></div></article>
+</section>
+<section class="view" id="view-rewards">
+<header class="section-head reveal"><p class="eyebrow">CONQUISTAS</p><h2>Seu progresso fica visível.</h2><p>Cores e animações são liberadas conforme suas ações. Seus XP não expiram.</p></header>
+<article class="paper-card"><div class="card-head"><h3 id="rewardLevel34">Nível 1</h3><b id="rewardTotal34">0 XP</b></div><p class="v34-help" id="rewardRules34">Tarefa concluída: 15 XP. Treino: 25 XP por dia. Conteúdo publicado: 30 XP. Hábitos e estudos também contam.</p><div class="v34-reward-grid" id="rewardCatalog34"></div></article>
+<article class="paper-card"><h3>Animação da conquista</h3><form class="v34-form" id="rewardAnimationForm34"><label><span>Estilo do feedback</span><select id="rewardFeedback34"><option value="quiet">Discreto</option><option value="confetti">Confetes</option><option value="gif">Meu GIF (a partir de 250 XP)</option><option value="off">Sem animação</option></select></label><label><span>Enviar GIF (opcional, até 500 KB)</span><input accept="image/gif" id="rewardGif34" type="file"></label><button class="primary" type="submit">Salvar animação</button><small class="v34-help">Redução de movimento do sistema é respeitada.</small></form></article>
+<article class="paper-card"><h3>Ações reconhecidas</h3><div class="v34-list" id="rewardHistory34"></div></article>
+</section>
+<!-- HÁBITOS -->
+<section class="view" id="view-habits">
+<header class="section-head reveal">
+<p class="eyebrow">HÁBITOS</p>
+<h2>Rotina.</h2>
+<p>Registros rápidos do dia e totais da semana. Metas podem ser alteradas.</p>
+</header>
+<section class="habit-summary reveal">
+<div><span>ÁGUA / SEMANA</span><strong id="habitWeekWater">0</strong><small>copos</small></div>
+<div><span>CAMINHADA / SEMANA</span><strong id="habitWeekWalk">0</strong><small>minutos</small></div>
+<div><span>LEITURA / SEMANA</span><strong id="habitWeekPages">0</strong><small>páginas</small></div>
+<div><span>MEDITAÇÃO / SEMANA</span><strong id="habitWeekMeditation">0</strong><small>dias</small></div>
+</section>
+<div class="habit-grid">
+<article class="habit-card reveal">
+<span class="habit-icon">◌</span><p>ÁGUA</p><strong id="habitWaterValue">0</strong><small>copos hoje</small>
+<div class="habit-stepper"><button data-delta="-1" data-habit-step="waterCups">−</button><button data-delta="1" data-habit-step="waterCups">+</button></div>
+<label class="field compact-field"><span>Meta diária</span><input data-setting="waterGoalCups" min="0" type="number"></label>
+</article>
+<article class="habit-card reveal">
+<span class="habit-icon">↗</span><p>CAMINHADA</p><strong id="habitWalkValue">0</strong><small>minutos hoje</small>
+<div class="habit-inline-entry"><input id="walkMinutesInput" min="0" placeholder="min" step="5" type="number"><button class="primary" id="addWalkMinutes">registrar</button></div>
+<label class="field compact-field"><span>Meta diária</span><input data-setting="walkGoalMinutes" min="0" type="number"></label>
+</article>
+<article class="habit-card reveal">
+<span class="habit-icon">○</span><p>ALIMENTAÇÃO PROTEICA <button type="button" class="habit-why49" id="proteinWhy49" aria-label="Por que incluir alimentos com proteína?" title="Por que fazer isso?">?</button></p><strong id="habitProtein49">0</strong><small>refeições com proteína hoje</small><small id="proteinLegacy49" hidden=""></small>
+<div class="habit-stepper"><button data-delta="-1" data-habit-step="proteinMeals49">−</button><button data-delta="1" data-habit-step="proteinMeals49">+</button></div>
+<label class="field compact-field"><span>Meta pessoal</span><input data-setting="proteinGoal49" min="0" type="number"></label>
+</article>
+<article class="habit-card reveal">
+<span class="habit-icon">◎</span><p>MEDITAÇÃO</p><strong id="habitMeditatedValue">não</strong><small>registro de hoje</small>
+<button class="ghost habit-toggle" id="toggleMeditated">marcar como feita</button>
+<button class="text-button" data-view-target="meditation">abrir desafio</button>
+</article>
+</div>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">LEITURA</p><h3>Registrar páginas.</h3></div></div>
+<label class="field"><span>Livro</span><select id="habitBookSelect"></select></label>
+<div class="two-inputs">
+<label class="field"><span>Páginas lidas hoje</span><input id="pagesReadInput" min="0" placeholder="0" type="number"></label>
+<label class="field"><span>Total de páginas do livro</span><input id="bookTotalPagesInput" min="1" placeholder="ex.: 320" type="number"></label>
+</div>
+<button class="primary" id="registerReading">Registrar leitura</button>
+<div class="reading-feedback" id="readingFeedback">Selecione um livro para ver o progresso.</div>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">PONTO</p><h3>4 registros.</h3></div></div>
+<div class="punch-grid">
+<label class="field"><span>Entrada</span><input data-day="punchIn" type="time"></label>
+<label class="field"><span>Almoço</span><input data-day="lunchOut" type="time"></label>
+<label class="field"><span>Retorno almoço</span><input data-day="lunchIn" type="time"></label>
+<label class="field"><span>Saída</span><input data-day="punchOut" type="time"></label>
+</div>
+<div class="punch-summary" id="punchSummary">Registre os quatro horários.</div>
+</article>
+</div>
+<article class="paper-card routine-builder reveal">
+<div class="card-head">
+<div><p class="eyebrow">ROTINA / WINDOWS</p><h3>Horários e alertas.</h3></div>
+<span class="routine-live-clock" id="routineLiveClock">--:--:--</span>
+</div>
+<p class="note">Os itens criados aqui entram nos lembretes do MyWay. No Windows, o processo em segundo plano compara os horários com o relógio do sistema mesmo quando o painel está fechado.</p>
+<div class="routine-form">
+<label class="field"><span>Atividade</span><input id="routineTitle" placeholder="Ex.: Bater o ponto e ir embora"></label>
+<label class="field"><span>Horário</span><input id="routineTime" type="time"></label>
+<label class="field"><span>Início</span><input id="routineStartDate" type="date"></label>
+<label class="field"><span>Fim</span><input id="routineEndDate" type="date"></label>
+<label class="field"><span>Tipo</span><select id="routineType"><option value="work">Trabalho</option><option value="exercise">Exercício</option><option value="study">Estudo</option><option value="health">Saúde</option><option value="personal">Pessoal</option></select></label>
+<label class="field"><span>Avisar antes</span><select id="routineLead"><option value="0">na hora</option><option value="5">5 min antes</option><option value="10">10 min antes</option><option value="15">15 min antes</option><option value="30">30 min antes</option></select></label>
+</div>
+<div class="routine-days" id="routineDaysPicker">
+<button data-routine-day="1" type="button">Seg</button><button data-routine-day="2" type="button">Ter</button><button data-routine-day="3" type="button">Qua</button><button data-routine-day="4" type="button">Qui</button><button data-routine-day="5" type="button">Sex</button><button data-routine-day="6" type="button">Sáb</button><button data-routine-day="0" type="button">Dom</button>
+</div>
+<div class="routine-actions">
+<button class="primary" id="addRoutine">Adicionar à rotina</button>
+<button class="text-button routine-template" data-routine-days="1,2,3,4,5" data-routine-time="18:00" data-routine-title="Hora de ir embora. Não esqueça de bater o ponto." data-routine-type="work">+ saída 18h</button>
+<button class="text-button routine-template" data-routine-days="1,2,3,4,5" data-routine-time="19:00" data-routine-title="Hora de correr." data-routine-type="exercise">+ corrida 19h</button>
+</div>
+<div class="windows-notify-panel">
+<div><span>NOTIFICAÇÕES DO WINDOWS</span><strong id="windowsNotifyStatus">verificando...</strong><small>Funcionam em segundo plano enquanto o MyWay estiver na bandeja.</small></div>
+<button aria-label="Ativar/desativar notificações" class="toggle on" id="windowsNotifyToggle"></button>
+<button class="ghost" id="testWindowsNotification">testar notificação</button>
+</div>
+<div class="routine-list" id="routineList"></div>
+</article>
+<article class="timeline-card reveal">
+<div class="card-head"><div><p class="eyebrow">SEMANA</p><h3>Histórico de hábitos.</h3></div></div>
+<div class="habit-week-history" id="habitWeekHistory"></div>
+</article>
+</section>
+<!-- METAS / FUTURO -->
+<section class="view" id="view-future">
+<header class="section-head reveal">
+<p class="eyebrow">CASA / PLANEJAMENTO</p>
+<h2>Minha casa, passo a passo.</h2>
+<p>Imóveis, reserva, entrada e simulações em uma área própria.</p>
+</header>
+<article class="property-importer reveal">
+<div class="property-importer-copy">
+<p class="eyebrow">IMÓVEIS / IMPORTAR LINK</p>
+<h3>Importar imóvel.</h3>
+<p>Funciona com páginas públicas do QuintoAndar, Chaves na Mão e tenta extrair dados de Remo, Eurico e outros portais compatíveis. Você confirma os dados antes de salvar.</p>
+</div>
+<div class="property-importer-form">
+<div class="property-url-line">
+<input id="propertyUrl" placeholder="Cole aqui o link do imóvel" type="url">
+<button class="primary" id="importProperty">Ler anúncio</button>
+</div>
+<div class="property-import-status" id="propertyImportStatus">Aguardando um link.</div>
+<div class="property-examples">
+<button data-property-example="https://vitrine.quintoandar.com.br/imovel/v2/895479711/AnaSiqueira-8P86">exemplo QuintoAndar</button>
+<button data-property-example="https://www.chavesnamao.com.br/imovel/apartamento-a-venda-2-quartos-com-garagem-sp-campinas-jardim-boa-esperanca-61m2-RS380000/id-3492161/">exemplo Chaves na Mão</button>
+<button data-property-example="https://www.quintoandar.com.br/imovel/893083629/comprar/apartamento-3-quartos-vila-industrial-campinas">exemplo QuintoAndar 2</button>
+</div>
+<div class="property-preview" hidden="" id="propertyPreview"></div>
+</div>
+</article>
+<article class="saved-properties reveal">
+<div class="card-head">
+<div><p class="eyebrow">OPÇÕES SALVAS</p><h3>Imóveis salvos.</h3></div>
+<span class="index" id="savedPropertiesCount">0</span>
+</div>
+<div class="property-grid" id="savedPropertiesList"></div>
+</article>
+<article class="property-game reveal" id="propertyGame">
+<div class="property-game-head"><div><p class="eyebrow">CAMINHO DO IMÓVEL</p><h3 id="propertyGameTitle">Construindo sua entrada.</h3><p id="propertyGameMessage">Defina o valor do imóvel e sua reserva para visualizar o caminho.</p></div><div class="property-game-level"><span>ETAPA</span><strong id="propertyGameLevel">1</strong><small id="propertyGameLevelName">Fundação</small></div></div>
+<div class="property-game-progress"><i id="propertyGameBar"></i></div>
+<div class="property-game-kpis">
+<div><span>PROGRESSO TOTAL</span><strong id="propertyGamePercent">0%</strong></div>
+<div><span>RESERVA ATUAL</span><strong id="propertyGameSaved">R$ 0</strong></div>
+<div><span>META DE ENTRADA + CUSTOS</span><strong id="propertyGameTarget">—</strong></div>
+<div><span>FALTA</span><strong id="propertyGameGap">—</strong></div>
+<div><span>NO RITMO ATUAL</span><strong id="propertyGameMonths">—</strong></div>
+</div>
+<div class="property-game-milestones" id="propertyGameMilestones"></div>
+</article>
+<article class="housing-card reveal">
+<div class="housing-intro">
+<div>
+<p class="eyebrow">CASA / MINHA CASA, MINHA VIDA</p>
+<h3>Minha Casa, Minha Vida.</h3>
+</div>
+<div class="housing-rules">
+<span>REFERÊNCIA 2026</span>
+<b>Renda familiar até R$ 13 mil</b>
+<b>Imóvel até R$ 600 mil</b>
+<b>Juros nominais 10% a.a.</b>
+<b>Prazo até 420 meses</b>
+</div>
+</div>
+<div class="housing-fields">
+<label class="field"><span>Renda familiar bruta (edite se compra conjunta)</span><input data-setting="householdIncome" placeholder="R$" type="number"></label>
+<label class="field"><span>Valor do imóvel</span><input data-setting="propertyValue" placeholder="400000" type="number"></label>
+<label class="field"><span>Tipo do imóvel</span>
+<select data-setting="propertyType">
+<option value="new">Novo / na planta</option>
+<option value="used">Usado</option>
+</select>
+</label>
+<label class="field"><span>Região</span>
+<select data-setting="propertyRegion">
+<option value="SE">Sudeste</option>
+<option value="S">Sul</option>
+<option value="CO">Centro-Oeste</option>
+<option value="NE">Nordeste</option>
+<option value="N">Norte</option>
+</select>
+</label>
+<label class="field"><span>Amortização</span>
+<select data-setting="amortizationSystem">
+<option value="SAC">SAC</option>
+<option value="PRICE">PRICE</option>
+</select>
+</label>
+<label class="field"><span>Prazo</span><div class="input-unit light-unit"><input data-setting="termMonths" max="420" min="12" type="number"><b>meses</b></div></label>
+</div>
+<div class="housing-results">
+<div><span>COTA MÁXIMA ESTIMADA</span><strong id="mcmvQuota">—</strong><small id="mcmvQuotaNote">—</small></div>
+<div><span>ENTRADA MÍNIMA</span><strong id="mcmvMinEntry">—</strong><small>pela cota máxima de financiamento</small></div>
+<div><span>RESERVA DISPONÍVEL</span><strong id="mcmvAvailable">—</strong><small>saldo + FGTS + outros recursos</small></div>
+<div><span>FALTA PARA A ENTRADA</span><strong id="mcmvGap">—</strong><small id="mcmvGapTime">—</small></div>
+</div>
+<details class="rules-editor">
+<summary>Editar parâmetros do programa</summary>
+<div class="housing-fields compact-fields">
+<label class="field"><span>Teto renda</span><input data-setting="mcmvIncomeLimit" type="number"></label>
+<label class="field"><span>Teto imóvel</span><input data-setting="mcmvPropertyCap" type="number"></label>
+<label class="field"><span>Juros nominais a.a.</span><input data-setting="mcmvAnnualRate" step=".01" type="number"></label>
+<label class="field"><span>Prazo máximo</span><input data-setting="mcmvMaxTerm" type="number"></label>
+</div>
+<p class="source-note">Parâmetros são editáveis para acompanhar futuras mudanças. A simulação é indicativa e não substitui a análise de crédito e o CET do banco.</p>
+</details>
+</article>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow">RESERVA / PICPAY</p><h3>Reserva.</h3></div>
+<span class="index">01</span>
+</div>
+<div class="finance-grid">
+<label class="field"><span>Saldo atual</span><input data-setting="currentSavings" type="number"></label>
+<label class="field"><span>Aporte mensal</span><input data-setting="monthlyContribution" type="number"></label>
+<label class="field"><span>FGTS disponível</span><input data-setting="fgtsBalance" type="number"></label>
+<label class="field"><span>Outros recursos</span><input data-setting="otherEntry" type="number"></label>
+<label class="field"><span>CDI de referência a.a.</span><div class="input-unit light-unit"><input data-setting="cdiAnnual" step=".01" type="number"><b>%</b></div></label>
+<label class="field"><span>Rentabilidade do CDB</span><div class="input-unit light-unit"><input data-setting="cdbPercent" step=".1" type="number"><b>% CDI</b></div></label>
+</div>
+<div class="quick-contribution">
+<input id="contributionInput" min="0" placeholder="Registrar aporte de hoje" step="50" type="number">
+<button class="primary" id="addContribution">+ aporte</button>
+</div>
+<div class="savings-big">
+<span>SALDO PROJETADO EM 12 MESES</span>
+<strong id="savings12m">—</strong>
+<small>estimativa bruta; aportes mensais no fim de cada mês, antes de IR/IOF</small>
+</div>
+</article>
+<article class="dark-card reveal">
+<p class="eyebrow light">SIMULAÇÃO DO FINANCIAMENTO</p>
+<h3 class="dark-title">Financiamento.</h3>
+<div class="finance-result-list">
+<div><span>Valor a financiar</span><strong id="financeAmount">—</strong></div>
+<div><span>Prestação PRICE estimada</span><strong id="pricePayment">—</strong></div>
+<div><span>SAC · primeira parcela</span><strong id="sacFirst">—</strong></div>
+<div><span>SAC · última parcela</span><strong id="sacLast">—</strong></div>
+<div><span>30% da renda familiar</span><strong id="incomeReference">—</strong></div>
+</div>
+<div class="eligibility-box" id="mcmvEligibility">Preencha renda e imóvel.</div>
+<small>Estimativa simplificada com taxa nominal informada. Não inclui TR, seguros, tarifas, CET, avaliação, cartório ou outras despesas.</small>
+</article>
+</div>
+<article class="amortization-compare reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">SAC x PRICE</p>
+<h3>Comparação de amortização.</h3>
+<p class="note">Mesma entrada, taxa e prazo. A comparação abaixo não inclui TR, seguros, tarifas ou CET.</p>
+</div>
+<span class="index">02</span>
+</div>
+<div class="amortization-grid">
+<section class="amortization-box" data-system-box="SAC">
+<header><span>SAC</span><b>parcela decrescente</b></header>
+<div><small>1ª parcela</small><strong id="compareSacFirst">—</strong></div>
+<div><small>última parcela</small><strong id="compareSacLast">—</strong></div>
+<div><small>juros totais estimados</small><strong id="compareSacInterest">—</strong></div>
+<div><small>total pago estimado</small><strong id="compareSacTotal">—</strong></div>
+</section>
+<section class="amortization-box" data-system-box="PRICE">
+<header><span>PRICE</span><b>parcela constante</b></header>
+<div><small>parcela estimada</small><strong id="comparePricePayment">—</strong></div>
+<div><small>última parcela</small><strong id="comparePriceLast">—</strong></div>
+<div><small>juros totais estimados</small><strong id="comparePriceInterest">—</strong></div>
+<div><small>total pago estimado</small><strong id="comparePriceTotal">—</strong></div>
+</section>
+</div>
+</article>
+<article class="bank-sim-panel reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">BANCOS / REFERÊNCIA 02.10.2026</p>
+<h3>Simulações bancárias.</h3>
+<p class="note">Taxas públicas de referência quando disponíveis. Edite a taxa em cada banco para reproduzir uma proposta real recebida.</p>
+</div>
+<span class="index">03</span>
+</div>
+<div class="bank-sim-controls">
+<div><span>IMÓVEL</span><strong id="bankPropertyValue">—</strong></div>
+<div><span>RESERVA USADA</span><strong id="bankEntryAvailable">—</strong></div>
+<div><span>PRAZO</span><strong id="bankTerm">—</strong></div>
+</div>
+<div class="bank-simulation-grid" id="bankSimulationGrid"></div>
+<p class="source-note">Use estes números como comparação inicial. A proposta final depende de perfil, relacionamento, seguros, TR, avaliação, CET e regras de crédito de cada banco.</p>
+</article>
+<article class="cashflow-card reveal">
+<div class="cashflow-head">
+<div><p class="eyebrow">FLUXO PESSOAL</p><h3>Fluxo mensal.</h3></div>
+<div class="cashflow-balance"><span>SALDO APÓS ITENS LISTADOS</span><strong id="cashflowAvailable">—</strong></div>
+</div>
+<div class="cashflow-grid">
+<label class="field"><span>Salário-base</span><input data-setting="salaryBase" type="number"></label>
+<label class="field"><span>Adiantamento</span><input data-setting="salaryAdvance" type="number"></label>
+<label class="field"><span>Pagamento restante</span><input data-setting="salarySecondPayment" type="number"></label>
+<label class="field"><span>Cartão atual</span><input data-setting="cardBill" type="number"></label>
+<label class="field"><span>Fecha dia</span><input data-setting="cardCloseDay" max="31" min="1" type="number"></label>
+<label class="field"><span>Claro / mês</span><input data-setting="claroMonthly" type="number"></label>
+<label class="field"><span id="educationMonthlyCostLabel">Estudos / mês</span><input data-setting="pucMonthly" type="number"></label>
+<label class="field"><span>Transporte médio</span><input data-setting="transportMonthly" type="number"></label>
+</div>
+<p class="source-note">O cálculo usa os recebimentos líquidos informados (adiantamento + pagamento restante). O salário-base fica registrado separadamente para referência de renda. Despesas não cadastradas aqui não entram no saldo.</p>
+</article>
+
+<details class="workspace-advanced38"><summary>Outras metas já cadastradas · opcional</summary><article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow">METAS LIVRES</p><h3>Outras metas.</h3></div>
+<button class="text-button" id="addCustomGoal">+ meta</button>
+</div>
+<div class="custom-goals-grid" id="customGoalsList"></div>
+</article></details>
+
+</section><section class="view" id="view-culture"><header class="section-head reveal"><p class="eyebrow">CULTURA / SEU TEMPO LIVRE</p><h2>O que quero aproveitar.</h2><p>Filmes, séries, livros e jogos. Guarde escolhas e acompanhe no seu ritmo, sem misturar com o planejamento da casa.</p></header><div class="two-col culture-screen38"><article class="paper-card reveal"><div class="card-head"><div><p class="eyebrow">FILMES</p><h3>Minha lista de filmes.</h3></div><button type="button" class="text-button" id="addFilm38">+ filme</button></div><div class="editable-goals-list" id="filmsList38"></div></article><article class="paper-card reveal"><div class="card-head"><div><p class="eyebrow">SÉRIES</p><h3>Minha lista de séries.</h3></div><button type="button" class="text-button" id="addSeries38">+ série</button></div><div class="editable-goals-list" id="seriesList38"></div></article></div><div class="two-col goals-media-layout">
+<article class="paper-card reveal media-goals-card books-card">
+<div class="card-head">
+<div><p class="eyebrow">LIVROS</p><h3>Leituras.</h3></div>
+<button class="text-button" id="addBook">+ livro</button>
+</div>
+<div class="editable-goals-list" id="booksList"></div>
+</article>
+<article class="paper-card reveal media-goals-card games-card">
+<div class="card-head">
+<div><p class="eyebrow">JOGOS</p><h3>Jogos.</h3></div>
+<button class="text-button" id="addGame">+ jogo</button>
+</div>
+<div class="editable-goals-list" id="gamesList"></div>
+</article>
+</div><details class="workspace-advanced38"><summary>Minha janela de lazer · opcional</summary><article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">LAZER</p><h3>Horários de lazer.</h3></div><span class="index">06</span></div>
+<label class="field"><span>Janela de lazer</span><input data-setting="leisureWindow" placeholder="Ex.: 21h30–23h30"></label>
+<label class="field full"><span>Regra pessoal</span><textarea data-setting="leisureRule" placeholder="Ex.: depois do mínimo do dia, jogo sem culpa."></textarea></label>
+</article></details></section>
+<!-- FINANÇAS -->
+<section class="view" id="view-finance">
+<header class="section-head reveal">
+<p class="eyebrow">FINANÇAS</p><h2>Controle seu dinheiro.</h2><p>Saldo, recebimentos, gastos, reserva e investimentos em um só lugar.</p>
+</header>
+<section class="finance-overview reveal">
+<div><span>SALDO DISPONÍVEL</span><strong id="financeHubBalance">R$ 0,00</strong><small id="financeHubBalanceSub">conta / caixa atual</small></div>
+<div><span>RENDA DO MÊS</span><strong id="financeHubIncome">R$ 0,00</strong><small id="financeHubIncomeSub">recebimentos previstos</small></div>
+<div><span>GASTOS DO MÊS</span><strong id="financeHubSpent">R$ 0,00</strong><small id="financeHubSpentSub">fixos + lançamentos</small></div>
+<div><span>TAXA DE POUPANÇA</span><strong id="financeHubSaveRate">0%</strong><small id="financeHubSaveRateSub">meta configurável</small></div>
+<div class="finance-health" id="financeHealthCard"><span>SITUAÇÃO</span><strong id="financeHealthLabel">organizando</strong><small id="financeHealthText">adicione renda e gastos</small></div>
+</section>
+<div class="two-col finance-config-grid">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">RECEBIMENTOS</p><h3>Salário e datas.</h3></div><span class="index">01</span></div>
+<div class="form-grid">
+<label class="field"><span>Saldo atual da conta</span><input data-setting="cashBalance" step="0.01" type="number"></label>
+<label class="field"><span>Salário-base</span><input data-setting="salaryBase" step="0.01" type="number"></label>
+<label class="field"><span>Recebe adiantamento?</span><select data-setting="salaryHasAdvance"><option value="false">Não</option><option value="true">Sim</option></select></label>
+<label class="field"><span>Dia do adiantamento</span><input data-setting="salaryAdvanceDay" max="31" min="1" type="number"></label>
+<label class="field"><span>Valor do adiantamento</span><input data-setting="salaryAdvance" step="0.01" type="number"></label>
+<label class="field"><span>Dia do pagamento final</span><input data-setting="salarySecondDay" max="31" min="1" type="number"></label>
+<label class="field"><span>Pagamento final</span><input data-setting="salarySecondPayment" step="0.01" type="number"></label>
+<label class="field"><span>% que quero guardar</span><input data-setting="financeSavePercent" max="100" min="0" step="1" type="number"></label>
+</div>
+<div class="finance-rule" id="financeSaveRule">—</div>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">LANÇAMENTO RÁPIDO</p><h3>Entrou ou saiu.</h3></div><span class="index">02</span></div>
+<div class="finance-quick-add">
+<select id="financeTxnType"><option value="expense">Gasto</option><option value="income">Entrada</option></select>
+<input id="financeTxnAmount" placeholder="Valor" step="0.01" type="number">
+<input id="financeTxnCategory" placeholder="Categoria: alimentação, lazer...">
+<input id="financeTxnDate" type="date">
+<input id="financeTxnNote" placeholder="Observação opcional">
+<label class="field"><span>Considerei esse gasto impulsivo? (opcional)</span><select id="financeImpulse34"><option value="">Ainda não avaliei</option><option value="yes">Sim, para mim foi impulsivo</option><option value="no">Não, foi planejado</option><option value="unsure">Ainda não tenho certeza</option></select></label><button class="primary" id="financeTxnAdd">Registrar</button>
+</div>
+<div class="finance-txn-list" id="financeTxnRecent"></div>
+</article>
+</div>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">GASTOS FIXOS</p><h3>Compromissos do mês.</h3></div><button class="text-button" id="financeFixedAdd">+ gasto fixo</button></div>
+<div class="finance-fixed-list" id="financeFixedList"></div>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">DÍVIDAS / ALERTAS</p><h3>O que exige atenção.</h3></div><button class="text-button" id="financeDebtAdd">+ dívida</button></div>
+<div class="finance-debt-list" id="financeDebtList"></div>
+<div class="finance-alert" id="financeDebtAlert">Nenhuma dívida cadastrada.</div>
+</article>
+</div>
+<article class="finance-invest-card reveal">
+<div class="card-head"><div><p class="eyebrow">CDB / RESERVA</p><h3>Simulador educativo.</h3><p class="note">Compare liquidez, % do CDI, prazo, tributação e cobertura do emissor antes de decidir. Rentabilidade passada ou simulações não são garantia.</p></div><span class="index">03</span></div>
+<div class="finance-invest-grid">
+<label class="field"><span>Valor aplicado</span><input data-setting="currentSavings" type="number"></label>
+<label class="field"><span>CDI anual de referência (%)</span><input data-setting="cdiAnnual" step="0.01" type="number"></label>
+<label class="field"><span>CDB (% do CDI)</span><input data-setting="cdbPercent" step="1" type="number"></label>
+<label class="field"><span>Prazo da simulação (meses)</span><input id="financeCdbMonths" max="120" min="1" type="number" value="12"></label>
+</div>
+<div class="finance-cdb-result"><div><span>BRUTO ESTIMADO</span><strong id="financeCdbGross">—</strong></div><div><span>RENDIMENTO BRUTO</span><strong id="financeCdbYield">—</strong></div><div><span>APORTE AUTOMÁTICO SUGERIDO PELA SUA REGRA</span><strong id="financeSuggestedSave">—</strong></div></div>
+<div class="finance-tip-card"><span>DICA DO DIA</span><b id="financeTipTitle">Liquidez vem antes de alguns décimos de rentabilidade.</b><p id="financeTipText">Para reserva de emergência, verifique quando o dinheiro pode ser resgatado antes de comparar apenas o % do CDI.</p><button class="text-button" id="financeTipNext">outra dica</button></div>
+<div class="finance-source-links"><a href="https://www.fgc.org.br/sobre-garantia-fgc" rel="noopener" target="_blank">FGC ↗</a><a href="https://www.caixa.gov.br/voce/poupanca-e-investimentos/cdb/cdb-flex/paginas/default.aspx" rel="noopener" target="_blank">Entender CDB ↗</a></div>
+</article>
+</section>
+<!-- ANA / NÓS -->
+<section class="view ana-view" id="view-ana">
+<header class="section-head reveal">
+<p class="eyebrow" id="relationshipEyebrow">Relacionamentos</p>
+<h2 id="relationshipHeading">Nós.</h2>
+<p id="relationshipDescription">Casamento, viagens, imóveis, sessão de fotos e arquivos privados do casal.</p>
+</header>
+<div class="ana-overview reveal">
+<div aria-hidden="true" class="ana-heart-mark">♥</div>
+<div>
+<span id="relationshipDateLabel">CASAMENTO</span>
+<strong id="anaWeddingDateLabel">14/08/2027</strong>
+<small id="anaWeddingCountdown">—</small>
+</div>
+<div>
+<span>PLANOS ABERTOS</span>
+<strong id="anaOpenPlans">0</strong>
+<small>itens do casamento</small>
+</div>
+<div>
+<span>VIAGENS</span>
+<strong id="anaTripsCount">0</strong>
+<small>planejadas</small>
+</div>
+<div>
+<span>IMÓVEIS ♥</span>
+<strong id="anaHomesCount">0</strong>
+<small>favoritos</small>
+</div>
+</div>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow" id="relationshipPlanKicker">CASAMENTO</p><h3 id="relationshipPlanTitle">Planejamento.</h3></div>
+<span class="ana-mini-heart">♥</span>
+</div>
+<label class="field">
+<span id="relationshipDateFieldLabel">Data do casamento</span>
+<input data-setting="coupleWeddingDate" type="date">
+</label>
+<div class="ana-add-line">
+<input id="anaWeddingPlanText" placeholder="Ex.: fechar fotógrafo, definir docinhos, revisar convidados">
+<button class="primary" id="anaAddWeddingPlan">+ plano</button>
+</div>
+<div class="ana-checklist" id="anaWeddingPlans"></div>
+</article>
+<article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow">IDEIAS</p><h3>Coisas para fazer juntos.</h3></div>
+<button class="text-button" id="anaAddIdea">+ ideia</button>
+</div>
+<div class="ana-add-line">
+<input id="anaIdeaText" placeholder="Restaurante, presente, passeio, detalhe do casamento...">
+<select id="anaIdeaType">
+<option>Casamento</option>
+<option>Casa</option>
+<option>Encontro</option>
+<option>Viagem</option>
+<option>Outro</option>
+</select>
+</div>
+<div class="ana-ideas-grid" id="anaIdeas"></div>
+</article>
+</div>
+<article class="saved-properties ana-properties reveal">
+<div class="card-head">
+<div><p class="eyebrow">NOSSOS IMÓVEIS</p><h3>Favoritos.</h3><p class="note">Marque ♥ em qualquer imóvel salvo na aba Metas. Ele aparece aqui automaticamente.</p></div>
+<span class="index" id="anaFavoritePropertiesCount">0</span>
+</div>
+<div class="property-grid" id="anaFavoriteProperties"></div>
+</article>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">SESSÃO DE FOTOS</p><h3>Planejamento.</h3></div><span class="index">01</span></div>
+<div class="form-grid">
+<label class="field"><span>Data</span><input data-setting="couplePhotoDate" type="date"></label>
+<label class="field"><span>Local</span><input data-setting="couplePhotoLocation" placeholder="Ex.: Campinas, campo, centro..."></label>
+<label class="field"><span>Conceito</span><input data-setting="couplePhotoConcept" placeholder="Ex.: urbano, editorial, pôr do sol..."></label>
+<label class="field"><span>Fotógrafo / contato</span><input data-setting="couplePhotographer" placeholder="Nome ou contato"></label>
+</div>
+<label class="field full"><span>Fotos que queremos / referências</span><textarea data-setting="couplePhotoNotes" placeholder="Poses, roupas, objetos, lugares e referências."></textarea></label>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">PRÓXIMAS VIAGENS</p><h3>Viagens.</h3></div><span class="index">02</span></div>
+<div class="ana-trip-form">
+<input id="anaTripDestination" placeholder="Destino">
+<input id="anaTripDate" type="date">
+<input id="anaTripNote" placeholder="Ideia / observação">
+<button class="primary" id="anaAddTrip">+ viagem</button>
+</div>
+<div class="ana-trips-list" id="anaTrips"></div>
+</article>
+</div>
+<article class="ana-gallery reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">FOTOS</p>
+<h3>Nós em fotos.</h3>
+<p class="note">Arraste imagens para o mosaico. Depois, arraste os cards para reorganizar.</p>
+</div>
+<label class="ana-photo-upload">+ fotos<input accept="image/*" id="anaPhotoFiles" multiple="" type="file"></label>
+</div>
+<div class="ana-photo-drop" id="anaPhotoDrop">Solte fotos aqui</div>
+<div class="ana-photo-mosaic" id="anaPhotoMosaic"></div>
+</article>
+<article class="ana-vault reveal">
+<div class="ana-vault-head">
+<div class="vault-heart">♥</div>
+<div>
+<p class="eyebrow">COFRE LOCAL</p>
+<h3>Vídeos privados.</h3>
+<p>Arquivos criptografados no seu computador. O PIN não é salvo em texto puro.</p>
+</div>
+<div class="vault-status" id="anaVaultStatus">verificando...</div>
+</div>
+<div class="vault-auth" id="anaVaultSetup">
+<input id="anaVaultNewPin" inputmode="numeric" placeholder="Criar PIN (mín. 4 caracteres)" type="password">
+<input id="anaVaultNewPin2" inputmode="numeric" placeholder="Confirmar PIN" type="password">
+<button class="primary" id="anaVaultCreate">Criar cofre</button>
+</div>
+<div class="vault-auth" hidden="" id="anaVaultUnlock">
+<input id="anaVaultPin" inputmode="numeric" placeholder="PIN do cofre" type="password">
+<button class="primary" id="anaVaultUnlockBtn">Desbloquear</button>
+</div>
+<div hidden="" id="anaVaultOpen">
+<div class="vault-toolbar">
+<label class="vault-upload">
+<span>+ adicionar vídeos</span>
+<input accept="video/*" id="anaVaultFiles" multiple="" type="file">
+</label>
+<button class="ghost" id="anaVaultLock">Bloquear</button>
+</div>
+<div class="vault-drop" id="anaVaultDrop">Arraste vídeos aqui</div>
+<div class="vault-layout">
+<div class="vault-list" id="anaVaultList"></div>
+<div class="vault-player-wrap">
+<video controls="" id="anaVaultPlayer" playsinline=""></video>
+<div id="anaVaultPlayerEmpty">Selecione um vídeo do cofre.</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- INGLÊS -->
+<section class="view" id="view-english">
+<header class="section-head reveal">
+<p class="eyebrow">ENGLISH LAB</p>
+<h2>Inglês.</h2>
+<p>Treino curto de vocabulário, gramática, leitura e escrita. Você escolhe o nível e registra a própria percepção de acerto.</p>
+</header>
+<div class="english-dashboard reveal">
+<div>
+<span>NÍVEL ATUAL</span>
+<strong id="englishLevelLabel">A1</strong>
+<small id="englishLevelName">Básico</small>
+</div>
+<div>
+<span>SESSÕES</span>
+<strong id="englishSessionsCount">0</strong>
+<small>registradas</small>
+</div>
+<div>
+<span>XP</span>
+<strong id="englishXP">0</strong>
+<small>progresso acumulado</small>
+</div>
+<div>
+<span>ACERTO PERCEBIDO</span>
+<strong id="englishAccuracy">—</strong>
+<small>com base nas autoavaliações</small>
+</div>
+</div>
+<div class="english-levels reveal">
+<button data-english-level="A1"><b>A1</b><span>sobrevivência</span></button>
+<button data-english-level="A2"><b>A2</b><span>rotina</span></button>
+<button data-english-level="B1"><b>B1</b><span>independência</span></button>
+<button data-english-level="B2"><b>B2</b><span>profissional</span></button>
+<button data-english-level="C1"><b>C1</b><span>nuance</span></button>
+</div>
+<div class="two-col">
+<article class="paper-card english-exercise-card reveal">
+<div class="card-head">
+<div><p class="eyebrow" id="englishExerciseType">VOCABULARY</p><h3 id="englishPrompt">Clique em “novo exercício”.</h3></div>
+<span class="index" id="englishExerciseLevel">A1</span>
+</div>
+<p class="exercise-instruction" id="englishInstruction">Escolha seu nível e faça uma rodada curta.</p>
+<label class="field full">
+<span>Sua resposta</span>
+<textarea id="englishUserAnswer" placeholder="Type your answer here..."></textarea>
+</label>
+<div class="exercise-actions">
+<button class="primary" id="newEnglishExercise">Novo exercício</button>
+<button class="ghost" id="speakEnglish">Ouvir</button>
+<button class="text-button" id="showEnglishAnswer">Ver resposta</button>
+</div>
+<div class="model-answer" hidden="" id="englishModelAnswer"></div>
+<div class="self-score" hidden="" id="englishSelfScore">
+<span>Como foi?</span>
+<button data-english-score="2">acertei</button>
+<button data-english-score="1">quase</button>
+<button data-english-score="0">errei</button>
+</div>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">ROADMAP</p><h3>O que treinar.</h3></div><span class="index">02</span></div>
+<div class="english-roadmap" id="englishRoadmap"></div>
+<div class="english-book-link">
+<span>LEITURA EM INGLÊS</span>
+<strong>Texto no seu nível</strong>
+<small>Escolha uma leitura curta compatível com seu nível, marque poucas palavras novas e escreva um resumo de 2 ou 3 linhas.</small>
+</div>
+</article>
+</div>
+<article class="timeline-card reveal">
+<div class="card-head"><div><p class="eyebrow">HISTÓRICO</p><h3>Últimos treinos.</h3></div><span class="index">03</span></div>
+<div class="history-list" id="englishHistory"></div>
+</article>
+</section>
+<!-- MEDITAÇÃO -->
+<section class="view" id="view-meditation">
+<header class="section-head reveal">
+<p class="eyebrow" id="wellnessEyebrow">BEM-ESTAR</p>
+<h2 id="wellnessHeading">Uma prática de cada vez.</h2>
+<p id="wellnessDescription">Pausas, atenção e aprendizagem no seu ritmo.</p>
+</header>
+
+
+
+
+<article class="wellness-generic paper-card reveal" id="wellnessGeneric">
+<div class="card-head"><div><p class="eyebrow">BEM-ESTAR</p><h3>Práticas pessoais.</h3><p class="note">Monte uma rotina de meditação, respiração, mindfulness, alongamento ou outra prática que faça sentido para você.</p></div><button class="text-button" id="wellnessAddPractice">+ prática</button></div>
+<div class="wellness-practice-list" id="wellnessPracticeList"></div>
+</article>
+</section>
+<!-- NOTAS -->
+<section class="view" id="view-notes">
+<header class="section-head reveal">
+<p class="eyebrow">NOTAS</p>
+<h2>Notas.</h2>
+<p>Notas de trabalho e vida ficam salvas automaticamente. As fixadas aparecem no mini-widget de desktop.</p>
+</header>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">NOVA NOTA</p><h3>Captura rápida.</h3></div><span class="index">01</span></div>
+<div class="note-meta-grid">
+<label class="field"><span>Área</span>
+<select id="noteArea"><option value="work">Trabalho</option><option value="life">Vida</option></select>
+</label>
+<label class="field"><span>Status</span>
+<select id="noteStatus">
+<option value="done">Feito</option><option value="waiting">Aguardando</option><option selected="" value="todo">A Fazer</option><option value="cancelled">Cancelado</option><option value="doing">Fazendo</option><option value="attention">Precisa de Atenção</option><option value="later">Sem Pressa / Por Último</option><option value="tomorrow">Para Amanhã</option>
+</select>
+</label>
+<label class="field"><span>Data</span><input id="noteDate" type="date"></label>
+</div>
+<label class="field"><span>Título</span><textarea id="noteTitle" placeholder="Ex.: Ajustar landing page" rows="2" maxlength="160"></textarea></label>
+<label class="field full"><span>Nota</span><textarea id="noteBody" placeholder="Escreva e tire isso da memória de trabalho..."></textarea></label>
+<div class="note-create-actions">
+<button class="primary" id="addNote">Criar nota</button>
+<button class="ghost" id="openNotesWidget">Abrir widget flutuante</button>
+</div>
+</article>
+<article class="dark-card reveal">
+<p class="eyebrow light">WIDGET</p>
+<h3 class="dark-title">Notas flutuantes.</h3>
+<p class="light-copy">Fixe notas importantes e abra uma janela pequena do MyWay. Ela usa os mesmos dados desta instalação.</p>
+<button class="light-button" id="openNotesWidget2">Abrir notas agora</button>
+<small>No MyWay.exe, o widget abre em formato largo e fica acima das outras janelas. Fechar a janela não encerra o processo: ele continua na bandeja do Windows.</small>
+</article>
+</div>
+<div class="status-legend reveal" id="statusLegend">
+<span data-status-filter="done"><i class="status-dot done"></i>Feito</span><span data-status-filter="waiting"><i class="status-dot waiting"></i>Aguardando</span><span data-status-filter="todo"><i class="status-dot todo"></i>A Fazer</span><span data-status-filter="cancelled"><i class="status-dot cancelled"></i>Cancelado</span><span data-status-filter="doing"><i class="status-dot doing"></i>Fazendo</span><span data-status-filter="attention"><i class="status-dot attention"></i>Precisa de Atenção</span><span data-status-filter="later"><i class="status-dot later"></i>Sem Pressa / Por Último</span><span data-status-filter="tomorrow"><i class="status-dot tomorrow"></i>Para Amanhã</span>
+</div>
+<div class="notes-columns">
+<article class="notes-board reveal">
+<div class="notes-board-head"><span>TRABALHO</span><b id="workNotesCount">0</b></div>
+<div class="notes-grid" id="workNotes"></div>
+</article>
+<article class="notes-board reveal">
+<div class="notes-board-head"><span>VIDA</span><b id="lifeNotesCount">0</b></div>
+<div class="notes-grid" id="lifeNotes"></div>
+</article>
+
+</div>
+</section>
+<!-- NO VANILLA REVIEWS -->
+<!-- DIÁRIO -->
+<section class="view" id="view-journal">
+<header class="section-head reveal"><p class="eyebrow">DIÁRIO</p><h2>Seu diário.</h2><p>Uma página por vez. Escreva primeiro; organize depois.</p></header>
+<div class="two-col journal-grid journal-grid-r2">
+<article class="journal-book-r2 reveal">
+<div class="journal-book-spine-r2" aria-hidden="true"></div>
+<div class="journal-book-toolbar-r2">
+<div class="journal-book-date-r2"><span>DATA</span><strong id="journalDateR2">—</strong></div>
+<div class="journal-score-grid-r2">
+<label class="journal-score-r2"><span>Humor · 0–10</span><input id="journalMood" type="number" inputmode="numeric" min="0" max="10" step="1" placeholder="—" aria-label="Humor de zero a dez"></label>
+<label class="journal-score-r2"><span>Energia · 0–10</span><input id="journalEnergy" type="number" inputmode="numeric" min="0" max="10" step="1" placeholder="—" aria-label="Energia de zero a dez"></label>
+</div>
+</div>
+<div class="journal-page-r2">
+<div class="journal-page-heading-r2"><span id="journalWeekdayR2">HOJE</span><span>escreva livremente</span></div>
+<textarea class="journal-paper-textarea-r2" id="journalText" placeholder="Comece daqui..."></textarea>
+</div>
+<div class="journal-save-row journal-save-r2"><input id="journalTags" placeholder="tags opcionais"><button class="primary" id="journalSave">Salvar página</button></div>
+</article>
+<article class="paper-card reveal cbt-record-card">
+<div class="card-head"><div><p class="eyebrow">REGISTRO DE PENSAMENTO / TCC</p><h3>Separar situação, pensamento e ação.</h3><p class="note">Exercício de auto-observação; não é diagnóstico nem substitui terapia.</p></div><span class="index">02</span></div>
+<label class="field full"><span>Situação objetiva</span><input id="cbtSituation" placeholder="O que aconteceu, sem interpretação?"></label>
+<label class="field full"><span>Pensamento automático</span><input id="cbtThought" placeholder="O que passou pela cabeça?"></label>
+<div class="form-grid"><label class="field"><span>Emoção</span><input id="cbtEmotion" placeholder="ansiedade, raiva, vergonha..."></label><label class="field"><span>Intensidade 0–100</span><input id="cbtIntensity" max="100" min="0" type="number"></label></div>
+<label class="field full"><span>Evidências a favor</span><textarea id="cbtFor"></textarea></label>
+<label class="field full"><span>Evidências contra / outras explicações</span><textarea id="cbtAgainst"></textarea></label>
+<label class="field full"><span>Pensamento mais útil e realista</span><textarea id="cbtAlternative"></textarea></label>
+<label class="field full"><span>Próxima ação pequena</span><input id="cbtAction" placeholder="Algo concreto que leva menos de 10 minutos"></label>
+<button class="primary" id="cbtSave">Salvar registro</button>
+</article>
+</div>
+<article class="journal-history-card reveal"><div class="card-head"><div><p class="eyebrow">HISTÓRICO</p><h3>Entradas recentes.</h3></div><span class="index" id="journalCount">0</span></div><div class="journal-history" id="journalHistory"></div></article>
+<article class="care-card reveal">
+<div class="care-head"><div><p class="eyebrow">CUIDADO PROFISSIONAL</p><h3>Encontrar psicólogo ou psiquiatra por região.</h3><p class="note">O MyWay não escolhe profissional por você. Ele abre caminhos oficiais e buscas por cidade/UF.</p></div><span class="index">03</span></div>
+<div class="care-location"><input data-setting="careCity" id="careCity" placeholder="Cidade"><select data-setting="careUF" id="careUF"><option value="">UF</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></div>
+<div class="care-actions"><button class="primary" data-care-search="psychologist">Psicólogos na região</button><button class="ghost" data-care-search="psychiatrist">Psiquiatras na região</button><a class="ghost link-button" href="https://www.gov.br/saude/pt-br/composicao/seidigi/meususdigital/meususdigital" rel="noopener" target="_blank">Meu SUS Digital ↗</a><a class="ghost link-button" href="https://estabelecimentos.saude.gov.br/" rel="noopener" target="_blank">CNES ↗</a><a class="ghost link-button" href="https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps/caps/caps" rel="noopener" target="_blank">CAPS / RAPS ↗</a></div>
+<div class="care-note"><b>Como usar</b><p>Para cuidado pelo SUS, a UBS é uma porta de entrada e CAPS pode fazer acolhimento direto em situações de sofrimento intenso. Em urgência, procure UPA/pronto-socorro ou SAMU 192.</p></div>
+</article>
+</section>
+<!-- INSPIRAÇÃO -->
+<section class="view inspiration-view" id="view-inspiration">
+<header class="section-head inspiration-head reveal">
+<div><p class="eyebrow">INSPIRAÇÃO / PARA VOCÊ</p><h2>Referências.</h2><p>Descubra, salve e organize ideias a partir dos seus interesses.</p></div>
+<div class="inspiration-head-actions"><button class="ghost" id="inspirationShuffle">Surpreender</button><button class="ghost" id="inspirationDashboard34">Enviar ao dashboard</button>
+<button class="primary" id="inspirationAddPin">+ adicionar pin</button></div>
+</header>
+<div class="inspiration-interest-strip reveal" id="inspirationInterestStrip"></div>
+<div class="inspiration-search reveal">
+<div class="inspiration-search-box"><span>⌕</span><input id="inspirationSearchInput" placeholder="Pesquisar referências, estética, ideias, lugares..."><button class="primary" id="inspirationSearchBtn">Explorar</button></div>
+<div class="inspiration-search-meta"><span id="inspirationSearchStatus">Escolha um interesse ou faça uma busca.</span></div>
+</div>
+<div class="inspiration-add-panel reveal" hidden="" id="inspirationAddPanel">
+<div class="card-head"><div><p class="eyebrow">NOVO PIN</p><h3>Guardar uma referência.</h3></div><button class="text-button" id="inspirationAddClose">fechar</button></div>
+<div class="inspiration-add-grid">
+<label class="field"><span>Título</span><input id="inspirationPinTitle" placeholder="Ex.: Sala com madeira escura"></label>
+<label class="field"><span>Link da referência</span><input id="inspirationPinSource" placeholder="https://..."></label>
+<label class="field"><span>URL da imagem</span><input id="inspirationPinImage" placeholder="https://...jpg"></label>
+<label class="field"><span>Quadro</span><select id="inspirationPinBoard"></select></label>
+<label class="field full"><span>Nota</span><input id="inspirationPinNote" placeholder="O que você quer lembrar desta referência?"></label>
+<label class="inspiration-upload full"><span>ou arraste / escolha uma imagem do computador</span><input accept="image/*" id="inspirationPinFile" type="file"></label>
+</div>
+<button class="primary" id="inspirationPinSave">Salvar pin</button>
+</div>
+<div class="inspiration-shell reveal">
+<aside class="inspiration-sidebar">
+<button class="active" data-inspiration-filter="discover"><span>✦</span>Para você</button>
+<button data-inspiration-filter="saved"><span>♥</span>Salvos <b id="inspirationSavedCount">0</b></button>
+<div class="inspiration-side-label">QUADROS</div>
+<div class="inspiration-board-list" id="inspirationBoards"></div>
+<button class="inspiration-new-board" id="inspirationNewBoard">+ novo quadro</button>
+<div class="inspiration-side-label">INTERESSES</div>
+<button class="inspiration-edit-interests" id="inspirationEditInterests">editar interesses</button>
+<div class="inspiration-taste-card">
+<div><span>SEU ESTILO</span><b id="inspirationTasteSignals">0 sinais</b></div>
+<div class="inspiration-taste-chips" id="inspirationTasteChips"></div>
+<small id="inspirationTasteHint">Salve, abra ou marque “mais assim” para o feed aprender.</small>
+<button id="inspirationTasteReset">resetar aprendizado</button>
+</div>
+<div class="pinterest-connect-card">
+<span>PINTEREST</span><b id="pinterestConnectStatus">não conectado</b>
+<button class="ghost" id="pinterestConnect">Conectar Pinterest</button>
+<button class="text-button" hidden="" id="pinterestImport">importar meus pins</button>
+<small>Importa pins/quadros via API oficial, sem usar o feed com anúncios.</small>
+</div>
+</aside>
+<main class="inspiration-main">
+<div class="inspiration-main-head"><div><span id="inspirationViewKicker">PARA VOCÊ</span><h3 id="inspirationViewTitle">Ideias para explorar.</h3><p id="inspirationLearningSummary">O feed começa pelos seus interesses e vai se ajustando conforme você usa.</p></div><small id="inspirationResultCount">0 itens</small></div>
+<div class="inspiration-masonry" id="inspirationMasonry"></div>
+<div class="inspiration-empty" hidden="" id="inspirationEmpty"><b>Seu mural ainda está vazio.</b><span>Escolha um interesse, pesquise uma referência ou salve seu primeiro pin.</span></div>
+</main>
+</div>
+</section>
+<section class="view nv-view" id="view-novanilla">
+<article class="nv-banner reveal">
+<img alt="Banner do canal" id="channelBannerImage" src="assets/nv-banner.png">
+<div class="nv-banner-overlay"></div>
+<div class="nv-channel-lockup">
+<img alt="Ícone do canal" class="nv-channel-icon" id="channelHeroIcon" src="assets/nv-icon-user.png">
+<div class="nv-channel-wordmark">
+<span>CREATOR STUDIO</span>
+<img alt="Logo do canal" class="nv-logo-user" id="channelHeroLogo" src="assets/nv-logo-user.png">
+<p id="channelHeroMeta">@canal · categorias</p>
+</div>
+</div>
+</article>
+<div class="nv-channel-snapshot reveal"><span id="channelSnapshotHandle">@canal</span><b id="channelSnapshotSubscribers">0 inscritos</b><i id="channelSnapshotVideos">0 vídeos</i><small id="channelSnapshotMeta">creator studio</small></div>
+<div class="nv-shortcuts reveal">
+<button data-nv-launch="youtube"><span>▶</span><b id="channelPlatformShortcut">YouTube</b><small id="channelHandleShortcut">@canal</small></button>
+<button data-nv-launch="photoshop"><span>Ps</span><b>Photoshop</b><small>abrir aplicativo</small></button>
+<button data-nv-launch="premiere"><span>Pr</span><b>Premiere</b><small>abrir aplicativo</small></button>
+<button data-nv-launch="aftereffects"><span>Ae</span><b>After Effects</b><small>abrir aplicativo</small></button>
+</div>
+<article class="nv-card v34-channel-card"><div class="card-head"><div><span class="nv-label">IDEIAS</span><h3>Guarde antes de esquecer.</h3></div><button class="ghost" id="channelAddIdea34">Salvar ideia</button></div><div class="v34-list" id="channelIdeas34"></div></article>
+<details class="nv-card v34-channel-card"><summary>Dicas e revisão do canal</summary><div class="v34-tip"><b id="channelTipTitle34"></b><p id="channelTipText34"></p><button class="ghost" id="channelNextTip34">Outra dica</button><a href="https://support.google.com/youtube/answer/12340300?hl=pt-BR" rel="noopener" target="_blank">Orientações do YouTube</a></div><form class="v34-form" id="channelHealthForm34"><p>Revisão da semana. As marcações são salvas ao enviar.</p><label class="v34-check"><input name="honest" type="checkbox">Título e thumbnail representam o vídeo</label><label class="v34-check"><input name="schedule" type="checkbox">Minha frequência de publicação é viável</label><label class="v34-check"><input name="analytics" type="checkbox">Revisei CTR e retenção no contexto do canal</label><label class="v34-check"><input name="community" type="checkbox">Li comentários e registrei dúvidas do público</label><label class="v34-check"><input name="security" type="checkbox">Revisei segurança da conta e direitos de uso</label><button class="primary" type="submit">Salvar revisão semanal</button><p class="v34-help" id="channelHealthResult34" role="status"></p></form></details>
+<div class="nv-stats reveal">
+<div><span>IDEIAS</span><strong id="nvIdeasCount">0</strong><small>na fila</small></div>
+<div><span>EM PRODUÇÃO</span><strong id="nvProductionCount">0</strong><small>pesquisa → edição</small></div>
+<div><span>PUBLICADOS</span><strong id="nvPublishedCount">0</strong><small>total registrado</small></div>
+<div><span>NO MÊS</span><strong id="nvPublishedMonth">0</strong><small>vídeos publicados</small></div>
+</div>
+<div class="nv-workbench reveal">
+<article class="nv-card nv-research-card">
+<div class="nv-card-head"><div><span class="nv-label">PESQUISA</span><h3>Pesquisa.</h3></div></div>
+<p class="nv-helper">Organize referências e links sem conectar uma conta externa de IA.</p>
+<label class="nv-field"><span>Pergunta / pauta</span><textarea id="nvResearchPrompt" placeholder="Ex.: pesquise contexto, referências, controvérsias e ganchos para este conteúdo..."></textarea></label>
+<div class="nv-research-actions">
+<button class="nv-primary" id="nvWebResearch">Pesquisar na web</button>
+
+
+<button class="nv-ghost" id="nvAttachResearchScript">Anexar roteiro</button>
+<input accept=".txt,.md,.rtf,.json,.csv,.pdf,.docx" hidden="" id="nvResearchScriptFile" type="file">
+</div>
+
+<div class="nv-research-response" id="nvResearchResponse"><span>Resultados da pesquisa aparecem aqui dentro do MyWay.</span></div>
+<div class="nv-research-saved">
+<div class="nv-research-saved-head"><span class="nv-label">LINKS FAVORITOS</span><b id="nvResearchFavoritesCount">0</b></div>
+<div class="nv-research-favorites" id="nvResearchFavorites"></div>
+</div>
+</article>
+<article class="nv-card nv-analytics-card">
+<div class="nv-card-head"><div><span class="nv-label" id="channelAnalyticsLabel">PLATAFORMA / ANALYTICS</span><h3>Analytics.</h3></div><b>YT</b></div>
+<div class="nv-analytics-kpis">
+<div><span>VIEWS</span><strong id="nvAnalyticsViews">82</strong></div>
+<div><span>IMPRESSÕES</span><strong id="nvAnalyticsImpressions">2.166</strong></div>
+<div><span>CTR THUMB</span><strong id="nvAnalyticsCTR">1,34%</strong></div>
+<div><span>INSCRITOS</span><strong id="nvAnalyticsSubs">+1</strong></div>
+</div>
+<div class="nv-daily-panel"><span class="nv-label">ÚLTIMOS 28 DIAS</span><div class="nv-daily-chart" id="nvDailyChart"></div></div>
+<div class="nv-top-videos" id="nvTopVideos"></div>
+<label class="nv-csv-upload">Atualizar com CSV do YouTube<input accept=".csv" id="nvAnalyticsImport" type="file"></label>
+</article>
+</div>
+<div class="two-col nv-two-col">
+<article class="nv-card reveal">
+<div class="nv-card-head"><div><span class="nv-label">NOVO CONTEÚDO</span><h3>Novo conteúdo.</h3></div><b>01</b></div>
+<label class="nv-field"><span>Título / ideia</span><input id="nvTitle" placeholder="Ex.: Ideia para o próximo conteúdo"></label>
+<div class="nv-form-grid">
+<label class="nv-field"><span>Pilar</span><select id="nvPillar"><option>Cinema</option><option>Games</option><option>HQs</option><option>Submundos</option></select></label>
+<label class="nv-field"><span>Status</span><select id="nvStatus"><option value="idea">Ideia</option><option value="research">Pesquisa</option><option value="script">Roteiro</option><option value="recording">Gravando</option><option value="editing">Editando</option><option value="thumbnail">Thumbnail</option><option value="published">Publicado</option></select></label>
+<label class="nv-field"><span>Prazo</span><input id="nvDueDate" type="date"></label>
+</div>
+<label class="nv-field"><span>Gancho / observação</span><textarea id="nvNotes" placeholder="Abertura, referência, ideia de thumbnail, ponto que não pode faltar..."></textarea></label>
+<div class="nv-assets-grid">
+<label class="nv-script-drop" id="nvScriptDrop"><span>ROTEIRO</span><b id="nvScriptName">arraste ou escolha um arquivo</b><small>TXT, MD, RTF, PDF ou DOCX</small><input accept=".txt,.md,.rtf,.pdf,.docx" id="nvScriptFile" type="file"></label>
+<label class="nv-thumb-drop" id="nvThumbDrop"><span>THUMBNAIL</span><b>arraste a thumb aqui</b><small>PNG / JPG / WEBP</small><input accept="image/*" id="nvThumbFile" type="file"><img alt="" id="nvThumbPreview"></label>
+</div>
+<button class="nv-primary" id="nvAddContent">Adicionar ao pipeline</button>
+</article>
+<article class="nv-card nv-brand-card reveal">
+<div class="nv-card-head"><div><span class="nv-label">DNA VISUAL</span><h3>Identidade visual.</h3></div><b>02</b></div>
+<div class="channel-config-panel">
+<div class="nv-form-grid">
+<label class="nv-field"><span>Nome do canal</span><input id="channelConfigName" placeholder="Meu Canal"></label>
+<label class="nv-field"><span>@ / identificador</span><input id="channelConfigHandle" placeholder="@meucanal"></label>
+<label class="nv-field"><span>Plataforma</span><select id="channelConfigPlatform"><option>YouTube</option><option>TikTok</option><option>Instagram</option><option>Twitch</option><option>Podcast</option><option>Outro</option></select></label>
+<label class="nv-field"><span>Pilares / categorias</span><input id="channelConfigPillars" placeholder="Cinema, Games, HQs"></label><label class="nv-field"><span>URL do canal</span><input id="channelConfigUrl" placeholder="https://..."></label>
+</div>
+<label class="nv-field"><span>Posicionamento / descrição</span><input id="channelConfigTagline" placeholder="O que define este canal?"></label>
+<div class="channel-brand-controls">
+<label><span>Cor 1</span><input id="channelColorPrimary" type="color"></label>
+<label><span>Cor 2</span><input id="channelColorAccent" type="color"></label><label><span>Fonte do canal</span><select id="channelFontPreset"><option value="impact">Impact</option><option value="editorial">Editorial</option><option value="modern">Modern</option><option value="geometric">Geometric</option><option value="soft">Soft</option></select></label>
+<label class="channel-file">Logo<input accept="image/*" id="channelLogoUpload" type="file"></label>
+<label class="channel-file">Ícone<input accept="image/*" id="channelIconUpload" type="file"></label><label class="channel-file">Banner<input accept="image/*" id="channelBannerUpload" type="file"></label>
+<button class="nv-ghost" id="channelBrandReset">restaurar visual</button>
+</div>
+</div>
+<div class="nv-brand-visual"><img alt="Ícone do canal" id="channelBrandIcon" src="assets/nv-icon-user.png"><img alt="Logo / faixa do canal" id="channelBrandLogo" src="assets/nv-strip.png"></div>
+<div class="nv-brand-grid"><div class="nv-color black"><span>#000000</span><small>PRETO DOMINANTE</small></div><div class="nv-color red"><span>#B01A1A</span><small>VERMELHO / IMPACTO</small></div><div class="nv-color ivory"><span>#A9A3A7</span><small>CINZA / MARFIM</small></div></div>
+<div class="nv-brand-rules"><p><b>01</b> defina logo e ícone reconhecíveis</p><p><b>02</b> mantenha duas cores principais</p><p><b>03</b> organize o conteúdo em pilares</p><p><b>04</b> ajuste o posicionamento conforme o projeto evoluir</p></div>
+</article>
+</div>
+<article class="nv-card nv-scratchpad reveal">
+<div class="nv-card-head"><div><span class="nv-label">NOTAS / DRAG &amp; DROP</span><h3>Notas do canal.</h3></div><button class="nv-ghost" id="nvQuickNoteAdd">+ nota</button></div>
+<div class="nv-quick-notes" id="nvQuickNotes"></div>
+</article>
+<article class="nv-card nv-insights reveal">
+<div class="nv-card-head">
+<div><span class="nv-label">INSIGHTS</span><h3>Post-its.</h3><p class="nv-helper">Ideias, observações de analytics, títulos, thumbnails e coisas que valem testar.</p></div>
+<button class="nv-ghost" id="nvInsightAdd">+ insight</button>
+</div>
+<div class="nv-insight-add">
+<input id="nvInsightTitle" placeholder="Título curto">
+<select id="nvInsightType"><option>Ideia</option><option>Analytics</option><option>Thumbnail</option><option>Título</option><option>Pesquisa</option><option>Outro</option></select>
+<button class="nv-primary" id="nvInsightCreate">Adicionar</button>
+</div>
+<div class="nv-insights-grid" id="nvInsights"></div>
+</article>
+<article class="nv-pipeline reveal">
+<div class="nv-pipeline-head"><div><span class="nv-label">PIPELINE</span><h3>Pipeline.</h3></div><div class="nv-filter-row" id="nvFilters"><button class="active" data-nv-filter="all">Todos</button><button data-nv-filter="idea">Ideias</button><button data-nv-filter="production">Produção</button><button data-nv-filter="published">Publicados</button></div></div>
+<div class="nv-content-list" id="nvContentList"></div>
+</article>
+<div class="two-col nv-two-col">
+<article class="nv-card reveal"><div class="nv-card-head"><div><span class="nv-label">CANAL</span><h3>Meta mensal.</h3></div><b>03</b></div><div class="nv-form-grid"><label class="nv-field"><span>Vídeos / mês</span><input data-setting="nvMonthlyTarget" id="nvMonthlyTarget" min="0" type="number"></label><label class="nv-field"><span>Inscritos atuais</span><input data-setting="nvSubscribers" id="nvSubscribers" min="0" type="number"></label><label class="nv-field"><span>Views no mês</span><input data-setting="nvMonthlyViews" id="nvMonthlyViews" min="0" type="number"></label></div><div class="nv-month-progress"><i id="nvMonthProgress"></i></div><p id="nvMonthText">Registre publicações para acompanhar a meta.</p></article>
+<article class="nv-card nv-quote-card reveal"><span class="nv-label">POSICIONAMENTO</span><blockquote>MENOS MAINSTREAM.<br><b>MAIS SUBMUNDO.</b></blockquote><p>Use esta área como sala de produção: ideias, pesquisa, roteiro, edição, thumb e publicação no mesmo sistema.</p></article>
+</div>
+</section>
+<!-- RELATÓRIOS -->
+<section class="view" id="view-reports">
+<header class="section-head reveal">
+<p class="eyebrow">RELATÓRIOS</p>
+<h2>Relatório mensal.</h2>
+<p>O relatório compara comportamento registrado, não “valor pessoal”: chegada, estudo, retornos, energia, ações de saída e recuperação do banco.</p>
+</header>
+<div class="report-toolbar reveal">
+<label class="field compact"><span>Mês</span><input id="reportMonth" type="month"></label>
+<button class="ghost" id="exportMonthCsv">Exportar CSV do mês</button>
+</div>
+<div class="report-kpis reveal">
+<div><span>DIAS REGISTRADOS</span><strong id="rDays">0</strong><small id="rDaysDelta">—</small></div>
+<div><span>ATRASO MÉDIO</span><strong id="rDelay">—</strong><small id="rDelayDelta">—</small></div>
+<div><span>ESTUDO</span><strong id="rStudy">0 min</strong><small id="rStudyDelta">—</small></div>
+<div><span>RETORNOS</span><strong id="rReturns">0</strong><small id="rReturnsDelta">—</small></div>
+<div><span>AÇÕES DE SAÍDA</span><strong id="rCareer">0</strong><small id="rCareerDelta">—</small></div>
+<div><span>ENERGIA MÉDIA</span><strong id="rEnergy">—</strong><small id="rEnergyDelta">—</small></div>
+<div><span>INGLÊS</span><strong id="rEnglish">0</strong><small id="rEnglishDelta">sessões</small></div>
+<div><span>APORTES</span><strong id="rContrib">R$ 0</strong><small id="rContribDelta">no mês</small></div>
+<div><span id="reportChannelLabel">CANAL</span><strong id="rNV">0</strong><small id="rNVDelta">publicados</small></div>
+<div><span>ÁGUA</span><strong id="rWater">0</strong><small>copos</small></div>
+<div><span>CAMINHADA</span><strong id="rWalk">0</strong><small>minutos</small></div>
+<div><span>LEITURA</span><strong id="rPages">0</strong><small>páginas</small></div>
+<div><span>MEDITAÇÃO</span><strong id="rMeditation">0</strong><small>dias</small></div>
+</div>
+<article class="report-summary reveal">
+<p class="eyebrow">LEITURA AUTOMÁTICA</p>
+<h3 id="reportNarrative">Ainda não há dados suficientes neste mês.</h3>
+</article>
+<article class="attention-report reveal">
+<div class="card-head"><div><p class="eyebrow">PONTOS DE ATENÇÃO</p><h3>Pontos de atenção.</h3></div><span class="index">!</span></div>
+<div class="attention-list" id="attentionList"></div>
+</article>
+<div class="chart-grid">
+<article class="chart-card reveal">
+<div class="chart-head"><span>ATRASO / MINUTOS APÓS 08:00</span><b id="delayChartLabel"></b></div>
+<div class="chart" id="delayChart"></div>
+</article>
+<article class="chart-card reveal">
+<div class="chart-head"><span>ESTUDO / MINUTOS POR SEMANA</span><b id="studyChartLabel"></b></div>
+<div class="chart" id="studyChart"></div>
+</article>
+<article class="chart-card reveal">
+<div class="chart-head"><span>RETORNOS / POR SEMANA</span><b id="returnsChartLabel"></b></div>
+<div class="chart" id="returnsChart"></div>
+</article>
+</div>
+<article class="timeline-card reveal monthly-archive">
+<div class="card-head"><div><p class="eyebrow">FECHAMENTOS MENSAIS</p><h3>Histórico automático.</h3></div><span class="index">12M</span></div>
+<div class="monthly-archive-list" id="monthlyArchive"></div>
+</article>
+</section>
+<!-- LEMBRETES -->
+<section class="view" id="view-reminders">
+<header class="section-head reveal">
+<p class="eyebrow">LEMBRETES</p>
+<h2>Lembretes.</h2>
+<p>O aplicativo verifica os lembretes enquanto estiver aberto. Quando o navegador permitir, também dispara notificação do sistema.</p>
+</header>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow">NOVO LEMBRETE</p><h3>Defina o gatilho.</h3></div>
+<span class="index">01</span>
+</div>
+<label class="field"><span>Texto</span><input id="reminderTitle" placeholder="Ex.: Live da PUC em 15 minutos"></label>
+<label class="field"><span>Horário</span><input id="reminderTime" type="time"></label>
+<div class="days-picker" id="daysPicker">
+<button data-daynum="1" type="button">S</button>
+<button data-daynum="2" type="button">T</button>
+<button data-daynum="3" type="button">Q</button>
+<button data-daynum="4" type="button">Q</button>
+<button data-daynum="5" type="button">S</button>
+<button data-daynum="6" type="button">S</button>
+<button data-daynum="0" type="button">D</button>
+</div>
+<button class="primary" id="addReminder">Adicionar lembrete</button>
+<div class="template-row">
+<button class="text-button reminder-template" data-days="3" data-time="18:45" data-title="Live da PUC em 15 minutos">+ Live quarta</button>
+<button class="text-button reminder-template" data-days="0,1,2,3,4" data-time="22:30" data-title="Preparar roupa e mochila de amanhã">+ Preparar amanhã</button>
+<button class="text-button reminder-template" data-days="1,2,4" data-time="20:00" data-title="Bloco de 25 minutos da PUC">+ Bloco PUC</button>
+</div>
+</article>
+<article class="dark-card reveal">
+<p class="eyebrow light">SISTEMA / PERMISSÕES</p>
+<h3 class="dark-title">Recursos<br><em>nativos.</em></h3>
+<div class="permission-list">
+<div><span>Segundo plano / bandeja</span><b id="permTray">verificando...</b></div>
+<div><span>Iniciar com o Windows</span><b id="permStartup">verificando...</b></div>
+<div><span>Notificações nativas</span><b id="permNativeNotify">verificando...</b></div>
+<div><span>Importador de imóveis</span><b id="permImporter">verificando...</b></div>
+<div><span>Notificação do navegador</span><b id="notificationStatus">verificando...</b></div>
+</div>
+<button class="light-button" id="requestNotifications">Solicitar permissão do navegador</button>
+<small>Os lembretes do MyWay.exe usam também notificações nativas pela bandeja; elas não dependem da permissão do navegador.</small>
+</article>
+</div>
+<article class="timeline-card reveal">
+<div class="card-head"><div><p class="eyebrow">ATIVOS</p><h3>Seus lembretes.</h3></div><span class="index">03</span></div>
+<div class="reminders-list" id="remindersList"></div>
+</article>
+</section>
+<!-- CONTROLE -->
+<section class="view" id="view-control">
+<header class="section-head reveal">
+<p class="eyebrow">CONTROLE</p>
+<h2>Painel de controle.</h2>
+<p>Escolha um assunto. Os ajustes relacionados ficam juntos em cada grupo.</p>
+</header>
+<div class="control-grid">
+<article class="profile-control-card reveal">
+<div class="profile-photo-shell">
+<div class="profile-photo-preview" id="profilePhotoPreview"><span id="profilePhotoInitials">FC</span><img alt="Foto de perfil" hidden="" id="profilePhotoImage"></div>
+<label class="profile-photo-upload">Trocar foto<input accept="image/*" id="profilePhotoUpload" type="file"></label>
+<button class="text-button" id="profilePhotoRemove">remover</button>
+</div>
+<div class="profile-control-copy">
+<p class="eyebrow">PERFIL</p>
+<h3>Identidade do MyWay.</h3>
+<div class="control-profile-fields">
+<label class="field"><span>Nome</span><input id="controlProfileName" placeholder="Seu nome"></label>
+<label class="field"><span>Função / título</span><input id="controlProfileRole" placeholder="Analista de Marketing"></label>
+</div>
+<p class="note">A foto é reduzida antes de ser salva e acompanha o state.json na sincronização do OneDrive.</p>
+<div class="account-security-row">
+<label class="field"><span>Bloqueio por inatividade</span><select id="controlAutoLock"><option value="0">Nunca</option><option value="15">15 minutos</option><option value="30">30 minutos</option><option value="60">1 hora</option></select></label>
+<div><span>ÚLTIMO ACESSO</span><b id="controlLastLogin">—</b></div>
+</div>
+<div class="account-control-actions"><button class="ghost" id="controlRerunOnboarding">Refazer configuração inicial</button><button class="ghost" id="controlLock">Bloquear agora</button><button class="ghost danger-outline" id="controlLogout">Sair neste dispositivo</button></div>
+</div>
+</article>
+<article class="control-card"><div class="card-head"><h3>Seu jeito de usar o MyWay</h3><button class="ghost" id="openPersonalization34">Personalizar</button></div><p class="v34-help">Escolha até três prioridades, nome do painel, densidade e módulos. Você pode mudar isso depois.</p></article>
+<article class="control-card" id="planCard34"><div class="card-head"><div><p class="eyebrow">MEU PLANO</p><h3>Pró gratuito</h3></div><b>R$ 0 / mês</b></div><p class="v34-help">Todos os módulos desta versão estão disponíveis. Sem cartão ou cobrança automática.</p><button class="ghost" id="activateFree34">Ativar plano gratuito</button><span class="v34-help" id="planStatus34" role="status"></span><details><summary>Sobre futuras assinaturas</summary><p class="v34-help">Planos pagos ainda não estão disponíveis. Nenhuma mudança para um plano pago ocorre sem uma nova escolha sua.</p></details></article>
+<article class="control-card" id="mobileCard34"><div class="card-head"><h3>MyWay no celular</h3><button class="primary" id="installApp34" type="button">Como instalar</button></div><p class="v34-help" id="mobileHelp34">O .exe é para Windows. No Android, use o endereço da versão móvel no Chrome e escolha “Instalar aplicativo”.</p><p class="v34-help">Para trazer dados do Windows: exporte um backup em Dados, transfira o JSON para o celular e importe no app móvel.</p></article>
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">APARÊNCIA</p><h3>Interface.</h3></div><span class="index">01</span></div>
+<div class="appearance-config">
+<div class="theme-preset-grid compact" id="controlThemePresets"></div>
+<div class="appearance-fields">
+<label class="field"><span>Fonte</span><select id="controlFontPreset"></select></label>
+<label class="field"><span>Cor principal</span><input id="controlPrimaryColor" type="color"></label>
+<label class="field"><span>Destaque</span><input id="controlAccentColor" type="color"></label>
+<button class="ghost" id="controlResetAppearance">Restaurar preset</button>
+</div>
+</div>
+<div class="control-toggle-list">
+<div><div><b>Modo escuro</b><small>Alterna a paleta do aplicativo.</small></div><button class="toggle" id="controlDarkToggle"></button></div>
+<div><div><b>Frase do dia</b><small>Exibe a frase no canto superior direito.</small></div><button class="toggle" data-control-setting="dailyQuoteEnabled"></button></div>
+<div><div><b>Rotina no cabeçalho</b><small>Mostra horário e próximo compromisso no topo.</small></div><button class="toggle" data-control-setting="routineHeaderEnabled"></button></div>
+<div><div><b>Animações leves</b><small>Transições, hover e comemorações de 100%.</small></div><button class="toggle" data-control-setting="animationsEnabled"></button></div>
+<div><div><b>Menu lateral automático</b><small>Recolhe após navegar e abre ao passar o mouse.</small></div><button class="toggle" data-control-setting="sidebarAutoCollapse"></button></div>
+</div>
+</article>
+</div>
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">MÓDULOS</p><h3>Módulos no modo Essencial.</h3><p class="v34-help">No modo Completo, todas as áreas permanecem acessíveis.</p><p class="note">No Essencial, desativar esconde o módulo e seus atalhos; os dados continuam salvos.</p></div><span class="index">02</span></div>
+<div class="module-toggle-grid">
+<label><span>Academia</span><button class="toggle" data-feature-toggle="gym"></button></label><label><span>Jogos</span><button class="toggle" data-feature-toggle="games"></button></label>
+<label><span>Trabalho</span><button class="toggle" data-feature-toggle="work"></button></label>
+<label><span id="educationModuleControlLabel">Estudos</span><button class="toggle" data-feature-toggle="puc"></button></label>
+<label><span>Hábitos</span><button class="toggle" data-feature-toggle="habits"></button></label>
+<label><span>Metas</span><button class="toggle" data-feature-toggle="future"></button></label>
+<label><span>Finanças</span><button class="toggle" data-feature-toggle="finance"></button></label>
+<label><span>Relacionamentos</span><button class="toggle" data-feature-toggle="ana"></button></label>
+<label><span>Inglês</span><button class="toggle" data-feature-toggle="english"></button></label>
+<label><span>Meditação</span><button class="toggle" data-feature-toggle="meditation"></button></label>
+<label><span>Notas</span><button class="toggle" data-feature-toggle="notes"></button></label>
+<label><span>Diário</span><button class="toggle" data-feature-toggle="journal"></button></label>
+<label><span>Inspiração</span><button class="toggle" data-feature-toggle="inspiration"></button></label>
+<label><span id="channelModuleControlLabel">Canal / Creator Studio</span><button class="toggle" data-feature-toggle="novanilla"></button></label>
+<label><span>Relatórios</span><button class="toggle" data-feature-toggle="reports"></button></label>
+<label><span>Lembretes</span><button class="toggle" data-feature-toggle="reminders"></button></label>
+</div>
+</article>
+<div class="control-grid product-config-grid">
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">ESTUDOS</p><h3>Instituição e curso.</h3></div><span class="index">03</span></div>
+<div class="control-profile-fields">
+<label class="field"><span>Nome no menu</span><input id="controlEducationLabel" placeholder="Estudos"></label>
+<label class="field"><span>Instituição</span><input id="controlInstitutionName" placeholder="PUC, USP, Alura..."></label>
+<label class="field"><span>Curso / programa</span><input id="controlProgramName" placeholder="Seu curso"></label>
+<label class="field"><span>Estrutura</span><select id="controlStudyStructure"><option value="subjects">Matérias / disciplinas</option><option value="modules">Módulos</option><option value="courses">Cursos independentes</option><option value="custom">Personalizado</option></select></label>
+</div>
+<p class="note">A aba de estudos deixa de ser “PUC” e assume a identidade da instituição definida aqui.</p>
+</article>
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">CREATOR STUDIO</p><h3>Canal / projeto.</h3></div><span class="index">04</span></div>
+<div class="control-profile-fields">
+<label class="field"><span>Nome do módulo</span><input id="controlChannelLabel" placeholder="Canal"></label>
+<label class="field"><span>Nome do canal</span><input id="controlChannelName" placeholder="Meu Canal"></label>
+<label class="field"><span>Identificador</span><input id="controlChannelHandle" placeholder="@meucanal"></label>
+<label class="field"><span>Plataforma</span><select id="controlChannelPlatform"><option>YouTube</option><option>TikTok</option><option>Instagram</option><option>Twitch</option><option>Podcast</option><option>Outro</option></select></label>
+</div>
+<p class="note">Nome, identidade visual, pilares e links também podem ser alterados dentro do Creator Studio.</p>
+</article>
+</div>
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">INTERESSES &amp; INSPIRAÇÃO</p><h3>O que alimenta seu mural.</h3><p class="note">Use palavras simples. O MyWay combina esses interesses para montar buscas e referências.</p></div><span class="index">05</span></div>
+<div class="interest-control-row">
+<input id="controlInterests" placeholder="Design, cinema, tecnologia, viagens...">
+<button class="primary" id="controlInterestsSave">Salvar interesses</button>
+</div>
+<div class="interest-chip-grid compact" id="controlInterestChips"></div>
+<div class="taste-control-summary">
+<div><span>APRENDIZADO DO FEED</span><b id="controlTasteSignals">0 sinais</b><small id="controlTasteSummary">Ainda aprendendo seu estilo.</small></div>
+<button class="ghost" id="controlTasteReset">Resetar aprendizado</button>
+</div>
+</article>
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">INTEGRAÇÕES</p><h3>Contas externas.</h3><p class="note">Seu acesso ao MyWay é interno. O Pinterest pode ser conectado para importar referências.</p></div><span class="index">06</span></div>
+<div class="integration-grid">
+<div><span class="integration-logo pinterest">P</span><div><b>Pinterest</b><small>pins e boards orgânicos</small></div><button class="ghost" id="controlPinterestConnect">conectar</button></div>
+</div>
+<p class="integration-status" id="integrationStatus">Login interno ativo. Verificando a conexão com o Pinterest…</p>
+</article>
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">WINDOWS / SISTEMA</p><h3>Recursos nativos.</h3></div><span class="index">07</span></div>
+<div class="system-control-grid">
+<div><div><b>Iniciar com o Windows</b><small>MyWay fica disponível na bandeja.</small></div><button class="toggle" id="controlStartupToggle"></button></div>
+<div><div><b>Notificações do Windows</b><small>Alertas da rotina funcionam com a janela fechada.</small></div><button class="toggle" id="controlNotificationsToggle"></button></div>
+<div><div><b>Abrir Notes ao iniciar</b><small>Abre o widget de notas junto com o processo.</small></div><button class="toggle" id="controlNotesStartupToggle"></button></div>
+<div><div><b>Sincronização OneDrive</b><small>Mantém o estado compartilhado entre computadores.</small></div><button class="toggle" id="controlCloudToggle"></button></div>
+</div>
+<div class="control-system-foot"><span id="controlSystemStatus">verificando recursos nativos...</span><button class="ghost" id="controlTestNotification">Testar notificação</button><button class="ghost" data-view-target="data">Dados e backup</button></div>
+</article>
+</section>
+<!-- DADOS -->
+<section class="view" id="view-data">
+<header class="section-head reveal">
+<p class="eyebrow">DADOS</p>
+<h2>Dados e backup.</h2>
+<p>Seus registros são salvos neste computador. Exporte um backup para guardar uma cópia ou transferir seus dados para outro PC.</p>
+</header>
+<article class="system-card reveal">
+<div><p class="eyebrow">WINDOWS / SEGUNDO PLANO</p><h3>Executar com o computador.</h3><p class="note">O executável mantém um ícone na bandeja. Fechar o painel ou as notas fecha apenas a janela; o MyWay continua disponível em segundo plano.</p></div>
+<div class="system-actions"><button class="toggle wide-toggle" id="startupToggle"></button><span id="startupStatus">verificando...</span><button class="ghost" id="showNotesFromSystem">Abrir Notes</button><span class="native-health" id="nativeHealth">verificando recursos nativos...</span></div>
+</article>
+<article class="cloud-sync-card reveal" id="cloudSyncCard">
+<div class="cloud-sync-main">
+<div aria-hidden="true" class="cloud-icon">☁</div>
+<div>
+<p class="eyebrow">ONEDRIVE / CLOUD STORE</p>
+<h3>MyWay em qualquer computador.</h3>
+<p class="note">Estado, notas, metas, estudos, creator studio, imóveis e arquivos dos módulos usam a pasta sincronizada do OneDrive como fonte compartilhada.</p>
+</div>
+</div>
+<div class="cloud-sync-status">
+<span class="cloud-dot" id="cloudStateDot"></span>
+<div><small>STATUS</small><strong id="cloudStateLabel">verificando...</strong></div>
+<div><small>ÚLTIMA SINCRONIZAÇÃO</small><strong id="cloudLastSync">—</strong></div>
+<div><small>DISPOSITIVO</small><strong id="cloudDevice">—</strong></div>
+</div>
+<div class="cloud-path" id="cloudPath">procurando workspace do MyWay...</div>
+<div class="cloud-all-box">
+<div class="cloud-all-copy">
+<span>SINCRONIZAÇÃO COMPLETA</span>
+<b>Levar o MyWay para outro PC.</b>
+<small>Envia estado, notas, metas, estudos, creator studio, mídias dos módulos e uma cópia do executável para o OneDrive.</small>
+</div>
+<button class="primary cloud-all-button" id="cloudSyncAll">☁ Sincronizar tudo</button>
+</div>
+<div class="cloud-all-progress" hidden="" id="cloudAllProgress">
+<div data-cloud-step="state"><i></i><span>Dados do painel</span><b>aguardando</b></div>
+<div data-cloud-step="media"><i></i><span>Fotos e cofre</span><b>aguardando</b></div>
+
+<div data-cloud-step="app"><i></i><span>Aplicativo portátil</span><b>aguardando</b></div>
+</div>
+<div class="cloud-portable-path" id="cloudPortablePath">No outro PC, abra o workspace do OneDrive e execute <b>MyWay.exe</b>.</div>
+<div class="cloud-actions">
+<button class="ghost" id="cloudSyncNow">Sincronizar só os dados</button>
+<button class="ghost" id="cloudOpenFolder">Abrir pasta local</button>
+<button class="ghost" id="cloudOpenShare">Abrir no OneDrive ↗</button>
+</div>
+<p class="source-note" id="cloudSyncNote">Conflitos usam o registro com <b>updatedAt</b> mais recente. Configurações específicas do dispositivo não são copiadas para a nuvem.</p>
+</article>
+<div class="data-grid">
+<article class="paper-card reveal">
+<p class="eyebrow">BACKUP</p>
+<h3>Exportar tudo.</h3>
+<p class="note">Gera um arquivo JSON com configurações, histórico, matérias e lembretes.</p>
+<button class="primary" id="exportBackup">Baixar backup</button>
+</article>
+<article class="paper-card reveal">
+<p class="eyebrow">RESTAURAR</p>
+<h3>Importar backup.</h3>
+<p class="note">Substitui os dados atuais pelos dados do arquivo escolhido.</p>
+<label class="file-button">Escolher JSON<input accept="application/json" id="importBackup" type="file"></label>
+</article>
+<article class="paper-card reveal">
+<p class="eyebrow">ARMAZENAMENTO</p>
+<h3 id="storageCount">0 dias registrados.</h3>
+<p class="note" id="storageInfo">Dados salvos automaticamente.</p>
+<button class="danger-button" id="resetAll">Apagar todos os dados</button>
+</article>
+</div>
+</section>
+</main>
+</div>
+<section class="sticky-shell" hidden="" id="stickyShell">
+<header class="sticky-head" id="stickyDragHandle">
+<div><span>MYWAY NOTES</span><strong>Quadro rápido.</strong></div>
+<div class="sticky-head-actions"><button id="stickyAdd" title="Nova nota">+</button><button id="stickyMinimize" title="Minimizar">—</button><button id="stickyClose" title="Fechar">×</button></div>
+</header>
+<div class="sticky-legend"><span><i class="status-dot done"></i>Feito</span><span><i class="status-dot waiting"></i>Aguardando</span><span><i class="status-dot todo"></i>A Fazer</span><span><i class="status-dot cancelled"></i>Cancelado</span><span><i class="status-dot doing"></i>Fazendo</span><span><i class="status-dot attention"></i>Atenção</span><span><i class="status-dot later"></i>Sem Pressa</span><span><i class="status-dot tomorrow"></i>Amanhã</span></div>
+<div class="sticky-notes-list" id="stickyNotesList"></div>
+<footer><span>MyWay</span><small>salvamento automático · status e datas editáveis</small></footer>
+</section>
+<section class="tutorial-overlay" hidden="" id="firstRunTutorial">
+<div class="tutorial-card">
+<div class="tutorial-progress"><i id="tutorialProgress"></i></div>
+<button aria-label="Fechar tutorial" class="tutorial-close" id="tutorialClose">×</button>
+<span class="tutorial-kicker" id="tutorialKicker">COMECE AQUI</span>
+<h2 id="tutorialTitle">Seu MyWay em poucos passos.</h2>
+<p id="tutorialText">Você pode pular este tutorial e reabri-lo depois em Controle.</p>
+<div class="tutorial-visual" id="tutorialVisual"></div>
+<footer><button class="ghost" id="tutorialSkip">Pular tutorial</button><div><button class="ghost" id="tutorialBack">Voltar</button><button class="primary" id="tutorialNext">Próximo</button></div></footer>
+</div>
+</section>
+<div aria-hidden="true" class="celebration-layer" id="celebrationLayer"></div>
+<div aria-live="polite" class="toast-stack" id="toastStack"></div>
+<script>
+(function(){
+ 'use strict';
+ var local=location.protocol==='https:'&&location.hostname==='appassets.androidplatform.net';
+ if(local){
+  function call(action,data){var result=window.prompt('MYWAY41',JSON.stringify(Object.assign({action:action},data||{})));if(result==null||result==='denied')throw new Error('Recurso Android indisponível');return result;}
+  window.MyWayAndroid={persist:function(text){return call('persist',{text:text});},exportFile:function(name,text,type){return call('export',{name:name,text:text,type:type});},fullscreen:function(on){return call('fullscreen',{on:!!on});},ready:function(){return call('ready');}};
+ }
+ var firstError='';window.addEventListener('error',function(e){if(!window.MyWay41Ready)firstError=e.message||'Não foi possível carregar um arquivo do app.';});
+ function show(){if(window.MyWay41Ready||document.getElementById('bootFailure41'))return;var panel=document.createElement('section');panel.id='bootFailure41';panel.setAttribute('role','alert');panel.style.cssText='position:fixed;inset:0;z-index:2147483646;background:#10202a;color:#edf4f7;padding:32px 24px;display:flex;flex-direction:column;justify-content:center;gap:18px;font:16px/1.6 Arial;';var h=document.createElement('h2');h.textContent='Vamos tentar abrir novamente';var p=document.createElement('p');p.textContent='O aplicativo não terminou de carregar. Seus dados não serão apagados. No Android, confira se o Android System WebView e o Chrome estão atualizados.';panel.append(h,p);if(firstError){var detail=document.createElement('small');detail.textContent='Detalhe: '+firstError;panel.append(detail);}var b=document.createElement('button');b.textContent='Tentar novamente';b.style.cssText='padding:14px;border:0;border-radius:12px;background:#79c5c4;color:#10202a;font:700 16px Arial';b.onclick=function(){location.reload();};panel.append(b);document.body.append(panel);}
+ window.mywayShowBootFailure41=show;setTimeout(show,12000);
+})();
+
+</script>
+<script src="assets/mpegts.js"></script><script src="app.js"></script>
+<img id="meditationCorner36" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/7QBGUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAACocAm4AHjEwNjc5MTk5Nzk0NzIyMDIyODc0Mi9WZWN0ZWV6eRwCAAACAAT/4Q5UaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCc/Pgo8eDp4bXBtZXRhIHhtbG5zOng9J2Fkb2JlOm5zOm1ldGEvJyB4OnhtcHRrPSdJbWFnZTo6RXhpZlRvb2wgMTIuNTcnPgo8cmRmOlJERiB4bWxuczpyZGY9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMnPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6ZGM9J2h0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvJz4KICA8ZGM6Y3JlYXRvcj4KICAgPHJkZjpTZXE+CiAgICA8cmRmOmxpPjEwNjc5MTk5Nzk0NzIyMDIyODc0MjwvcmRmOmxpPgogICA8L3JkZjpTZXE+CiAgPC9kYzpjcmVhdG9yPgogIDxkYzpyaWdodHM+CiAgIDxyZGY6QWx0PgogICAgPHJkZjpsaSB4bWw6bGFuZz0neC1kZWZhdWx0Jz4xMDY3OTE5OTc5NDcyMjAyMjg3NDIvVmVjdGVlenk8L3JkZjpsaT4KICAgPC9yZGY6QWx0PgogIDwvZGM6cmlnaHRzPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpwbHVzPSdodHRwOi8vbnMudXNlcGx1cy5vcmcvbGRmL3htcC8xLjAvJz4KICA8cGx1czpMaWNlbnNvcj4KICAgPHJkZjpTZXE+CiAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9J1Jlc291cmNlJz4KICAgICA8cGx1czpMaWNlbnNvclVSTD5odHRwczovL3d3dy52ZWN0ZWV6eS5jb20vcGhvdG8vNzAxNjcwMjktc2lsaG91ZXR0ZS1vZi1wZXJzb24tbWVkaXRhdGluZy1pbi1zZXJlbmUtYmx1ZS1saWdodC1maW5kaW5nLWlubmVyLXBlYWNlLWFuZC1taW5kZnVsbmVzcz91dG1fc291cmNlPWlwdGMlMjZ1dG1fbWVkaXVtJTNEZ29vZ2xlaW1hZ2VzJTI2dXRtX2NhbXBhaWduJTNEaW1hZ2U8L3BsdXM6TGljZW5zb3JVUkw+CiAgICA8L3JkZjpsaT4KICAgPC9yZGY6U2VxPgogIDwvcGx1czpMaWNlbnNvcj4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6eG1wUmlnaHRzPSdodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyc+CiAgPHhtcFJpZ2h0czpXZWJTdGF0ZW1lbnQ+aHR0cHM6Ly93d3cudmVjdGVlenkuY29tL2xpY2Vuc2luZzwveG1wUmlnaHRzOldlYlN0YXRlbWVudD4KIDwvcmRmOkRlc2NyaXB0aW9uPgo8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg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" alt="" aria-hidden="true">
+
+</body></html>

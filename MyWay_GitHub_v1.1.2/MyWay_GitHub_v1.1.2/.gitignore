@@ -1,0 +1,32 @@
+# Secrets / signing
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+.env
+.env.*
+!*.example
+local.properties
+
+# Build outputs
+**/build/
+**/.gradle/
+.gradle/
+node_modules/
+*.apk
+*.aab
+*.exe
+*.msi
+*.dmg
+*.zip
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local commercial settings
+commercial-config62.json
+admob.local.properties

@@ -1,0 +1,21 @@
+name: quality
+on:
+  push:
+  pull_request:
+
+jobs:
+  web-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript syntax
+        run: node --check web/app.js
+      - name: Guard private signing files
+        run: |
+          test -z "$(find . -type f \( -name '*.keystore' -o -name '*.jks' -o -name '*.p12' \) -print -quit)"
+      - name: Guard font binaries
+        run: |
+          test -z "$(find . -type f \( -name '*.ttf' -o -name '*.otf' -o -name '*.woff' -o -name '*.woff2' \) -print -quit)"
