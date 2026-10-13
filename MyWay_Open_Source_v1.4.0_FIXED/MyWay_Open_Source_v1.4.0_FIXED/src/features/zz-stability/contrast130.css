@@ -1,0 +1,152 @@
+/* v1.3.0 · camada final de estabilidade visual. Deve ser carregada por último. */
+:root {
+  --mw130-bg: #eef1f3;
+  --mw130-surface: #f8fafb;
+  --mw130-surface-2: #e8edf0;
+  --mw130-text: #172630;
+  --mw130-muted: #5d6972;
+  --mw130-border: rgba(23,38,48,.16);
+  --mw130-button: #e6ecef;
+  --mw130-button-text: #172630;
+  --mw130-sidebar: #112333;
+  --mw130-sidebar-text: #f4f8fb;
+}
+body[data-panel-tone-r2="dark"], html[data-theme="dark"] body {
+  --mw130-bg: #0b1721;
+  --mw130-surface: #112330;
+  --mw130-surface-2: #183142;
+  --mw130-text: #f1f6f9;
+  --mw130-muted: #afbec8;
+  --mw130-border: rgba(235,244,249,.15);
+  --mw130-button: #17374d;
+  --mw130-button-text: #f4f8fb;
+  --mw130-sidebar: #07131d;
+  --mw130-sidebar-text: #f4f8fb;
+}
+body[data-panel-custom-r2="true"] {
+  --mw130-bg: var(--panel-r2);
+  --mw130-surface: var(--panel-surface-r2);
+  --mw130-surface-2: var(--panel-surface2-r2);
+  --mw130-text: var(--panel-text-r2);
+  --mw130-muted: var(--panel-muted-r2);
+  --mw130-border: var(--panel-line-r2);
+  --mw130-button: var(--panel-control-r3);
+  --mw130-button-text: var(--panel-control-text-r3);
+  --mw130-sidebar: var(--panel-sidebar-r2);
+  --mw130-sidebar-text: var(--panel-sidebar-text-r2);
+}
+
+/* O fundo e o texto sempre nascem do mesmo contrato de contraste. */
+body {
+  background-color: var(--mw130-bg) !important;
+  color: var(--mw130-text) !important;
+}
+.main,.view { color: var(--mw130-text); }
+:is(
+  .paper-card,.control-card,.widget-card58,.timeline-card,.chart-card,.report-summary,
+  .week-card,.habit-card,.housing-card,.property-card,.puc-course-card,.puc-module,
+  .english-dashboard,.english-exercise-card,.system-card,.profile-control-card,.cloud-sync-card,
+  .favorite-tool-r2,.workspace-cards38>article,.notes-board,.note-card,.sticky-note,
+  .kanban-column35,.nv-card,.nv-channel-snapshot,.practice-card57,.exercise-row58,.video-card40,
+  .psycho-card67,.psycho-history67,.inspiration-pin,.myway-dialog,.mobile-sheet43,
+  .toolbar-more-panel44,.profile-assist49,.node-palette61,.map-toolbar129,.map-help129
+) {
+  background-color: var(--mw130-surface) !important;
+  color: var(--mw130-text) !important;
+  border-color: var(--mw130-border) !important;
+}
+:is(
+  .paper-card,.control-card,.widget-card58,.timeline-card,.chart-card,.report-summary,
+  .week-card,.habit-card,.housing-card,.property-card,.puc-course-card,.puc-module,
+  .english-dashboard,.english-exercise-card,.system-card,.profile-control-card,.cloud-sync-card,
+  .favorite-tool-r2,.workspace-cards38>article,.notes-board,.note-card,.sticky-note,
+  .kanban-column35,.nv-card,.practice-card57,.exercise-row58,.video-card40,
+  .psycho-card67,.psycho-history67,.inspiration-pin,.myway-dialog
+) :is(h1,h2,h3,h4,h5,h6,b,strong,label) { color: inherit; }
+:is(.note,.mini-label,.eyebrow,small,.source-note,.v34-help,.field>span) { color: var(--mw130-muted) !important; }
+
+/* Inputs nunca usam o foreground do tema como background. */
+body :is(input,select,textarea,[contenteditable="true"]) {
+  background-color: var(--mw130-surface-2) !important;
+  color: var(--mw130-text) !important;
+  border-color: var(--mw130-border) !important;
+  caret-color: var(--mw130-text) !important;
+}
+body :is(input,textarea)::placeholder { color: var(--mw130-muted) !important; opacity:.78 !important; }
+
+/* Contrato único de botões: secundário, primário e destrutivo. */
+body :is(.ghost,.utility-button,.text-button,.icon-button,.light-button,.node-more124,.map-add124,.map-organize124,
+  .tree-zoom65 button,.palette-toggle61,.palette-close61,.dialog-page-actions68 button:not(.primary),
+  .tool-search-results127 footer button,.wallpaper-option127,.wallpaper-upload127) {
+  background: var(--mw130-button) !important;
+  color: var(--mw130-button-text) !important;
+  border-color: var(--mw130-border) !important;
+}
+body :is(.primary,.auth-primary,.nv-primary,[data-primary-action="true"]) {
+  background: var(--accent) !important;
+  color: var(--mw-accent-fg130,#fff) !important;
+  border-color: color-mix(in srgb,var(--accent) 70%,var(--mw130-border)) !important;
+}
+body :is(button,a,[role="button"]).mw-force-dark130 { color:#13212a !important; }
+body :is(button,a,[role="button"]).mw-force-light130 { color:#fff !important; }
+
+/* Sidebar: ícone e rótulo são elementos separados. O grip do drag não pode quebrar o modo recolhido. */
+.sidebar {
+  background: var(--mw130-sidebar) !important;
+  color: var(--mw130-sidebar-text) !important;
+}
+.sidebar .nav-item {
+  box-sizing:border-box !important;
+  min-width:0 !important;
+  color: color-mix(in srgb,var(--mw130-sidebar-text) 80%,transparent) !important;
+}
+.sidebar .nav-item .nav-icon {
+  width:30px !important;
+  min-width:30px !important;
+  height:30px !important;
+  display:grid !important;
+  place-items:center !important;
+  overflow:visible !important;
+  color: color-mix(in srgb,var(--accent) 82%,var(--mw130-sidebar-text)) !important;
+}
+.sidebar .nav-item .nav-icon svg { width:21px !important; height:21px !important; overflow:visible !important; }
+.sidebar .nav-item .nav-icon svg * { stroke:currentColor; fill:none; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; }
+.sidebar .nav-item.active { color:var(--mw130-sidebar-text)!important; background:color-mix(in srgb,var(--mw130-sidebar-text) 12%,transparent)!important; }
+.sidebar .nav-item > span:not(.nav-icon):not(.menu-grip126) {
+  min-width:0 !important;
+  overflow:hidden !important;
+  white-space:nowrap !important;
+  text-overflow:ellipsis !important;
+}
+@media (min-width:901px) {
+  body.sidebar-collapsed { --sidebar-w:72px !important; }
+  body.sidebar-collapsed .sidebar { padding-inline:8px !important; }
+  body.sidebar-collapsed .nav-item { width:48px !important; min-width:48px !important; height:44px !important; min-height:44px !important; overflow:visible !important; }
+  body.sidebar-collapsed .nav-item > span:not(.nav-icon):not(.menu-grip126) { display:none !important; }
+  body.sidebar-collapsed .nav-item .nav-icon { width:28px!important; min-width:28px!important; height:28px!important; margin:0!important; }
+  body.sidebar-collapsed .nav-item .nav-icon svg { width:22px!important; height:22px!important; }
+  body.sidebar-collapsed .menu-grip126 { display:none !important; }
+}
+
+/* Busca lateral também respeita sidebar clara/escura personalizada. */
+.tool-search127>label,.tool-search-results127 {
+  background: color-mix(in srgb,var(--mw130-sidebar) 92%,transparent) !important;
+  color: var(--mw130-sidebar-text) !important;
+  border-color: color-mix(in srgb,var(--mw130-sidebar-text) 16%,transparent) !important;
+}
+.tool-search127 input,.tool-search-list127>button,.tool-search-results127 footer button { color:var(--mw130-sidebar-text)!important; }
+.tool-search127 input::placeholder,.tool-search-list127 p,.tool-search-results127 output { color:color-mix(in srgb,var(--mw130-sidebar-text) 58%,transparent)!important; }
+
+/* Wallpaper agora é controlado por mvc/styles/control/appearance.css. */
+/* Marca do app permanece visível mesmo sem foto de perfil. */
+.myway-mark130 { display:flex; align-items:center; justify-content:center; width:38px; height:38px; margin:2px auto 8px; border-radius:12px; overflow:hidden; flex:0 0 auto; }
+.myway-mark130 img { width:100%; height:100%; object-fit:cover; display:block; }
+body:not(.sidebar-collapsed) .myway-mark130 { margin-left:2px; }
+
+/* Segurança contra cards colados. */
+.view > * + * { scroll-margin-top:18px; }
+:is(.dashboard-grid,.dashboard-widgets58,.control-grid,.widget-grid58,.feature-gridR1,.workspace-cards38) { gap:14px !important; }
+
+@media(max-width:760px){
+  .sidebar .nav-item .nav-icon { width:28px!important; min-width:28px!important; }
+}

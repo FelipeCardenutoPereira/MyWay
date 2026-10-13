@@ -1,0 +1,12 @@
+/* v1.4.0 · conclusão e level-up. */
+.mw-celebration140{position:fixed;inset:0;z-index:2147482500;display:grid;place-items:center;pointer-events:none;overflow:hidden}
+.mw-celebration-card140{position:relative;z-index:2;display:flex;align-items:center;gap:14px;min-width:min(360px,calc(100vw - 32px));max-width:min(520px,calc(100vw - 32px));padding:18px 22px;border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:20px;background:color-mix(in srgb,var(--surface,#17232d) 92%,transparent);box-shadow:0 18px 55px rgba(0,0,0,.24);backdrop-filter:blur(16px);animation:mwCelebrationPop140 .42s cubic-bezier(.2,.9,.25,1.2) both}
+.mw-celebration-card140 strong,.mw-celebration-card140 small{display:block}.mw-celebration-card140 strong{font-size:1.05rem}.mw-celebration-card140 small{margin-top:3px;opacity:.78}
+.mw-celebration-symbol140{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:50%;background:var(--accent);color:var(--mw-accent-fg130,#fff);font-size:1.35rem;font-weight:800;animation:mwCelebrationSymbol140 .55s .08s cubic-bezier(.2,.9,.25,1.3) both}
+.mw-celebration-particles140{position:absolute;inset:50% auto auto 50%;width:1px;height:1px}.mw-celebration-particles140 i{--a:calc(var(--i)*20deg);position:absolute;width:8px;height:8px;border-radius:2px;background:var(--accent);animation:mwCelebrationParticle140 1.05s ease-out both;transform:rotate(var(--a)) translateY(-22px);animation-delay:calc(var(--i)*8ms)}.mw-celebration-particles140 i:nth-child(3n){background:var(--primary)}.mw-celebration-particles140 i:nth-child(3n+1){border-radius:50%}
+.mw-celebration-level .mw-celebration-card140{animation-name:mwLevelPop140}.mw-celebration-level .mw-celebration-symbol140{font-size:1.2rem}
+.mw-celebration140.reduced .mw-celebration-card140,.mw-celebration140.reduced .mw-celebration-symbol140{animation:none}
+@keyframes mwCelebrationPop140{0%{opacity:0;transform:translateY(16px) scale(.88)}70%{opacity:1;transform:translateY(-2px) scale(1.025)}100%{opacity:1;transform:none}}
+@keyframes mwLevelPop140{0%{opacity:0;transform:scale(.72)}65%{opacity:1;transform:scale(1.05)}100%{opacity:1;transform:scale(1)}}
+@keyframes mwCelebrationSymbol140{0%{transform:scale(.2) rotate(-18deg)}100%{transform:none}}
+@keyframes mwCelebrationParticle140{0%{opacity:1;transform:rotate(var(--a)) translateY(-18px) scale(.8)}100%{opacity:0;transform:rotate(var(--a)) translateY(-145px) scale(.15)}}

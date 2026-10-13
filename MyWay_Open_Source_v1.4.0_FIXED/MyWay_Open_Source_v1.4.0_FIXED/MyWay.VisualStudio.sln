@@ -1,0 +1,85 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{66A26720-8FB5-11D2-AA7E-00C04F688DDE}") = "01 - Shell e Build", "01 - Shell e Build", "{A6A8A07D-03B9-43AD-95B1-090AE1A875E1}"
+	ProjectSection(SolutionItems) = preProject
+		src\index.shell.html = src\index.shell.html
+		tools\build-ui.mjs = tools\build-ui.mjs
+		tools\dev-server.mjs = tools\dev-server.mjs
+		package.json = package.json
+		docs\GUIA-VISUAL-STUDIO-MVC.md = docs\GUIA-VISUAL-STUDIO-MVC.md
+	EndProjectSection
+EndProject
+Project("{66A26720-8FB5-11D2-AA7E-00C04F688DDE}") = "02 - Views por Aba", "02 - Views por Aba", "{744C762F-5979-4832-9A0B-65F3D5548429}"
+	ProjectSection(SolutionItems) = preProject
+		src\mvc\views\tabs\relationships.html = src\mvc\views\tabs\relationships.html
+		src\mvc\views\tabs\control.html = src\mvc\views\tabs\control.html
+		src\mvc\views\tabs\culture.html = src\mvc\views\tabs\culture.html
+		src\mvc\views\tabs\data.html = src\mvc\views\tabs\data.html
+		src\mvc\views\tabs\english.html = src\mvc\views\tabs\english.html
+		src\mvc\views\tabs\finance.html = src\mvc\views\tabs\finance.html
+		src\mvc\views\tabs\future.html = src\mvc\views\tabs\future.html
+		src\mvc\views\tabs\games.html = src\mvc\views\tabs\games.html
+		src\mvc\views\tabs\gym.html = src\mvc\views\tabs\gym.html
+		src\mvc\views\tabs\habits.html = src\mvc\views\tabs\habits.html
+		src\mvc\views\tabs\inspiration.html = src\mvc\views\tabs\inspiration.html
+		src\mvc\views\tabs\journal.html = src\mvc\views\tabs\journal.html
+		src\mvc\views\tabs\meditation.html = src\mvc\views\tabs\meditation.html
+		src\mvc\views\tabs\notes.html = src\mvc\views\tabs\notes.html
+		src\mvc\views\tabs\channel.html = src\mvc\views\tabs\channel.html
+		src\mvc\views\tabs\psychoanalysis.html = src\mvc\views\tabs\psychoanalysis.html
+		src\mvc\views\tabs\puc.html = src\mvc\views\tabs\puc.html
+		src\mvc\views\tabs\reminders.html = src\mvc\views\tabs\reminders.html
+		src\mvc\views\tabs\reports.html = src\mvc\views\tabs\reports.html
+		src\mvc\views\tabs\resilience.html = src\mvc\views\tabs\resilience.html
+		src\mvc\views\tabs\rewards.html = src\mvc\views\tabs\rewards.html
+		src\mvc\views\tabs\today.html = src\mvc\views\tabs\today.html
+		src\mvc\views\tabs\work.html = src\mvc\views\tabs\work.html
+	EndProjectSection
+EndProject
+Project("{66A26720-8FB5-11D2-AA7E-00C04F688DDE}") = "03 - Controllers", "03 - Controllers", "{E6ABF13A-1B7C-45F5-B886-C2399C8E860B}"
+	ProjectSection(SolutionItems) = preProject
+		src\mvc\controllers\00-registry.js = src\mvc\controllers\00-registry.js
+		src\mvc\controllers\control\appearance.controller.js = src\mvc\controllers\control\appearance.controller.js
+		src\mvc\controllers\tabs\relationships.controller.js = src\mvc\controllers\tabs\relationships.controller.js
+		src\mvc\controllers\tabs\control.controller.js = src\mvc\controllers\tabs\control.controller.js
+		src\mvc\controllers\tabs\culture.controller.js = src\mvc\controllers\tabs\culture.controller.js
+		src\mvc\controllers\tabs\data.controller.js = src\mvc\controllers\tabs\data.controller.js
+		src\mvc\controllers\tabs\english.controller.js = src\mvc\controllers\tabs\english.controller.js
+		src\mvc\controllers\tabs\finance.controller.js = src\mvc\controllers\tabs\finance.controller.js
+		src\mvc\controllers\tabs\future.controller.js = src\mvc\controllers\tabs\future.controller.js
+		src\mvc\controllers\tabs\games.controller.js = src\mvc\controllers\tabs\games.controller.js
+		src\mvc\controllers\tabs\gym.controller.js = src\mvc\controllers\tabs\gym.controller.js
+		src\mvc\controllers\tabs\habits.controller.js = src\mvc\controllers\tabs\habits.controller.js
+		src\mvc\controllers\tabs\inspiration.controller.js = src\mvc\controllers\tabs\inspiration.controller.js
+		src\mvc\controllers\tabs\journal.controller.js = src\mvc\controllers\tabs\journal.controller.js
+		src\mvc\controllers\tabs\meditation.controller.js = src\mvc\controllers\tabs\meditation.controller.js
+		src\mvc\controllers\tabs\notes.controller.js = src\mvc\controllers\tabs\notes.controller.js
+		src\mvc\controllers\tabs\channel.controller.js = src\mvc\controllers\tabs\channel.controller.js
+		src\mvc\controllers\tabs\psychoanalysis.controller.js = src\mvc\controllers\tabs\psychoanalysis.controller.js
+		src\mvc\controllers\tabs\puc.controller.js = src\mvc\controllers\tabs\puc.controller.js
+		src\mvc\controllers\tabs\reminders.controller.js = src\mvc\controllers\tabs\reminders.controller.js
+		src\mvc\controllers\tabs\reports.controller.js = src\mvc\controllers\tabs\reports.controller.js
+		src\mvc\controllers\tabs\resilience.controller.js = src\mvc\controllers\tabs\resilience.controller.js
+		src\mvc\controllers\tabs\rewards.controller.js = src\mvc\controllers\tabs\rewards.controller.js
+		src\mvc\controllers\tabs\today.controller.js = src\mvc\controllers\tabs\today.controller.js
+		src\mvc\controllers\tabs\work.controller.js = src\mvc\controllers\tabs\work.controller.js
+	EndProjectSection
+EndProject
+Project("{66A26720-8FB5-11D2-AA7E-00C04F688DDE}") = "04 - Models e Styles", "04 - Models e Styles", "{AB9D19CB-54F5-487A-A1D0-394EFB62EA9A}"
+	ProjectSection(SolutionItems) = preProject
+		src\mvc\models\appearance.model.js = src\mvc\models\appearance.model.js
+		src\mvc\styles\control\appearance.css = src\mvc\styles\control\appearance.css
+		src\mvc\README.md = src\mvc\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+import { readFile, stat, readdir } from 'node:fs/promises';
+import { spawnSync } from 'node:child_process';
+let b=spawnSync(process.execPath,['tools/build-ui.mjs'],{stdio:'inherit'});if(b.status)process.exit(b.status||1);
+for(const f of ['src/index.html','src/styles/app.css','src/js/app.js'])await stat(f);
+const html=await readFile('src/index.html','utf8');
+for(const required of ['styles/app.css','js/app.js','id="authGate"','id="appPreloader"'])if(!html.includes(required))throw new Error(`index.html sem ${required}`);
+const js=spawnSync(process.execPath,['--check','src/js/app.js'],{stdio:'inherit'});if(js.status)process.exit(js.status);
+const modules=(await readdir('src/js/modules')).filter(x=>x.endsWith('.js')).sort();
+const styles=(await readdir('src/styles/modules')).filter(x=>x.endsWith('.css')).sort();
+const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]),dup=ids.filter((x,i)=>ids.indexOf(x)!==i);
+if(dup.length)console.warn('IDs duplicados herdados:',[...new Set(dup)].slice(0,20).join(', '));
+console.log(`OK · ${modules.length} módulos JS · ${styles.length} módulos CSS · ${ids.length} IDs · bundle válido`);

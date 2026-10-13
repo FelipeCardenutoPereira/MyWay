@@ -1,0 +1,52 @@
+<section class="view inspiration-view" id="view-inspiration">
+<header class="section-head inspiration-head reveal">
+<div><p class="eyebrow">INSPIRAÇÃO / PARA VOCÊ</p><h2>Referências.</h2><p>Descubra, salve e organize ideias a partir dos seus interesses.</p></div>
+<div class="inspiration-head-actions"><button class="ghost" id="inspirationShuffle">Surpreender</button><button class="ghost" id="inspirationDashboard34">Enviar ao dashboard</button>
+<button class="primary" id="inspirationAddPin">+ adicionar pin</button></div>
+</header>
+<div class="inspiration-interest-strip reveal" id="inspirationInterestStrip"></div>
+<div class="inspiration-search reveal">
+<div class="inspiration-search-box"><span>⌕</span><input id="inspirationSearchInput" placeholder="Pesquisar referências, estética, ideias, lugares..."/><button class="primary" id="inspirationSearchBtn">Explorar</button></div>
+<div class="inspiration-search-meta"><span id="inspirationSearchStatus">Escolha um interesse ou faça uma busca.</span><button class="text-button" type="button" id="inspirationRestorePins137" hidden>recuperar pins locais</button></div>
+</div>
+<div class="inspiration-add-panel reveal" hidden="" id="inspirationAddPanel">
+<div class="card-head"><div><p class="eyebrow">NOVO PIN</p><h3>Guardar uma referência.</h3></div><button class="text-button" id="inspirationAddClose">fechar</button></div>
+<div class="inspiration-add-grid">
+<label class="field"><span>Título</span><input id="inspirationPinTitle" placeholder="Ex.: Sala com madeira escura"/></label>
+<label class="field"><span>Link da referência</span><input id="inspirationPinSource" placeholder="https://..."/></label>
+<label class="field"><span>URL da imagem</span><input id="inspirationPinImage" placeholder="https://...jpg"/></label>
+<label class="field"><span>Quadro</span><select id="inspirationPinBoard"></select></label>
+<label class="field full"><span>Nota</span><input id="inspirationPinNote" placeholder="O que você quer lembrar desta referência?"/></label>
+<label class="inspiration-upload full"><span>ou arraste / escolha uma imagem do computador</span><input accept="image/*" id="inspirationPinFile" type="file"/></label>
+</div>
+<button class="primary" id="inspirationPinSave">Salvar pin</button>
+</div>
+<div class="inspiration-shell reveal">
+<aside class="inspiration-sidebar">
+<button class="active" data-inspiration-filter="discover"><span>✦</span>Para você</button>
+<button data-inspiration-filter="saved"><span>♥</span>Salvos <b id="inspirationSavedCount">0</b></button>
+<div class="inspiration-side-label">QUADROS</div>
+<div class="inspiration-board-list" id="inspirationBoards"></div>
+<button class="inspiration-new-board" id="inspirationNewBoard">+ novo quadro</button>
+<div class="inspiration-side-label">INTERESSES</div>
+<button class="inspiration-edit-interests" id="inspirationEditInterests">editar interesses</button>
+<div class="inspiration-taste-card">
+<div><span>SEU ESTILO</span><b id="inspirationTasteSignals">0 sinais</b></div>
+<div class="inspiration-taste-chips" id="inspirationTasteChips"></div>
+<small id="inspirationTasteHint">Salve, abra ou marque “mais assim” para o feed aprender.</small>
+<button id="inspirationTasteReset">resetar aprendizado</button>
+</div>
+<div class="pinterest-connect-card">
+<span>PINTEREST</span><b id="pinterestConnectStatus">não conectado</b>
+<button class="ghost" id="pinterestConnect">Conectar Pinterest</button>
+<button class="text-button" hidden="" id="pinterestImport">importar meus pins</button>
+<small>Importa pins/quadros via API oficial, sem usar o feed com anúncios.</small>
+</div>
+</aside>
+<main class="inspiration-main">
+<div class="inspiration-main-head"><div><span id="inspirationViewKicker">PARA VOCÊ</span><h3 id="inspirationViewTitle">Ideias para explorar.</h3><p id="inspirationLearningSummary">O feed começa pelos seus interesses e vai se ajustando conforme você usa.</p></div><small id="inspirationResultCount">0 itens</small></div>
+<div class="inspiration-masonry" id="inspirationMasonry"></div>
+<div class="inspiration-empty" hidden="" id="inspirationEmpty"><b>Seu mural ainda está vazio.</b><span>Escolha um interesse, pesquise uma referência ou salve seu primeiro pin.</span></div>
+</main>
+</div>
+</section>

@@ -1,0 +1,12 @@
+import { spawnSync } from 'node:child_process';
+import { mkdir, copyFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+const root=process.cwd();
+let r=spawnSync(process.execPath,['tools/sync.mjs'],{stdio:'inherit'});if(r.status)process.exit(r.status||1);
+await mkdir(resolve(root,'releases'),{recursive:true});
+const env={...process.env,GOOS:'windows',GOARCH:'amd64',CGO_ENABLED:'0'};
+r=spawnSync('go',['build','-trimpath','-ldflags=-s -w -H=windowsgui','-o',resolve(root,'releases/MyWay_Open_v1.4.0.exe'),'.'],{cwd:resolve(root,'desktop'),env,stdio:'inherit'});
+if(r.error){console.error('Go não encontrado. Instale Go 1.23+ e repita npm run build:windows');process.exit(1)}if(r.status)process.exit(r.status);
+await mkdir(resolve(root,'installer/payload'),{recursive:true});await copyFile(resolve(root,'releases/MyWay_Open_v1.4.0.exe'),resolve(root,'installer/payload/MyWay.exe'));
+r=spawnSync('go',['build','-trimpath','-ldflags=-s -w -H=windowsgui','-o',resolve(root,'releases/MyWay_Open_Setup_v1.4.0.exe'),'.'],{cwd:resolve(root,'installer'),env,stdio:'inherit'});if(r.status)process.exit(r.status||1);
+console.log('Windows pronto em releases/.');

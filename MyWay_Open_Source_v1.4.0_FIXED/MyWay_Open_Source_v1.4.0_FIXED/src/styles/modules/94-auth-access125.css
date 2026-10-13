@@ -1,0 +1,8 @@
+/* MyWay 1.2.5 — acesso à conta */
+.auth-account-hint125{margin:.2rem 0 .75rem;padding:.65rem .8rem;border:1px solid var(--line,rgba(127,127,127,.22));border-radius:12px;background:color-mix(in srgb,var(--panel,Canvas) 92%,var(--accent,#4d7cff) 8%);}
+.auth-email-login125{font-weight:700;}
+.auth-email-code125{display:grid;gap:.8rem;}
+.auth-email-code125 label{display:grid;gap:.4rem;}
+.auth-email-code125 input{width:100%;}
+#cloudEmailStatus125{min-height:1.3em;margin:0;}
+@media(max-width:620px){.auth-email-code125,.cloud-actions53{gap:.65rem}.auth-email-login125{width:100%;}}

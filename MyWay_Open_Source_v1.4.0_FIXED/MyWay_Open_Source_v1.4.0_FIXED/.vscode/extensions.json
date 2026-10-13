@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "ritwickdey.liveserver",
+    "dbaeumer.vscode-eslint",
+    "formulahendry.code-runner",
+    "ms-vscode.powershell",
+    "golang.go"
+  ]
+}

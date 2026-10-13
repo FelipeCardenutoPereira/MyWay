@@ -1,0 +1,17 @@
+{
+  "name": "myway-open",
+  "version": "1.4.0",
+  "private": false,
+  "description": "MyWay em HTML, CSS e JavaScript com projetos Windows e Android.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node tools/dev-server.mjs",
+    "sync": "node tools/sync.mjs",
+    "check": "node tools/check.mjs",
+    "build:windows": "node tools/build-windows.mjs",
+    "build:android": "node tools/build-android.mjs",
+    "prepare": "npm run sync && npm run check",
+    "build:ui": "node tools/build-ui.mjs",
+    "build:android:clean": "node tools/build-android-clean.mjs"
+  }
+}

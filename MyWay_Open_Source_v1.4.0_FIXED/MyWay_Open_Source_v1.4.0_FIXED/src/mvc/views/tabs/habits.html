@@ -1,0 +1,90 @@
+<section class="view" id="view-habits">
+<header class="section-head reveal">
+<p class="eyebrow">HÁBITOS</p>
+<h2>Rotina.</h2>
+<p>Registros rápidos do dia e totais da semana. Metas podem ser alteradas.</p>
+</header>
+<section class="habit-summary reveal">
+<div><span>ÁGUA / SEMANA</span><strong id="habitWeekWater">0</strong><small>copos</small></div>
+<div><span>CAMINHADA / SEMANA</span><strong id="habitWeekWalk">0</strong><small>minutos</small></div>
+<div><span>LEITURA / SEMANA</span><strong id="habitWeekPages">0</strong><small>páginas</small></div>
+<div><span>MEDITAÇÃO / SEMANA</span><strong id="habitWeekMeditation">0</strong><small>dias</small></div>
+</section>
+<div class="habit-grid">
+<article class="habit-card reveal">
+<span class="habit-icon">◌</span><p>ÁGUA</p><strong id="habitWaterValue">0</strong><small>copos hoje</small>
+<div class="habit-stepper"><button data-delta="-1" data-habit-step="waterCups">−</button><button data-delta="1" data-habit-step="waterCups">+</button></div>
+<label class="field compact-field"><span>Meta diária</span><input data-setting="waterGoalCups" min="0" type="number"/></label>
+</article>
+<article class="habit-card reveal">
+<span class="habit-icon">↗</span><p>CAMINHADA</p><strong id="habitWalkValue">0</strong><small>minutos hoje</small>
+<div class="habit-inline-entry"><input id="walkMinutesInput" min="0" placeholder="min" step="5" type="number"/><button class="primary" id="addWalkMinutes">registrar</button></div>
+<label class="field compact-field"><span>Meta diária</span><input data-setting="walkGoalMinutes" min="0" type="number"/></label>
+</article>
+<article class="habit-card reveal">
+<span class="habit-icon">○</span><p>ALIMENTAÇÃO PROTEICA <button aria-label="Por que incluir alimentos com proteína?" class="habit-why49" id="proteinWhy49" title="Por que fazer isso?" type="button">?</button></p><strong id="habitProtein49">0</strong><small>refeições com proteína hoje</small><small hidden="" id="proteinLegacy49"></small>
+<div class="habit-stepper"><button data-delta="-1" data-habit-step="proteinMeals49">−</button><button data-delta="1" data-habit-step="proteinMeals49">+</button></div>
+<label class="field compact-field"><span>Meta pessoal</span><input data-setting="proteinGoal49" min="0" type="number"/></label>
+</article>
+<article class="habit-card reveal">
+<span class="habit-icon">◎</span><p>MEDITAÇÃO</p><strong id="habitMeditatedValue">não</strong><small>registro de hoje</small>
+<button class="ghost habit-toggle" id="toggleMeditated">marcar como feita</button>
+<button class="text-button" data-view-target="meditation">abrir desafio</button>
+</article>
+</div>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">LEITURA</p><h3>Registrar páginas.</h3></div></div>
+<label class="field"><span>Livro</span><select id="habitBookSelect"></select></label>
+<div class="two-inputs">
+<label class="field"><span>Páginas lidas hoje</span><input id="pagesReadInput" min="0" placeholder="0" type="number"/></label>
+<label class="field"><span>Total de páginas do livro</span><input id="bookTotalPagesInput" min="1" placeholder="ex.: 320" type="number"/></label>
+</div>
+<button class="primary" id="registerReading">Registrar leitura</button>
+<div class="reading-feedback" id="readingFeedback">Selecione um livro para ver o progresso.</div>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">PONTO</p><h3>4 registros.</h3></div></div>
+<div class="punch-grid">
+<label class="field"><span>Entrada</span><input data-day="punchIn" type="time"/></label>
+<label class="field"><span>Almoço</span><input data-day="lunchOut" type="time"/></label>
+<label class="field"><span>Retorno almoço</span><input data-day="lunchIn" type="time"/></label>
+<label class="field"><span>Saída</span><input data-day="punchOut" type="time"/></label>
+</div>
+<div class="punch-summary" id="punchSummary">Registre os quatro horários.</div>
+</article>
+</div>
+<article class="paper-card routine-builder reveal">
+<div class="card-head">
+<div><p class="eyebrow">ROTINA / WINDOWS</p><h3>Horários e alertas.</h3></div>
+<span class="routine-live-clock" id="routineLiveClock">--:--:--</span>
+</div>
+<p class="note">Os itens criados aqui entram nos lembretes do MyWay. No Windows, o processo em segundo plano compara os horários com o relógio do sistema mesmo quando o painel está fechado.</p>
+<div class="routine-form">
+<label class="field"><span>Atividade</span><input id="routineTitle" placeholder="Ex.: Bater o ponto e ir embora"/></label>
+<label class="field"><span>Horário</span><input id="routineTime" type="time"/></label>
+<label class="field"><span>Início</span><input id="routineStartDate" type="date"/></label>
+<label class="field"><span>Fim</span><input id="routineEndDate" type="date"/></label>
+<label class="field"><span>Tipo</span><select id="routineType"><option value="work">Trabalho</option><option value="exercise">Exercício</option><option value="study">Estudo</option><option value="health">Saúde</option><option value="personal">Pessoal</option></select></label>
+<label class="field"><span>Avisar antes</span><select id="routineLead"><option value="0">na hora</option><option value="5">5 min antes</option><option value="10">10 min antes</option><option value="15">15 min antes</option><option value="30">30 min antes</option></select></label>
+</div>
+<div class="routine-days" id="routineDaysPicker">
+<button data-routine-day="1" type="button">Seg</button><button data-routine-day="2" type="button">Ter</button><button data-routine-day="3" type="button">Qua</button><button data-routine-day="4" type="button">Qui</button><button data-routine-day="5" type="button">Sex</button><button data-routine-day="6" type="button">Sáb</button><button data-routine-day="0" type="button">Dom</button>
+</div>
+<div class="routine-actions">
+<button class="primary" id="addRoutine">Adicionar à rotina</button>
+<button class="text-button routine-template" data-routine-days="1,2,3,4,5" data-routine-time="18:00" data-routine-title="Hora de ir embora. Não esqueça de bater o ponto." data-routine-type="work">+ saída 18h</button>
+<button class="text-button routine-template" data-routine-days="1,2,3,4,5" data-routine-time="19:00" data-routine-title="Hora de correr." data-routine-type="exercise">+ corrida 19h</button>
+</div>
+<div class="windows-notify-panel">
+<div><span>NOTIFICAÇÕES DO WINDOWS</span><strong id="windowsNotifyStatus">verificando...</strong><small>Funcionam em segundo plano enquanto o MyWay estiver na bandeja.</small></div>
+<button aria-label="Ativar/desativar notificações" class="toggle on" id="windowsNotifyToggle"></button>
+<button class="ghost" id="testWindowsNotification">testar notificação</button>
+</div>
+<div class="routine-list" id="routineList"></div>
+</article>
+<article class="timeline-card reveal">
+<div class="card-head"><div><p class="eyebrow">SEMANA</p><h3>Histórico de hábitos.</h3></div></div>
+<div class="habit-week-history" id="habitWeekHistory"></div>
+</article>
+</section>

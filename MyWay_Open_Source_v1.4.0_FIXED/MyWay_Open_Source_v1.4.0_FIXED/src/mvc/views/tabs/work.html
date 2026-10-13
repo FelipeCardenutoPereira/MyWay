@@ -1,0 +1,91 @@
+<section class="view" id="view-work">
+<header class="section-head reveal">
+<p class="eyebrow">TRABALHO</p>
+<h2>Trabalho e ponto.</h2>
+<p>Você não precisa gostar do trabalho para proteger sua pontualidade, seu banco de horas e sua estratégia de saída.</p>
+</header>
+<div class="work-view-tools35"><div aria-label="Visualização do trabalho" class="navigation-modes34" role="group"><button aria-pressed="true" data-work-view35="kanban" type="button">Kanban</button><button aria-pressed="false" data-work-view35="list" type="button">Lista e prazos</button></div><button class="primary" id="workAddCard35">Adicionar atividade</button></div>
+<section class="work-kanban35" id="workKanban35"><div class="kanban-toolbar35"><label><span>Buscar atividade</span><input id="workKanbanSearch35" placeholder="Título ou descrição" type="search"/></label><label><span>Projeto</span><select id="workKanbanProject35"><option value="">Todos os projetos</option></select></label><label class="kanban-all35"><input id="workKanbanAll35" type="checkbox"/>Todos os status</label></div><p class="v34-help">Arraste os cartões para mudar de coluna. No celular, use o campo de status. Os cartões são as mesmas atividades das notas e dos relatórios.</p><div class="kanban-board35" id="workKanbanBoard35"></div><p class="v34-help" id="workKanbanResult35" role="status"></p></section>
+<section class="work-command reveal">
+<div class="work-command-head"><div><p class="eyebrow">CENTRAL DE TRABALHO</p><h3>O que precisa da sua atenção.</h3></div><button class="primary" id="workAddTaskTop">+ atividade</button></div>
+<div class="work-kpis">
+<button data-work-filter="current"><span>AGORA</span><strong id="workCurrentCount">0</strong><small>fazendo / atenção</small></button>
+<button data-work-filter="week"><span>SEMANA</span><strong id="workWeekCount">0</strong><small>com prazo nesta semana</small></button>
+<button data-work-filter="month"><span>MÊS</span><strong id="workMonthCount">0</strong><small>com prazo neste mês</small></button>
+<button data-work-filter="overdue"><span>ATRASADAS</span><strong id="workOverdueCount">0</strong><small>precisam de decisão</small></button>
+</div>
+<div class="work-now-board" id="workNowBoard"></div>
+</section>
+<article class="work-planner reveal">
+<div class="card-head"><div><p class="eyebrow">MURAL DE PRAZOS</p><h3>Semana e mês.</h3><p class="note">As notas de trabalho aparecem organizadas por data. Arraste o prazo no card pela própria data quando precisar replanejar.</p></div><span class="index" id="workPlannerMonthLabel">—</span></div>
+<div class="work-planner-grid">
+<section><header><span>PRÓXIMOS 7 DIAS</span><b id="workWeekLabel">—</b></header><div class="work-deadline-board" id="workWeekBoard"></div></section>
+<section><header><span>RESTO DO MÊS</span><b id="workMonthLabel">—</b></header><div class="work-deadline-board" id="workMonthBoard"></div></section>
+</div>
+</article>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">CHEGADA</p><h3>Pontualidade.</h3></div><span class="index">01</span></div>
+<div class="triple-grid">
+<label class="field"><span>Horário contratual</span><input data-setting="workStart" type="time" value="08:00"/></label>
+<label class="field"><span>Meta desta fase</span><input data-setting="phaseArrival" type="time" value="08:20"/></label>
+<label class="field"><span>Chegada na data ativa</span><input data-day="arrivalTime" type="time"/></label>
+</div>
+<div class="status-message" id="arrivalAnalysis"></div>
+<p class="note">“Cheguei atrasado” descreve um comportamento. “Sou um fracasso” não produz informação útil nem corrige o comportamento.</p>
+</article>
+<article class="dark-card reveal">
+<p class="eyebrow light">BANCO DE HORAS</p>
+<h3 class="dark-title">Banco de horas.</h3>
+<label class="field dark-field">
+<span>Saldo atual</span>
+<div class="input-unit"><input data-setting="bankHours" id="bankHours" step=".25" type="number"/><b>h</b></div>
+</label>
+<label class="field dark-field">
+<span>Recuperados hoje</span>
+<div class="input-unit"><input id="bankRecoveryInput" min="0" placeholder="15" step="5" type="number"/><b>min</b></div>
+</label>
+<button class="light-button" id="addBankRecovery">Registrar recuperação</button>
+<div class="progress-line"><i id="bankProgress"></i></div>
+<small id="bankProjection"></small>
+</article>
+</div>
+<article class="paper-card work-notes-panel reveal work-legacy-list35">
+<div class="card-head">
+<div><p class="eyebrow">MURAL DE NOTAS</p><h3>Atividades e contexto.</h3><p class="note">Status, prazo e conteúdo ficam sincronizados com Notas e MyWay Notes.</p></div>
+<span class="index" id="workQuickNotesCount">0</span>
+</div>
+<div class="work-note-add">
+<input id="workQuickNoteTitle" placeholder="Título da atividade"/>
+<select id="workQuickNoteStatus">
+<option value="todo">A Fazer</option><option value="doing">Fazendo</option><option value="waiting">Aguardando</option><option value="attention">Precisa de Atenção</option><option value="tomorrow">Para Amanhã</option><option value="done">Feito</option><option value="later">Sem Pressa / Por Último</option><option value="cancelled">Cancelado</option>
+</select>
+<button class="primary" id="workQuickNoteAdd">+ nota</button>
+</div>
+<div class="notes-grid work-notes-grid" id="workQuickNotes"></div>
+</article>
+<article class="work-report-card reveal">
+<div class="card-head"><div><p class="eyebrow">RELATÓRIO DE TRABALHO</p><h3>Relatório de trabalho.</h3><p class="note">Gera o relatório a partir das atividades, prazos e registros do próprio MyWay.</p></div><span class="index">R</span></div>
+<div class="work-report-actions"><button class="primary" id="workReportDay">Gerar relatório do dia</button><button class="ghost" id="workReportMonth">Gerar relatório do mês</button><button class="ghost" disabled="" id="workReportDownload">Baixar HTML</button><button class="primary" disabled="" id="workReportShare34">Enviar relatório</button></div>
+<div class="work-report-output" id="workReportOutput"><p class="note">Escolha um período para montar o relatório.</p></div>
+</article>
+<article class="timeline-card reveal">
+<div class="card-head"><div><p class="eyebrow">HISTÓRICO</p><h3>Últimas chegadas registradas.</h3></div><span class="index">03</span></div>
+<div class="history-list" id="arrivalHistory"></div>
+</article>
+<details class="workspace-advanced38"><summary>Planos de carreira · opcional</summary><article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">CARREIRA</p><h3>Próximo passo.</h3></div><span class="index">05</span></div>
+<label class="field"><span>Eixo dos próximos 30 dias</span>
+<select data-setting="careerProject">
+<option value="">Selecione...</option>
+<option>Portfólio audiovisual / edição</option>
+<option>Growth Marketing</option>
+<option>Power BI / dados</option>
+<option>Wix Studio / web</option>
+<option>Freelas / prospecção</option>
+<option>Estudos / formação</option>
+<option>Outro</option>
+</select>
+</label>
+<label class="field full"><span>Próxima ação concreta</span><textarea data-setting="careerNext"></textarea></label>
+</article></details></section>

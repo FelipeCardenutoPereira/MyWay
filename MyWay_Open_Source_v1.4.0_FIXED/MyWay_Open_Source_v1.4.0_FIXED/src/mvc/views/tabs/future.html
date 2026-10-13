@@ -1,0 +1,208 @@
+<section class="view" id="view-future">
+<header class="section-head reveal">
+<p class="eyebrow">CASA / PLANEJAMENTO</p>
+<h2>Minha casa, passo a passo.</h2>
+<p>Imóveis, reserva, entrada e simulações em uma área própria.</p>
+</header>
+<article class="property-importer reveal">
+<div class="property-importer-copy">
+<p class="eyebrow">IMÓVEIS / IMPORTAR LINK</p>
+<h3>Importar imóvel.</h3>
+<p>Funciona com páginas públicas do QuintoAndar, Chaves na Mão e tenta extrair dados de Remo, Eurico e outros portais compatíveis. Você confirma os dados antes de salvar.</p>
+</div>
+<div class="property-importer-form">
+<div class="property-url-line">
+<input id="propertyUrl" placeholder="Cole aqui o link do imóvel" type="url"/>
+<button class="primary" id="importProperty">Ler anúncio</button>
+</div>
+<div class="property-import-status" id="propertyImportStatus">Aguardando um link.</div>
+<div class="property-examples">
+<button data-property-example="https://vitrine.quintoandar.com.br/imovel/v2/895479711/RelationshipsSiqueira-8P86">exemplo QuintoAndar</button>
+<button data-property-example="https://www.chavesnamao.com.br/imovel/apartamento-a-venda-2-quartos-com-garagem-sp-campinas-jardim-boa-esperanca-61m2-RS380000/id-3492161/">exemplo Chaves na Mão</button>
+<button data-property-example="https://www.quintoandar.com.br/imovel/893083629/comprar/apartamento-3-quartos-vila-industrial-campinas">exemplo QuintoAndar 2</button>
+</div>
+<div class="property-preview" hidden="" id="propertyPreview"></div>
+</div>
+</article>
+<article class="saved-properties reveal">
+<div class="card-head">
+<div><p class="eyebrow">OPÇÕES SALVAS</p><h3>Imóveis salvos.</h3></div>
+<span class="index" id="savedPropertiesCount">0</span>
+</div>
+<div class="property-grid" id="savedPropertiesList"></div>
+</article>
+<article class="property-game reveal" id="propertyGame">
+<div class="property-game-head"><div><p class="eyebrow">CAMINHO DO IMÓVEL</p><h3 id="propertyGameTitle">Construindo sua entrada.</h3><p id="propertyGameMessage">Defina o valor do imóvel e sua reserva para visualizar o caminho.</p></div><div class="property-game-level"><span>ETAPA</span><strong id="propertyGameLevel">1</strong><small id="propertyGameLevelName">Fundação</small></div></div>
+<div class="property-game-progress"><i id="propertyGameBar"></i></div>
+<div class="property-game-kpis">
+<div><span>PROGRESSO TOTAL</span><strong id="propertyGamePercent">0%</strong></div>
+<div><span>RESERVA ATUAL</span><strong id="propertyGameSaved">R$ 0</strong></div>
+<div><span>META DE ENTRADA + CUSTOS</span><strong id="propertyGameTarget">—</strong></div>
+<div><span>FALTA</span><strong id="propertyGameGap">—</strong></div>
+<div><span>NO RITMO ATUAL</span><strong id="propertyGameMonths">—</strong></div>
+</div>
+<div class="property-game-milestones" id="propertyGameMilestones"></div>
+</article>
+<article class="housing-card reveal">
+<div class="housing-intro">
+<div>
+<p class="eyebrow">CASA / MINHA CASA, MINHA VIDA</p>
+<h3>Minha Casa, Minha Vida.</h3>
+</div>
+<div class="housing-rules">
+<span>REFERÊNCIA 2026</span>
+<b>Renda familiar até R$ 13 mil</b>
+<b>Imóvel até R$ 600 mil</b>
+<b>Juros nominais 10% a.a.</b>
+<b>Prazo até 420 meses</b>
+</div>
+</div>
+<div class="housing-fields">
+<label class="field"><span>Renda familiar bruta (edite se compra conjunta)</span><input data-setting="householdIncome" placeholder="R$" type="number"/></label>
+<label class="field"><span>Valor do imóvel</span><input data-setting="propertyValue" placeholder="400000" type="number"/></label>
+<label class="field"><span>Tipo do imóvel</span>
+<select data-setting="propertyType">
+<option value="new">Novo / na planta</option>
+<option value="used">Usado</option>
+</select>
+</label>
+<label class="field"><span>Região</span>
+<select data-setting="propertyRegion">
+<option value="SE">Sudeste</option>
+<option value="S">Sul</option>
+<option value="CO">Centro-Oeste</option>
+<option value="NE">Nordeste</option>
+<option value="N">Norte</option>
+</select>
+</label>
+<label class="field"><span>Amortização</span>
+<select data-setting="amortizationSystem">
+<option value="SAC">SAC</option>
+<option value="PRICE">PRICE</option>
+</select>
+</label>
+<label class="field"><span>Prazo</span><div class="input-unit light-unit"><input data-setting="termMonths" max="420" min="12" type="number"/><b>meses</b></div></label>
+</div>
+<div class="housing-results">
+<div><span>COTA MÁXIMA ESTIMADA</span><strong id="mcmvQuota">—</strong><small id="mcmvQuotaNote">—</small></div>
+<div><span>ENTRADA MÍNIMA</span><strong id="mcmvMinEntry">—</strong><small>pela cota máxima de financiamento</small></div>
+<div><span>RESERVA DISPONÍVEL</span><strong id="mcmvAvailable">—</strong><small>saldo + FGTS + outros recursos</small></div>
+<div><span>FALTA PARA A ENTRADA</span><strong id="mcmvGap">—</strong><small id="mcmvGapTime">—</small></div>
+</div>
+<details class="rules-editor">
+<summary>Editar parâmetros do programa</summary>
+<div class="housing-fields compact-fields">
+<label class="field"><span>Teto renda</span><input data-setting="mcmvIncomeLimit" type="number"/></label>
+<label class="field"><span>Teto imóvel</span><input data-setting="mcmvPropertyCap" type="number"/></label>
+<label class="field"><span>Juros nominais a.a.</span><input data-setting="mcmvAnnualRate" step=".01" type="number"/></label>
+<label class="field"><span>Prazo máximo</span><input data-setting="mcmvMaxTerm" type="number"/></label>
+</div>
+<p class="source-note">Parâmetros são editáveis para acompanhar futuras mudanças. A simulação é indicativa e não substitui a análise de crédito e o CET do banco.</p>
+</details>
+</article>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow">RESERVA / PICPAY</p><h3>Reserva.</h3></div>
+<span class="index">01</span>
+</div>
+<div class="finance-grid">
+<label class="field"><span>Saldo atual</span><input data-setting="currentSavings" type="number"/></label>
+<label class="field"><span>Aporte mensal</span><input data-setting="monthlyContribution" type="number"/></label>
+<label class="field"><span>FGTS disponível</span><input data-setting="fgtsBalance" type="number"/></label>
+<label class="field"><span>Outros recursos</span><input data-setting="otherEntry" type="number"/></label>
+<label class="field"><span>CDI de referência a.a.</span><div class="input-unit light-unit"><input data-setting="cdiAnnual" step=".01" type="number"/><b>%</b></div></label>
+<label class="field"><span>Rentabilidade do CDB</span><div class="input-unit light-unit"><input data-setting="cdbPercent" step=".1" type="number"/><b>% CDI</b></div></label>
+</div>
+<div class="quick-contribution">
+<input id="contributionInput" min="0" placeholder="Registrar aporte de hoje" step="50" type="number"/>
+<button class="primary" id="addContribution">+ aporte</button>
+</div>
+<div class="savings-big">
+<span>SALDO PROJETADO EM 12 MESES</span>
+<strong id="savings12m">—</strong>
+<small>estimativa bruta; aportes mensais no fim de cada mês, antes de IR/IOF</small>
+</div>
+</article>
+<article class="dark-card reveal">
+<p class="eyebrow light">SIMULAÇÃO DO FINANCIAMENTO</p>
+<h3 class="dark-title">Financiamento.</h3>
+<div class="finance-result-list">
+<div><span>Valor a financiar</span><strong id="financeAmount">—</strong></div>
+<div><span>Prestação PRICE estimada</span><strong id="pricePayment">—</strong></div>
+<div><span>SAC · primeira parcela</span><strong id="sacFirst">—</strong></div>
+<div><span>SAC · última parcela</span><strong id="sacLast">—</strong></div>
+<div><span>30% da renda familiar</span><strong id="incomeReference">—</strong></div>
+</div>
+<div class="eligibility-box" id="mcmvEligibility">Preencha renda e imóvel.</div>
+<small>Estimativa simplificada com taxa nominal informada. Não inclui TR, seguros, tarifas, CET, avaliação, cartório ou outras despesas.</small>
+</article>
+</div>
+<article class="amortization-compare reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">SAC x PRICE</p>
+<h3>Comparação de amortização.</h3>
+<p class="note">Mesma entrada, taxa e prazo. A comparação abaixo não inclui TR, seguros, tarifas ou CET.</p>
+</div>
+<span class="index">02</span>
+</div>
+<div class="amortization-grid">
+<section class="amortization-box" data-system-box="SAC">
+<header><span>SAC</span><b>parcela decrescente</b></header>
+<div><small>1ª parcela</small><strong id="compareSacFirst">—</strong></div>
+<div><small>última parcela</small><strong id="compareSacLast">—</strong></div>
+<div><small>juros totais estimados</small><strong id="compareSacInterest">—</strong></div>
+<div><small>total pago estimado</small><strong id="compareSacTotal">—</strong></div>
+</section>
+<section class="amortization-box" data-system-box="PRICE">
+<header><span>PRICE</span><b>parcela constante</b></header>
+<div><small>parcela estimada</small><strong id="comparePricePayment">—</strong></div>
+<div><small>última parcela</small><strong id="comparePriceLast">—</strong></div>
+<div><small>juros totais estimados</small><strong id="comparePriceInterest">—</strong></div>
+<div><small>total pago estimado</small><strong id="comparePriceTotal">—</strong></div>
+</section>
+</div>
+</article>
+<article class="bank-sim-panel reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">BANCOS / REFERÊNCIA 02.10.2026</p>
+<h3>Simulações bancárias.</h3>
+<p class="note">Taxas públicas de referência quando disponíveis. Edite a taxa em cada banco para reproduzir uma proposta real recebida.</p>
+</div>
+<span class="index">03</span>
+</div>
+<div class="bank-sim-controls">
+<div><span>IMÓVEL</span><strong id="bankPropertyValue">—</strong></div>
+<div><span>RESERVA USADA</span><strong id="bankEntryAvailable">—</strong></div>
+<div><span>PRAZO</span><strong id="bankTerm">—</strong></div>
+</div>
+<div class="bank-simulation-grid" id="bankSimulationGrid"></div>
+<p class="source-note">Use estes números como comparação inicial. A proposta final depende de perfil, relacionamento, seguros, TR, avaliação, CET e regras de crédito de cada banco.</p>
+</article>
+<article class="cashflow-card reveal">
+<div class="cashflow-head">
+<div><p class="eyebrow">FLUXO PESSOAL</p><h3>Fluxo mensal.</h3></div>
+<div class="cashflow-balance"><span>SALDO APÓS ITENS LISTADOS</span><strong id="cashflowAvailable">—</strong></div>
+</div>
+<div class="cashflow-grid">
+<label class="field"><span>Salário-base</span><input data-setting="salaryBase" type="number"/></label>
+<label class="field"><span>Adiantamento</span><input data-setting="salaryAdvance" type="number"/></label>
+<label class="field"><span>Pagamento restante</span><input data-setting="salarySecondPayment" type="number"/></label>
+<label class="field"><span>Cartão atual</span><input data-setting="cardBill" type="number"/></label>
+<label class="field"><span>Fecha dia</span><input data-setting="cardCloseDay" max="31" min="1" type="number"/></label>
+<label class="field"><span>Claro / mês</span><input data-setting="claroMonthly" type="number"/></label>
+<label class="field"><span id="educationMonthlyCostLabel">Estudos / mês</span><input data-setting="pucMonthly" type="number"/></label>
+<label class="field"><span>Transporte médio</span><input data-setting="transportMonthly" type="number"/></label>
+</div>
+<p class="source-note">O cálculo usa os recebimentos líquidos informados (adiantamento + pagamento restante). O salário-base fica registrado separadamente para referência de renda. Despesas não cadastradas aqui não entram no saldo.</p>
+</article>
+<details class="workspace-advanced38"><summary>Outras metas já cadastradas · opcional</summary><article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow">METAS LIVRES</p><h3>Outras metas.</h3></div>
+<button class="text-button" id="addCustomGoal">+ meta</button>
+</div>
+<div class="custom-goals-grid" id="customGoalsList"></div>
+</article></details>
+</section>

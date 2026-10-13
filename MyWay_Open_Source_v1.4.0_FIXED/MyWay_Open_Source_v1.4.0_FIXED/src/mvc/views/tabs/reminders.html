@@ -1,0 +1,49 @@
+<section class="view" id="view-reminders">
+<header class="section-head reveal">
+<p class="eyebrow">LEMBRETES</p>
+<h2>Lembretes.</h2>
+<p>O aplicativo verifica os lembretes enquanto estiver aberto. Quando o navegador permitir, também dispara notificação do sistema.</p>
+</header>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow">NOVO LEMBRETE</p><h3>Defina o gatilho.</h3></div>
+<span class="index">01</span>
+</div>
+<label class="field"><span>Texto</span><input id="reminderTitle" placeholder="Ex.: Live da PUC em 15 minutos"/></label>
+<label class="field"><span>Horário</span><input id="reminderTime" type="time"/></label>
+<div class="days-picker" id="daysPicker">
+<button data-daynum="1" type="button">S</button>
+<button data-daynum="2" type="button">T</button>
+<button data-daynum="3" type="button">Q</button>
+<button data-daynum="4" type="button">Q</button>
+<button data-daynum="5" type="button">S</button>
+<button data-daynum="6" type="button">S</button>
+<button data-daynum="0" type="button">D</button>
+</div>
+<button class="primary" id="addReminder">Adicionar lembrete</button>
+<div class="template-row">
+<button class="text-button reminder-template" data-days="3" data-time="18:45" data-title="Live da PUC em 15 minutos">+ Live quarta</button>
+<button class="text-button reminder-template" data-days="0,1,2,3,4" data-time="22:30" data-title="Preparar roupa e mochila de amanhã">+ Preparar amanhã</button>
+<button class="text-button reminder-template" data-days="1,2,4" data-time="20:00" data-title="Bloco de 25 minutos da PUC">+ Bloco PUC</button>
+</div>
+</article>
+<article class="dark-card reveal">
+<p class="eyebrow light">SISTEMA / PERMISSÕES</p>
+<h3 class="dark-title">Recursos<br/><em>nativos.</em></h3>
+<div class="permission-list">
+<div><span>Segundo plano / bandeja</span><b id="permTray">verificando...</b></div>
+<div><span>Iniciar com o Windows</span><b id="permStartup">verificando...</b></div>
+<div><span>Notificações nativas</span><b id="permNativeNotify">verificando...</b></div>
+<div><span>Importador de imóveis</span><b id="permImporter">verificando...</b></div>
+<div><span>Notificação do navegador</span><b id="notificationStatus">verificando...</b></div>
+</div>
+<button class="light-button" id="requestNotifications">Solicitar permissão do navegador</button>
+<small>Os lembretes do MyWay.exe usam também notificações nativas pela bandeja; elas não dependem da permissão do navegador.</small>
+</article>
+</div>
+<article class="timeline-card reveal">
+<div class="card-head"><div><p class="eyebrow">ATIVOS</p><h3>Seus lembretes.</h3></div><span class="index">03</span></div>
+<div class="reminders-list" id="remindersList"></div>
+</article>
+</section>

@@ -1,0 +1,52 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MyWay: editor visual",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "MyWay: montar interface",
+      "type": "shell",
+      "command": "npm run build:ui",
+      "problemMatcher": []
+    },
+    {
+      "label": "MyWay: validar código",
+      "type": "shell",
+      "command": "npm run check",
+      "problemMatcher": []
+    },
+    {
+      "label": "MyWay: sincronizar Windows + Android",
+      "type": "shell",
+      "command": "npm run sync",
+      "problemMatcher": []
+    },
+    {
+      "label": "MyWay: gerar Windows",
+      "type": "shell",
+      "command": "npm run build:windows",
+      "problemMatcher": []
+    },
+    {
+      "label": "MyWay: gerar Android",
+      "type": "shell",
+      "command": "npm run build:android",
+      "problemMatcher": []
+    },
+    {
+      "label": "MyWay: gerar Android CLEAN",
+      "type": "shell",
+      "command": "npm run build:android:clean",
+      "problemMatcher": []
+    }
+  ]
+}

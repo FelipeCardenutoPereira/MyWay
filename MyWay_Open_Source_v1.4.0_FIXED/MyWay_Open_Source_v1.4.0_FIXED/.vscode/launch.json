@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MyWay — Editor visual (Edge)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://127.0.0.1:5173/dev/editor.html",
+      "webRoot": "${workspaceFolder}/src",
+      "preLaunchTask": "MyWay: abrir editor visual"
+    },
+    {
+      "name": "MyWay — Aplicativo web (Edge)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://127.0.0.1:5173/src/index.html",
+      "webRoot": "${workspaceFolder}/src",
+      "preLaunchTask": "MyWay: abrir editor visual"
+    }
+  ]
+}

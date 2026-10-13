@@ -1,0 +1,93 @@
+/* MVC · Aparência v1.3.5
+   O wallpaper mora em uma camada própria. Ele não depende do background de body/html. */
+html.wallpaper-enabled127,html.wallpaper-enabled127 body{background:transparent!important;background-color:transparent!important;background-image:none!important}
+.wallpaper-layer127{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:var(--mw-wallpaper-image,none);
+  background-size:var(--mw-wallpaper-fit,cover);
+  background-position:var(--mw-wallpaper-position,50% 50%);
+  background-repeat:no-repeat;
+  filter:blur(var(--mw-wallpaper-blur,0px));
+  transform:scale(var(--mw-wallpaper-zoom,1));transform-origin:center;
+  will-change:transform,filter;contain:strict;overflow:hidden;
+}
+.wallpaper-layer127::after{
+  content:"";position:absolute;inset:-2px;pointer-events:none;
+  background:var(--mw-wallpaper-tint-color,transparent);
+  opacity:var(--mw-wallpaper-tint-opacity,0);
+}
+.wallpaper-layer127[hidden]{display:none!important}
+body.wallpaper-scroll134 .wallpaper-layer127{position:absolute;min-height:100%;height:auto}
+body.wallpaper-enabled127 #ambient41,body.wallpaper-enabled127 .ambient-preview44{display:none!important}
+body.wallpaper-enabled127 .main::before,body.wallpaper-enabled127 .main::after{display:none!important;content:none!important;background:none!important}
+body.wallpaper-enabled127 .app-shell,
+body.wallpaper-enabled127 .main,
+body.wallpaper-enabled127 .view,
+body.wallpaper-enabled127 .toolbar-slot44,
+body.wallpaper-enabled127 .main>.topbar{
+  background:transparent!important;background-color:transparent!important;background-image:none!important;
+}
+body.wallpaper-enabled127 .app-shell{position:relative!important;z-index:1!important}
+body.wallpaper-enabled127 .main{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+body.wallpaper-enabled127 .main>.navigation-access34{background:rgba(247,245,241,.72)!important;backdrop-filter:blur(18px)!important;-webkit-backdrop-filter:blur(18px)!important}
+html[data-theme="dark"] body.wallpaper-enabled127 .main>.navigation-access34{background:rgba(16,27,36,.72)!important}
+body.wallpaper-enabled127 .sidebar{background:rgba(18,34,48,.84)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+body.wallpaper-enabled127 .grain{opacity:.01!important;mix-blend-mode:normal!important}
+
+.visual-panel-mvc{overflow:visible}.visual-panel-grid-mvc{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.7fr);gap:14px;margin-top:14px}.visual-group-mvc{display:grid;gap:12px;align-content:start;padding:14px;border:1px solid var(--mw130-border,var(--line));border-radius:14px;background:color-mix(in srgb,var(--mw130-surface,var(--paper)) 82%,transparent)}.visual-group-mvc>div:first-child{display:grid;gap:4px}.visual-group-mvc>div:first-child small{color:var(--mw130-muted,var(--muted))}.wallpaper-group-mvc{grid-column:1/-1}
+.wallpaper-presets127{display:grid;grid-template-columns:repeat(5,minmax(100px,1fr));gap:10px}
+.wallpaper-option127{position:relative;border:1px solid var(--mw130-border,var(--line));border-radius:13px;padding:6px;min-width:0;display:grid;gap:6px;background:var(--mw130-button,var(--paper2));color:var(--mw130-button-text,var(--ink));cursor:pointer!important;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease,background .16s ease;box-shadow:0 2px 8px #0000000b}
+.wallpaper-option127:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--accent) 72%,var(--mw130-border,var(--line)))!important;box-shadow:0 9px 24px #00000018}
+.wallpaper-option127:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 55%,transparent)!important;outline-offset:2px}
+.wallpaper-option127 img,.wallpaper-none127{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;display:grid;place-items:center;background:var(--mw130-surface,var(--paper2));pointer-events:none}.wallpaper-option127 small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;pointer-events:none}.wallpaper-option127.active{border-color:var(--accent)!important;box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 28%,transparent),0 8px 20px #00000016}.wallpaper-check134{display:none;position:absolute;right:10px;top:10px;width:24px;height:24px;border-radius:50%;place-items:center;background:var(--accent);color:var(--mw-accent-fg130,#fff);font-weight:900;box-shadow:0 3px 10px #0004}.wallpaper-option127.active .wallpaper-check134{display:grid}
+.wallpaper-actions127{display:grid;grid-template-columns:minmax(180px,.8fr) repeat(3,minmax(145px,.65fr));gap:10px;align-items:end}.wallpaper-actions127>label,.wallpaper-tuning134>label{display:grid;gap:6px;color:var(--mw130-muted,var(--muted));font-size:11px}.wallpaper-upload127{min-height:44px;border:1px dashed var(--mw130-border,var(--line));border-radius:10px;place-items:center;cursor:pointer!important;font-weight:700;transition:.16s ease}.wallpaper-upload127:hover{border-color:var(--accent)!important;transform:translateY(-1px)}.wallpaper-upload127 input{display:none}
+.wallpaper-tuning134{display:grid;grid-template-columns:repeat(3,minmax(150px,1fr));gap:10px}.wallpaper-tuning134 select,.wallpaper-tuning134 input[type=range]{width:100%}.wallpaper-range-head134{display:flex;justify-content:space-between;align-items:center;gap:8px}.wallpaper-range-head134 output{font-variant-numeric:tabular-nums;color:var(--mw130-text,var(--ink));font-weight:700}
+.visual-panel-mvc #controlThemePresets{margin:0}.visual-panel-mvc .panel-color-r2{margin:0;display:grid;gap:10px}.visual-panel-mvc .panel-color-r2 label{display:flex;align-items:center;justify-content:space-between;gap:12px}.visual-panel-mvc .panel-color-r2 input[type=color]{width:56px;height:38px;padding:2px;border:1px solid var(--line);border-radius:9px;background:transparent}
+
+/* Ícones e itens precisam comunicar clique, não parecer ilustração. */
+.sidebar .nav-item{cursor:pointer!important;border:1px solid transparent!important;border-radius:12px!important;transition:background .14s ease,border-color .14s ease,transform .14s ease!important}
+.sidebar .nav-item .nav-icon{border-radius:9px!important;border:1px solid color-mix(in srgb,currentColor 22%,transparent)!important;background:color-mix(in srgb,currentColor 8%,transparent)!important;transition:transform .14s ease,background .14s ease,border-color .14s ease!important}
+.sidebar .nav-item:hover{background:color-mix(in srgb,var(--mw130-sidebar-text,#fff) 12%,transparent)!important;border-color:color-mix(in srgb,var(--mw130-sidebar-text,#fff) 17%,transparent)!important;transform:translateX(2px)}
+.sidebar .nav-item:hover .nav-icon{transform:scale(1.06);background:color-mix(in srgb,currentColor 15%,transparent)!important;border-color:color-mix(in srgb,currentColor 34%,transparent)!important}.sidebar .nav-item:focus-visible{outline:2px solid var(--accent)!important;outline-offset:2px}
+
+/* Modo enxuto: mantém rótulos funcionais e remove textos de apoio/exemplo. v1.3.7 liga/desliga no html e body. */
+html.compact-copy134 body :is(.note,.v34-help,.source-note,.setup-note35,.onboard-note,.control-card details,.visual-group-mvc>div:first-child>small,.control-toggle-list small,.section-head>div>p:not(.eyebrow),.card-head>div>p:not(.eyebrow),.inspiration-learning-summary){display:none!important}
+html.compact-copy134 body input::placeholder,html.compact-copy134 body textarea::placeholder{color:transparent!important}
+html.compact-copy134 body .control-card{padding-block:14px!important}html.compact-copy134 body .control-grid{gap:10px!important}
+
+@media(max-width:900px){.visual-panel-grid-mvc{grid-template-columns:1fr}.wallpaper-group-mvc{grid-column:auto}.wallpaper-presets127{grid-template-columns:repeat(2,minmax(0,1fr))}.wallpaper-actions127,.wallpaper-tuning134{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.wallpaper-option127,.sidebar .nav-item,.sidebar .nav-item .nav-icon{transition:none!important}}
+
+/* v1.3.7 · clique explícito + transparência real das superfícies sobre o wallpaper */
+.wallpaper-title136{display:flex!important;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}.wallpaper-title136>div{display:grid;gap:4px}.wallpaper-active-badge136{display:inline-flex;align-items:center;min-height:30px;padding:6px 10px;border-radius:999px;border:1px solid var(--mw130-border,var(--line));background:var(--mw130-surface,var(--paper));font-size:10px;letter-spacing:.08em}.wallpaper-active-badge136.is-active{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 16%,var(--mw130-surface,var(--paper)));color:var(--mw130-text,var(--ink))}
+.wallpaper-presets127{position:relative;z-index:6;pointer-events:auto!important}.wallpaper-option127{pointer-events:auto!important;user-select:none;touch-action:manipulation;min-height:92px}.wallpaper-option127::after{content:"Selecionar";position:absolute;left:10px;top:10px;padding:4px 7px;border-radius:999px;background:rgba(0,0,0,.62);color:#fff;font-size:9px;font-weight:800;letter-spacing:.05em;opacity:.82;pointer-events:none}.wallpaper-option127.active::after{content:"Selecionado";background:var(--accent);opacity:1}.wallpaper-active-label136{display:none;position:absolute;left:8px;bottom:29px;padding:4px 7px;border-radius:7px;background:var(--accent);color:var(--mw-accent-fg130,#fff);font-size:9px;font-weight:900;letter-spacing:.08em;pointer-events:none}.wallpaper-option127.active .wallpaper-active-label136{display:block}
+.wallpaper-tuning134{grid-template-columns:repeat(4,minmax(140px,1fr))}.wallpaper-tuning134 label small{font-size:9px;line-height:1.35;color:var(--mw130-muted,var(--muted))}
+/* A imagem fica atrás; esta variável controla quanto das superfícies sólidas continua cobrindo-a. */
+body.wallpaper-enabled127 .main>.navigation-access34{background:color-mix(in srgb,var(--paper) var(--mw-panel-opacity-pct,45%),transparent)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important}
+body.wallpaper-enabled127 .sidebar{background:color-mix(in srgb,var(--panel-sidebar-r2,var(--brand-navy)) var(--mw-panel-opacity-pct,45%),transparent)!important;backdrop-filter:blur(14px)!important;-webkit-backdrop-filter:blur(14px)!important}
+body.wallpaper-enabled127 :is(
+  .paper-card,.timeline-card,.week-card,.chart-card,.report-summary,.control-card,.widget-card58,
+  .favorite-tool-r2,.notes-board,.note-card,.sticky-note,.kanban-column35,.workspace-cards38>article,
+  .habit-card,.habit-day,.housing-card,.property-importer,.saved-properties,.property-card,
+  .puc-courses-panel,.puc-track-panel,.puc-course-card,.puc-module,.english-dashboard,.english-exercise-card,
+  .focus-dock,.system-card,.profile-control-card,.cloud-sync-card,.amortization-compare,.bank-sim-panel,.bank-sim-card,
+  .routine-now,.routine-builder,.windows-notify-panel,.relationships-gallery,.v34-reward,.v34-two-col>article,
+  .nv-card,.nv-channel-snapshot,.nv-stats>div,.practice-card57,.exercise-row58,.video-card40,
+  .mobile-context43,.mobile-sheet43,.myway-dialog,.toolbar-more-panel44,.profile-assist49,
+  .visual-group-mvc
+){background-color:color-mix(in srgb,var(--paper) var(--mw-panel-opacity-pct,45%),transparent)!important;background-image:none!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+body.wallpaper-enabled127[data-panel-custom-r2="true"] :is(
+  .paper-card,.timeline-card,.week-card,.chart-card,.report-summary,.control-card,.widget-card58,
+  .favorite-tool-r2,.notes-board,.note-card,.sticky-note,.kanban-column35,.workspace-cards38>article,
+  .habit-card,.habit-day,.housing-card,.property-importer,.saved-properties,.property-card,
+  .puc-courses-panel,.puc-track-panel,.puc-course-card,.puc-module,.english-dashboard,.english-exercise-card,
+  .focus-dock,.system-card,.profile-control-card,.cloud-sync-card,.amortization-compare,.bank-sim-panel,.bank-sim-card,
+  .routine-now,.routine-builder,.windows-notify-panel,.relationships-gallery,.v34-reward,.v34-two-col>article,
+  .nv-card,.nv-channel-snapshot,.nv-stats>div,.practice-card57,.exercise-row58,.video-card40,
+  .mobile-context43,.mobile-sheet43,.myway-dialog,.toolbar-more-panel44,.profile-assist49,
+  .visual-group-mvc
+){background-color:color-mix(in srgb,var(--panel-surface-r2) var(--mw-panel-opacity-pct,45%),transparent)!important}
+@media(max-width:900px){.wallpaper-tuning134{grid-template-columns:1fr 1fr}}@media(max-width:520px){.wallpaper-tuning134{grid-template-columns:1fr}.wallpaper-option127{min-height:84px}}
+
+/* v1.3.7 · estado explícito do Modo enxuto */
+.compact-mode-row137>div:first-child{display:grid;gap:4px}.compact-state137{display:inline-flex;width:max-content;align-items:center;min-height:22px;padding:3px 7px;border-radius:999px;border:1px solid var(--line);font-size:9px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.compact-state137.is-active{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--ink)}#controlCompactCopy134{cursor:pointer!important;pointer-events:auto!important;touch-action:manipulation}

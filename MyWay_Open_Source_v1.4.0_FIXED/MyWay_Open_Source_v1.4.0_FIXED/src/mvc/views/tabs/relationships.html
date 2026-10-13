@@ -1,0 +1,142 @@
+<section class="view relationships-view" id="view-relationships">
+<header class="section-head reveal">
+<p class="eyebrow" id="relationshipEyebrow">Relacionamentos</p>
+<h2 id="relationshipHeading">Nós.</h2>
+<p id="relationshipDescription">Casamento, viagens, imóveis, sessão de fotos e arquivos privados do casal.</p>
+</header>
+<div class="relationships-overview reveal">
+<div aria-hidden="true" class="relationships-heart-mark">♥</div>
+<div>
+<span id="relationshipDateLabel">CASAMENTO</span>
+<strong id="relationshipsWeddingDateLabel">14/08/2027</strong>
+<small id="relationshipsWeddingCountdown">—</small>
+</div>
+<div>
+<span>PLANOS ABERTOS</span>
+<strong id="relationshipsOpenPlans">0</strong>
+<small>itens do casamento</small>
+</div>
+<div>
+<span>VIAGENS</span>
+<strong id="relationshipsTripsCount">0</strong>
+<small>planejadas</small>
+</div>
+<div>
+<span>IMÓVEIS ♥</span>
+<strong id="relationshipsHomesCount">0</strong>
+<small>favoritos</small>
+</div>
+</div>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow" id="relationshipPlanKicker">CASAMENTO</p><h3 id="relationshipPlanTitle">Planejamento.</h3></div>
+<span class="relationships-mini-heart">♥</span>
+</div>
+<label class="field">
+<span id="relationshipDateFieldLabel">Data do casamento</span>
+<input data-setting="coupleWeddingDate" type="date"/>
+</label>
+<div class="relationships-add-line">
+<input id="relationshipsWeddingPlanText" placeholder="Ex.: fechar fotógrafo, definir docinhos, revisar convidados"/>
+<button class="primary" id="relationshipsAddWeddingPlan">+ plano</button>
+</div>
+<div class="relationships-checklist" id="relationshipsWeddingPlans"></div>
+</article>
+<article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow">IDEIAS</p><h3>Coisas para fazer juntos.</h3></div>
+<button class="text-button" id="relationshipsAddIdea">+ ideia</button>
+</div>
+<div class="relationships-add-line">
+<input id="relationshipsIdeaText" placeholder="Restaurante, presente, passeio, detalhe do casamento..."/>
+<select id="relationshipsIdeaType">
+<option>Casamento</option>
+<option>Casa</option>
+<option>Encontro</option>
+<option>Viagem</option>
+<option>Outro</option>
+</select>
+</div>
+<div class="relationships-ideas-grid" id="relationshipsIdeas"></div>
+</article>
+</div>
+<article class="saved-properties relationships-properties reveal">
+<div class="card-head">
+<div><p class="eyebrow">NOSSOS IMÓVEIS</p><h3>Favoritos.</h3><p class="note">Marque ♥ em qualquer imóvel salvo na aba Metas. Ele aparece aqui automaticamente.</p></div>
+<span class="index" id="relationshipsFavoritePropertiesCount">0</span>
+</div>
+<div class="property-grid" id="relationshipsFavoriteProperties"></div>
+</article>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">SESSÃO DE FOTOS</p><h3>Planejamento.</h3></div><span class="index">01</span></div>
+<div class="form-grid">
+<label class="field"><span>Data</span><input data-setting="couplePhotoDate" type="date"/></label>
+<label class="field"><span>Local</span><input data-setting="couplePhotoLocation" placeholder="Ex.: Campinas, campo, centro..."/></label>
+<label class="field"><span>Conceito</span><input data-setting="couplePhotoConcept" placeholder="Ex.: urbano, editorial, pôr do sol..."/></label>
+<label class="field"><span>Fotógrafo / contato</span><input data-setting="couplePhotographer" placeholder="Nome ou contato"/></label>
+</div>
+<label class="field full"><span>Fotos que queremos / referências</span><textarea data-setting="couplePhotoNotes" placeholder="Poses, roupas, objetos, lugares e referências."></textarea></label>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">PRÓXIMAS VIAGENS</p><h3>Viagens.</h3></div><span class="index">02</span></div>
+<div class="relationships-trip-form">
+<input id="relationshipsTripDestination" placeholder="Destino"/>
+<input id="relationshipsTripDate" type="date"/>
+<input id="relationshipsTripNote" placeholder="Ideia / observação"/>
+<button class="primary" id="relationshipsAddTrip">+ viagem</button>
+</div>
+<div class="relationships-trips-list" id="relationshipsTrips"></div>
+</article>
+</div>
+<article class="relationships-gallery reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">FOTOS</p>
+<h3>Nós em fotos.</h3>
+<p class="note">Arraste imagens para o mosaico. Depois, arraste os cards para reorganizar.</p>
+</div>
+<label class="relationships-photo-upload">+ fotos<input accept="image/*" id="relationshipsPhotoFiles" multiple="" type="file"/></label>
+</div>
+<div class="relationships-photo-drop" id="relationshipsPhotoDrop">Solte fotos aqui</div>
+<div class="relationships-photo-mosaic" id="relationshipsPhotoMosaic"></div>
+</article>
+<article class="relationships-vault reveal">
+<div class="relationships-vault-head">
+<div class="vault-heart">♥</div>
+<div>
+<p class="eyebrow">COFRE LOCAL</p>
+<h3>Vídeos privados.</h3>
+<p>Arquivos criptografados no seu computador. O PIN não é salvo em texto puro.</p>
+</div>
+<div class="vault-status" id="relationshipsVaultStatus">verificando...</div>
+</div>
+<div class="vault-auth" id="relationshipsVaultSetup">
+<input id="relationshipsVaultNewPin" inputmode="numeric" placeholder="Criar PIN (mín. 4 caracteres)" type="password"/>
+<input id="relationshipsVaultNewPin2" inputmode="numeric" placeholder="Confirmar PIN" type="password"/>
+<button class="primary" id="relationshipsVaultCreate">Criar cofre</button>
+</div>
+<div class="vault-auth" hidden="" id="relationshipsVaultUnlock">
+<input id="relationshipsVaultPin" inputmode="numeric" placeholder="PIN do cofre" type="password"/>
+<button class="primary" id="relationshipsVaultUnlockBtn">Desbloquear</button>
+</div>
+<div hidden="" id="relationshipsVaultOpen">
+<div class="vault-toolbar">
+<label class="vault-upload">
+<span>+ adicionar vídeos</span>
+<input accept="video/*" id="relationshipsVaultFiles" multiple="" type="file"/>
+</label>
+<button class="ghost" id="relationshipsVaultLock">Bloquear</button>
+</div>
+<div class="vault-drop" id="relationshipsVaultDrop">Arraste vídeos aqui</div>
+<div class="vault-layout">
+<div class="vault-list" id="relationshipsVaultList"></div>
+<div class="vault-player-wrap">
+<video controls="" id="relationshipsVaultPlayer" playsinline=""></video>
+<div id="relationshipsVaultPlayerEmpty">Selecione um vídeo do cofre.</div>
+</div>
+</div>
+</div>
+</article>
+</section>

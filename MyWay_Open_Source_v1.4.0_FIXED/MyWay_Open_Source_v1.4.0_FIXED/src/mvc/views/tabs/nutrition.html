@@ -1,0 +1,111 @@
+<section class="view" id="view-nutrition">
+<header class="section-head reveal nutrition-head127">
+<div>
+<p class="eyebrow">DESENVOLVIMENTO · NUTRIÇÃO</p>
+<h2>Comer melhor começa entendendo o padrão.</h2>
+<p>Registre o que acontece de verdade e use ferramentas simples para variedade, hidratação, composição das refeições e próximos ajustes.</p>
+</div>
+<div class="nutrition-date127"><small>DATA ATIVA</small><b id="nutritionActiveDate127">—</b></div>
+</header>
+
+<div class="nutrition-grid127">
+<article class="paper-card nutrition-register127">
+<div class="card-head"><div><p class="eyebrow">REGISTRAR</p><h3>Como foi esta refeição?</h3></div><span class="index">01</span></div>
+<form id="nutritionForm127">
+<div class="nutrition-form-grid127">
+<label class="field"><span>Refeição</span><select id="nutritionMeal127"><option value="cafe">Café da manhã</option><option value="lanche">Lanche</option><option value="almoco">Almoço</option><option value="jantar">Jantar</option><option value="ceia">Ceia</option><option value="outro">Outro</option></select></label>
+<label class="field nutrition-food-field127"><span>O que você comeu?</span><input id="nutritionFoods127" maxlength="500" placeholder="Ex.: arroz, feijão, frango, salada e suco"></label>
+<label class="field"><span>Copos de água nesta refeição</span><input id="nutritionWater127" type="number" min="0" max="20" step="1" value="0"></label>
+</div>
+<div class="nutrition-sensation-grid133">
+<label class="nutrition-range133"><span>Fome antes <output id="nutritionHungerValue133">5</output>/10</span><input id="nutritionHunger133" type="range" min="0" max="10" step="1" value="5"></label>
+<label class="nutrition-range133"><span>Saciedade depois <output id="nutritionSatietyValue133">5</output>/10</span><input id="nutritionSatiety133" type="range" min="0" max="10" step="1" value="5"></label>
+</div>
+<fieldset class="nutrition-tags127">
+<legend>O que apareceu na refeição?</legend>
+<label><input type="checkbox" value="protein"><span>Proteína</span></label>
+<label><input type="checkbox" value="vegetables"><span>Verduras / legumes</span></label>
+<label><input type="checkbox" value="fruit"><span>Fruta</span></label>
+<label><input type="checkbox" value="carbs"><span>Grãos / tubérculos</span></label>
+<label><input type="checkbox" value="dairy"><span>Laticínio</span></label>
+<label><input type="checkbox" value="ultra"><span>Doce / ultraprocessado</span></label>
+</fieldset>
+<label class="field"><span>Observação opcional</span><textarea id="nutritionNote127" maxlength="800" placeholder="Fome, contexto, pressa, vontade de repetir, algo que quer lembrar..."></textarea></label>
+<div class="nutrition-form-actions127"><button class="primary" type="submit">Salvar refeição</button><small>O texto também ajuda o MyWay a reconhecer grupos de alimentos automaticamente.</small></div>
+</form>
+</article>
+
+<article class="paper-card nutrition-today127">
+<div class="card-head"><div><p class="eyebrow">HOJE / DATA ATIVA</p><h3>Mapa das refeições.</h3></div><span class="index">02</span></div>
+<div id="nutritionTodaySummary127" class="nutrition-summary127"></div>
+<div id="nutritionEntries127" class="nutrition-entries127"></div>
+</article>
+</div>
+
+<div class="nutrition-tools-grid133">
+<article class="paper-card nutrition-tool133" id="nutritionHydration133">
+<div class="card-head"><div><p class="eyebrow">HIDRATAÇÃO</p><h3>Contador do dia.</h3></div><span class="index">03</span></div>
+<div class="nutrition-water133"><strong id="nutritionWaterTotal133">0</strong><span>copos registrados</span></div>
+<div class="nutrition-water-progress133"><i><u id="nutritionWaterBar133"></u></i><span id="nutritionWaterProgressText133">0 de 8</span></div>
+<div class="nutrition-water-actions133"><button class="ghost" type="button" data-water-add133="-1">− 1</button><button class="primary" type="button" data-water-add133="1">+ 1 copo</button></div>
+<label class="field"><span>Meta pessoal de referência</span><input id="nutritionWaterGoal133" type="number" min="1" max="20" step="1" value="8"></label>
+<p class="note">A meta é editável e serve só para organização. Necessidades de líquidos variam entre pessoas.</p>
+</article>
+
+<article class="paper-card nutrition-tool133" id="nutritionPlateBuilder133">
+<div class="card-head"><div><p class="eyebrow">PRÓXIMA REFEIÇÃO</p><h3>Montador simples.</h3></div><span class="index">04</span></div>
+<p class="note">Marque o que você pretende incluir. O objetivo é lembrar grupos, não montar uma dieta rígida.</p>
+<div class="nutrition-plate-picks133">
+<label><input type="checkbox" value="vegetables"><span>Verduras / legumes</span></label>
+<label><input type="checkbox" value="protein"><span>Proteína</span></label>
+<label><input type="checkbox" value="carbs"><span>Grãos / tubérculos</span></label>
+<label><input type="checkbox" value="fruit"><span>Fruta</span></label>
+<label><input type="checkbox" value="dairy"><span>Laticínio</span></label>
+</div>
+<div class="nutrition-plate-result133" id="nutritionPlateResult133"></div>
+<button class="text-button" type="button" id="nutritionPlateClear133">Limpar rascunho</button>
+</article>
+
+<article class="paper-card nutrition-tool133" id="nutritionVariety133">
+<div class="card-head"><div><p class="eyebrow">VARIEDADE · 7 DIAS</p><h3>O que se repete?</h3></div><span class="index">05</span></div>
+<div class="nutrition-variety-kpis133" id="nutritionVarietyKpis133"></div>
+<div class="nutrition-variety-list133" id="nutritionVarietyList133"></div>
+</article>
+
+<article class="paper-card nutrition-tool133" id="nutritionRhythm133">
+<div class="card-head"><div><p class="eyebrow">RITMO · 7 DIAS</p><h3>Quando você costuma comer.</h3></div><span class="index">06</span></div>
+<div id="nutritionRhythmList133" class="nutrition-rhythm-list133"></div>
+<p class="note">O MyWay mostra frequência dos seus registros; não classifica horários como certos ou errados.</p>
+</article>
+
+<article class="paper-card nutrition-tool133" id="nutritionSignals133">
+<div class="card-head"><div><p class="eyebrow">SINAIS</p><h3>Fome e saciedade.</h3></div><span class="index">07</span></div>
+<div id="nutritionSignalsSummary133" class="nutrition-signals133"></div>
+<p class="note">Use como observação do próprio padrão. Os números não substituem avaliação clínica.</p>
+</article>
+
+<article class="paper-card nutrition-tool133" id="nutritionShopping133">
+<div class="card-head"><div><p class="eyebrow">PRÓXIMA COMPRA</p><h3>Lista a partir dos seus registros.</h3></div><span class="index">08</span></div>
+<p class="note">Sugestões genéricas para aumentar variedade dos grupos que apareceram menos.</p>
+<div id="nutritionShoppingList133" class="nutrition-shopping133"></div>
+<button class="ghost" type="button" id="nutritionCopyShopping133">Copiar lista</button>
+</article>
+</div>
+
+<article class="paper-card nutrition-map127">
+<div class="card-head"><div><p class="eyebrow">MAPEAMENTO · 7 DIAS</p><h3>O que apareceu × próxima melhoria possível.</h3><p class="note">A leitura usa somente seus registros dos últimos sete dias até a data ativa. Não é diagnóstico, dieta nem prescrição.</p></div><span class="index">09</span></div>
+<div id="nutritionCompare127" class="nutrition-compare127"></div>
+</article>
+
+<div class="nutrition-grid127">
+<article class="paper-card">
+<div class="card-head"><div><p class="eyebrow">PRÓXIMAS AÇÕES</p><h3>Pequenos ajustes.</h3></div><span class="index">10</span></div>
+<div id="nutritionSuggestions127" class="nutrition-suggestions127"></div>
+</article>
+<article class="paper-card">
+<div class="card-head"><div><p class="eyebrow">VISÃO DA SEMANA</p><h3>Frequência dos grupos.</h3></div><span class="index">11</span></div>
+<div id="nutritionWeek127" class="nutrition-week127"></div>
+<p class="note nutrition-disclaimer127">Ferramenta educativa de organização alimentar. Necessidades individuais, alergias, doenças, restrições e metas clínicas devem ser avaliadas por nutricionista ou profissional de saúde.</p>
+</article>
+</div>
+</section>

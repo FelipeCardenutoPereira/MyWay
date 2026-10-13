@@ -1,0 +1,8 @@
+/* v1.2.7 · feed de inspiração resiliente e compacto. */
+.inspiration-search-meta { min-height:18px; }
+.inspiration-empty { min-height:140px; place-content:center; }
+.inspiration-pin[data-pin-key^="local-"] .inspiration-pin-copy footer::after { content:'biblioteca local'; color:var(--muted); font-size:9px; text-transform:uppercase; letter-spacing:.08em; }
+@media(max-width:700px){.inspiration-shell{gap:12px!important}.inspiration-sidebar{padding:10px!important}.inspiration-masonry{columns:2!important;column-gap:10px!important}.inspiration-pin{margin-bottom:10px!important}}
+
+/* v1.3.7 · busca e recuperação de pins */
+.inspiration-search-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.inspiration-search-meta #inspirationRestorePins137{min-height:32px}.inspiration-sidebar [data-inspiration-filter],.inspiration-board-list button,#inspirationSearchBtn{cursor:pointer!important;pointer-events:auto!important;touch-action:manipulation}.inspiration-sidebar [data-inspiration-filter].active{outline:1px solid color-mix(in srgb,var(--accent) 55%,transparent)}

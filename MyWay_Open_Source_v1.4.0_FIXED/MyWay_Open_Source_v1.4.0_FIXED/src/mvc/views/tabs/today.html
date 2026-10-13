@@ -1,0 +1,233 @@
+<section class="view active" id="view-today"><section class="workspace-home38" id="workspaceHome38"></section>
+<article class="resilience-dashboard34 resilience-reservoir34 reveal" id="resilienceDashboard34"><div class="resilience-head34"><div><p class="eyebrow">RESILIÊNCIA · UMA PAUSA CONTA</p><h3>Reservatório de Dopamina</h3></div><button class="ghost" id="resilienceOpen34">Abrir resiliência</button></div><div aria-label="Reservatório: progresso das pausas registradas" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="reservoir-track34" role="progressbar"><i data-reservoir-fill=""></i></div><div class="resilience-bar-caption34"><b data-reservoir-label="">0%</b><span data-reservoir-copy=""></span></div><p class="v34-help">Progresso simbólico das suas escolhas. Não é uma medição de dopamina.</p><div id="resilienceToday34"></div><div class="v34-item-actions"><button class="primary" id="resilienceQuick34">Como foi sua escolha?</button><button class="text-button" id="resilienceCustomize34">Escolher assuntos e efeitos</button></div></article>
+<section class="daily-direction reveal">
+<div class="direction-copy"><p class="eyebrow">COMECE PEQUENO</p><h3 id="focusCoachTitle">Defina uma ação que caiba em um bloco.</h3><p id="focusCoachText">Evite “terminar o projeto”. Prefira “abrir o arquivo e escrever o primeiro parágrafo”.</p></div>
+<div class="direction-tip"><span>DICA DE FOCO</span><b id="focusTipText">Reduza a tarefa até ela ficar fácil de começar.</b><button class="text-button" id="focusTipNext">outra dica</button></div>
+</section>
+<article class="focus-dock reveal">
+<div>
+<p class="eyebrow">FOCO / 25 MIN</p>
+<input class="focus-input" data-day="focusTask" id="focusTask" placeholder="Qual é a única coisa deste bloco?"/>
+</div>
+<div class="timer" id="timerDisplay">25:00</div>
+<div class="timer-controls">
+<button class="primary" id="timerStart">Começar</button>
+<button class="ghost" id="timerPause">Pausar</button>
+<button class="text-button" id="timerReset">Resetar</button>
+</div>
+</article>
+<article class="cbt-day-card reveal">
+<div class="card-head"><div><p class="eyebrow">TCC / AUTOGESTÃO</p><h3>Três microtarefas para hoje.</h3><p class="note">Ferramentas de organização inspiradas em TCC. Não substituem acompanhamento profissional.</p></div><span class="index">03</span></div>
+<div class="cbt-day-grid">
+<label><input data-day="cbtFiveMinute" type="checkbox"/><span><b>Comecei por 5 minutos</b><small>Começar vem antes de ter vontade.</small></span></label>
+<label><input data-day="cbtThoughtCheck" type="checkbox"/><span><b>Separei pensamento de fato</b><small>“Estou atrasado” é fato; “sou incapaz” é interpretação.</small></span></label>
+<label><input data-day="cbtIfThen" type="checkbox"/><span><b>Criei um plano “se → então”</b><small>Se eu abrir o YouTube no horário de foco, então fecho e volto por 5 minutos.</small></span></label>
+</div>
+<button class="text-button" data-view-target="journal">abrir registro de pensamento</button>
+</article>
+<article class="cover-hero reveal" id="coverHero">
+<img alt="" id="coverImage" src="assets/cover-default.jpg"/>
+<div class="cover-shade"></div>
+<div class="cover-copy">
+<p class="eyebrow light">MYWAY / PERSONAL OS</p>
+<h2>Visão geral.</h2>
+<p>Trabalho, estudo, finanças e rotina no mesmo painel.</p>
+</div>
+<div class="cover-controls">
+<label class="cover-upload">Trocar capa<input accept="image/*" id="coverUpload" type="file"/></label>
+<button class="cover-reset" id="coverReset">restaurar</button>
+</div>
+</article>
+<article class="attention-rail reveal" id="todayAttentionRail">
+<div><span>ATENÇÃO DO MOMENTO</span><strong id="todayAttentionTitle">Colete alguns dias de dados.</strong></div>
+<p id="todayAttentionText">O MyWay aponta tendências que merecem sua atenção sem transformar isso em julgamento.</p>
+<button class="text-button" data-view-target="reports">ver diagnóstico</button>
+</article>
+<!-- Compact overview, expanded only when requested. -->
+<section class="v34-overview reveal" id="overview34">
+<div class="v34-overview-head"><div><p class="eyebrow">SEU PAINEL</p><h3 id="dashboardTitle34">Uma coisa de cada vez.</h3></div><button class="ghost" id="customize34">Personalizar painel</button></div>
+<div class="v34-quick-actions"><button class="primary" id="quickTask34">Adicionar tarefa</button><button class="ghost" id="quickGym34">Registrar treino</button><button class="ghost" id="quickIdea34">Salvar ideia do canal</button><button class="ghost" id="showModules34">Ver módulos</button></div>
+<div class="v34-reward-strip"><div><b id="rewardSummary34">0 XP acumulados</b><small id="rewardNext34">Primeira recompensa em 100 XP.</small></div><button class="text-button" id="openRewards34">Ver recompensas</button></div>
+<div class="v34-inspiration" hidden="" id="dashboardInspiration34"></div>
+</section>
+<section class="daily-gamebar reveal" id="dailyGamebar">
+<div class="gamebar-level"><span>NÍVEL</span><strong id="dailyLevel">1</strong></div>
+<div class="gamebar-progress"><div><b id="dailyXPLabel">0 XP hoje</b><small id="dailyStreakLabel">0 dias de sequência</small></div><div class="gamebar-track"><i id="dailyXPBar"></i></div></div>
+<div class="gamebar-score"><span>CHECKLIST</span><strong id="dailyCompletion">0%</strong></div>
+</section>
+<article class="adhd-guide reveal legacy-execution-guide" hidden="">
+<div class="adhd-guide-head"><div><p class="eyebrow">MODO EXECUÇÃO</p><h3>Próximo passo, não projeto inteiro.</h3></div><span class="adhd-badge">baixo atrito</span></div>
+<div class="adhd-guide-grid">
+<label><span>Qual é a próxima ação física?</span><input id="adhdNextAction" placeholder="Ex.: abrir o PDF e ler só a primeira página"/></label>
+<label><span>Energia agora</span><select id="adhdEnergyNow"><option value="">—</option><option value="1">Baixa · tarefa mecânica</option><option value="2">Média · bloco curto</option><option value="3">Boa · tarefa difícil</option></select></label>
+<div class="adhd-actions"><button class="primary" id="adhdFiveMinute">Só 5 minutos</button><button class="ghost" id="adhdParkDistraction">Estacionar distração</button></div>
+</div>
+<div class="adhd-distraction-row" hidden="" id="adhdDistractionRow"><input id="adhdDistractionInput" placeholder="Anote a distração para não precisar segui-la agora"/><button class="ghost" id="adhdDistractionSave">guardar</button></div>
+<div class="adhd-parking-lot" id="adhdParkingLot"></div>
+</article>
+<section aria-label="Aplicações do MyWay" class="today-launcher reveal">
+<button data-view-target="puc"><span class="launcher-icon"><svg viewbox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5"></path></svg></span><b id="educationLauncherLabel">Estudos</b><small id="educationLauncherSub">instituição / curso</small></button>
+<button data-view-target="habits"><span class="launcher-icon"><svg viewbox="0 0 24 24"><path d="M7 3v6a5 5 0 0 0 10 0V3M5 21h14M9 16v5m6-5v5"></path></svg></span><b>Hábitos</b><small>água + caminhada + leitura</small></button>
+<button data-view-target="english"><span class="launcher-icon"><svg viewbox="0 0 24 24"><path d="M4 5h8v14H4zM12 7h8v12h-8M6 9h4M6 13h4m5-2 2-3 2 3m-4 3h4"></path></svg></span><b>Inglês</b><small>English Lab</small></button>
+<button data-view-target="meditation"><span class="launcher-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="5" r="2"></circle><path d="M7 20c1-4 3-6 5-6s4 2 5 6M6 12c2 1 4 1 6-1 2 2 4 2 6 1M12 7v7"></path></svg></span><b id="wellnessLauncherLabel">Meditação</b><small id="wellnessLauncherSub">práticas + sessões</small></button>
+<button data-view-target="future"><span class="launcher-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v4m10 6h-4"></path></svg></span><b>Casa</b><small>reserva + imóvel</small></button>
+<button class="launcher-finance" data-view-target="finance"><span class="launcher-icon"><svg viewbox="0 0 24 24"><path d="M4 7h16v12H4zM7 4h10v3M7 11h6m-6 4h10"></path><circle cx="17" cy="11" r="1"></circle></svg></span><b>Finanças</b><small>saldo + gastos + reserva</small></button>
+<button class="launcher-relationships" data-view-target="relationships"><span class="launcher-icon"><svg viewbox="0 0 24 24"><path d="M12 20.5 4.6 13.4C1.2 10.2 2.2 5 6.6 4.1 8.8 3.6 10.7 4.7 12 6.4c1.3-1.7 3.2-2.8 5.4-2.3 4.4.9 5.4 6.1 2 9.3z"></path></svg></span><b id="relationshipLauncherLabel">Relacionamentos</b><small id="relationshipLauncherSub">planos + viagens</small></button>
+<button data-view-target="notes"><span class="launcher-icon"><svg viewbox="0 0 24 24"><path d="M5 3h14v14l-4 4H5zM15 17h4M8 8h8M8 12h8"></path></svg></span><b>Notas</b><small>trabalho + vida</small></button>
+<button class="launcher-journal" data-view-target="journal"><span class="launcher-icon"><svg viewbox="0 0 24 24"><path d="M5 4h12l2 2v14H5zM8 9h8M8 13h8M8 17h5"></path><path d="M17 4v3h3"></path></svg></span><b>Diário</b><small>desabafo + reflexão</small></button>
+<button class="launcher-inspiration" data-view-target="inspiration"><span class="launcher-icon"><svg viewbox="0 0 24 24"><path d="m12 2 1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8zM18 15l.9 2.6L21.5 19l-2.6.9L18 22.5l-.9-2.6-2.6-.9 2.6-.9z"></path></svg></span><b>Inspiração</b><small>ideias + referências</small></button>
+<button class="launcher-nv" data-view-target="channel"><span class="launcher-icon nv-image-icon"><img alt="" src="assets/nv-icon-user.png"/></span><b id="channelLauncherLabel">Canal</b><small>creator studio</small></button>
+<button data-view-target="reports"><span class="launcher-icon"><svg viewbox="0 0 24 24"><path d="M4 20V10h4v10zm6 0V4h4v16zm6 0v-7h4v7z"></path></svg></span><b>Relatórios</b><small>progressão mensal</small></button>
+</section>
+<section class="today-habits reveal">
+<button data-view-target="habits"><span>ÁGUA</span><strong id="todayWater">0</strong><small>copos</small></button>
+<button data-view-target="habits"><span>CAMINHADA</span><strong id="todayWalk">0</strong><small>min</small></button>
+<button data-view-target="habits"><span>LEITURA</span><strong id="todayPages">0</strong><small>páginas</small></button>
+<button data-view-target="habits"><span>ALIMENTAÇÃO PROTEICA</span><strong id="todayProtein49">0</strong><small>refeições hoje</small></button>
+<button data-view-target="meditation"><span>MEDITAÇÃO</span><strong id="todayMeditation">—</strong><small>hoje</small></button>
+</section>
+<article class="routine-now reveal" data-view-target="habits">
+<div><span>ROTINA / HORÁRIO DO WINDOWS</span><strong id="routineClock">--:--</strong></div>
+<p><b id="routineNextTitle">Nenhum próximo item.</b><small id="routineNextTime">Defina sua rotina em Hábitos.</small></p>
+<button class="text-button" data-view-target="habits">editar rotina</button>
+</article>
+<article class="dashboard-notes reveal">
+<div class="dashboard-notes-head"><div><p class="eyebrow">NOTAS / DRAG &amp; DROP</p><h3>Notas rápidas.</h3></div><button class="text-button" data-view-target="notes">gerenciar notas</button></div>
+<div class="dashboard-notes-grid" id="dashboardNotes"></div>
+</article>
+<article class="paper-card profile-board138 reveal" id="profileBoard138">
+<div class="card-head"><div><p class="eyebrow">SOBRE VOCÊ</p><h3 id="profileBoardTitle138">O que importa agora.</h3></div><button class="text-button" type="button" id="profileBoardAdd138">+ adicionar</button></div>
+<p class="profile-board-intro138">Monte este espaço com metas, lembretes, preferências ou qualquer coisa que você queira manter à vista.</p>
+<div class="profile-board-grid138" id="profileBoardGrid138"></div>
+</article>
+<div class="hero-grid">
+<article class="hero-copy panel-plain reveal">
+<p class="eyebrow">HOJE / DIREÇÃO</p>
+<h2 id="todayHeadline">Plano de hoje.</h2>
+<p class="lead" id="todayGuidance"></p>
+<div class="hero-actions">
+<button class="primary" id="startQuickFocus">Começar bloco de 25 min</button>
+<button class="ghost" data-view-target="reports">Ver minha evolução</button>
+</div>
+</article>
+<article class="daily-score dark-card reveal">
+<span class="mini-label">RETORNOS DE HOJE</span>
+<div class="score-number" id="returnsToday">0</div>
+<p>Quantas vezes você percebeu a fuga e voltou para a tarefa.</p>
+<div class="score-actions">
+<button class="light-button" id="returnPlus">+ voltei</button>
+<button aria-label="Diminuir retorno" class="icon-button" id="returnMinus">−</button>
+</div>
+</article>
+</div>
+<div class="metric-strip reveal">
+<div>
+<span>CHEGADA</span>
+<strong id="todayArrivalMetric">—</strong>
+<small id="todayArrivalSub">registre quando chegar</small>
+</div>
+<div>
+<span id="todayStudyLabel">ESTUDOS</span>
+<strong id="todayStudyMetric">0 min</strong>
+<small>estudo registrado</small>
+</div>
+<div>
+<span>BANCO</span>
+<strong id="todayBankMetric">−14h</strong>
+<small>saldo informado</small>
+</div>
+<div>
+<span>ENERGIA</span>
+<strong id="todayEnergyMetric">—/5</strong>
+<small>ao chegar em casa</small>
+</div>
+</div>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">CHECK-IN RÁPIDO</p>
+<h3>Check-in do dia.</h3>
+</div>
+<span class="index">01</span>
+</div>
+<div class="form-grid">
+<label class="field">
+<span>Cheguei ao trabalho</span>
+<input data-day="arrivalTime" id="arrivalTime" type="time"/>
+</label>
+<label class="field">
+<span>Energia ao chegar em casa</span>
+<select data-day="energy" id="energy">
+<option value="">—</option>
+<option value="1">1 · esgotado</option>
+<option value="2">2 · baixo</option>
+<option value="3">3 · funcional</option>
+<option value="4">4 · bom</option>
+<option value="5">5 · ótimo</option>
+</select>
+</label>
+<label class="field">
+<span>Vontade de fugir / anestesiar</span>
+<select data-day="escapeUrge" id="escapeUrge">
+<option value="">—</option>
+<option value="1">1 · baixa</option>
+<option value="2">2</option>
+<option value="3">3 · média</option>
+<option value="4">4</option>
+<option value="5">5 · muito alta</option>
+</select>
+</label>
+<label class="field">
+<span id="studyMinutesLabel">Minutos de estudo hoje</span>
+<input data-day="studyMinutes" id="studyMinutes" min="0" placeholder="0" step="5" type="number"/>
+</label>
+</div>
+<label class="field full">
+<span>O que mais drenou minha energia?</span>
+<textarea data-day="drainNote" id="drainNote" placeholder="Tarefa mecânica, reunião, cobrança, tédio, ansiedade..."></textarea>
+</label>
+<label class="field full">
+<span>Minha resposta possível</span>
+<textarea data-day="responseNote" id="responseNote" placeholder="O que depende de mim agora, mesmo que seja pequeno?"></textarea>
+</label>
+</article>
+<article class="paper-card reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">MÍNIMO VIÁVEL</p>
+<h3>Mínimo do dia.</h3>
+</div>
+<span class="index">02</span>
+</div>
+<div class="check-list">
+<label class="check-row">
+<input data-day="morningNoScroll" type="checkbox"/>
+<span><b>Sem feed antes de me vestir</b><small>Reduzir o atrito antes do trabalho.</small></span>
+</label>
+<label class="check-row">
+<input data-day="studyMinimum" type="checkbox"/>
+<span><b>Fiz o mínimo da pós</b><small>25 min — ou a live de quarta-feira.</small></span>
+</label>
+<label class="check-row">
+<input data-day="careerAction" type="checkbox"/>
+<span><b>Fiz uma ação de saída</b><small>Algo que aumenta empregabilidade, renda ou portfólio.</small></span>
+</label>
+<label class="check-row">
+<input data-day="preparedTomorrow" type="checkbox"/>
+<span><b>Preparei amanhã</b><small>Roupa, mochila e próximo passo definidos.</small></span>
+</label>
+</div>
+<div class="protocol">
+<span>PROTOCOLO DE FUGA</span>
+<ol>
+<li>Percebi.</li>
+<li>Fecho o estímulo.</li>
+<li>Levanto, água ou banheiro.</li>
+<li>Abro a tarefa correta.</li>
+<li>Faço <strong>5 minutos</strong>.</li>
+</ol>
+</div>
+</article>
+</div>
+</section>

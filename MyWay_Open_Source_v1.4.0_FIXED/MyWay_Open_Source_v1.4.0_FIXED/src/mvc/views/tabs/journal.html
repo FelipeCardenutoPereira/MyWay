@@ -1,0 +1,38 @@
+<section class="view" id="view-journal">
+<header class="section-head reveal"><p class="eyebrow">DIÁRIO</p><h2>Seu diário.</h2><p>Uma página por vez. Escreva primeiro; organize depois.</p></header>
+<div class="two-col journal-grid journal-grid-r2">
+<article class="journal-book-r2 reveal">
+<div aria-hidden="true" class="journal-book-spine-r2"></div>
+<div class="journal-book-toolbar-r2">
+<div class="journal-book-date-r2"><span>DATA</span><strong id="journalDateR2">—</strong></div>
+<div class="journal-score-grid-r2">
+<label class="journal-score-r2"><span>Humor · 0–10</span><input aria-label="Humor de zero a dez" id="journalMood" inputmode="numeric" max="10" min="0" placeholder="—" step="1" type="number"/></label>
+<label class="journal-score-r2"><span>Energia · 0–10</span><input aria-label="Energia de zero a dez" id="journalEnergy" inputmode="numeric" max="10" min="0" placeholder="—" step="1" type="number"/></label>
+</div>
+</div>
+<div class="journal-page-r2">
+<div class="journal-page-heading-r2"><span id="journalWeekdayR2">HOJE</span><span>escreva livremente</span></div>
+<textarea class="journal-paper-textarea-r2" id="journalText" placeholder="Comece daqui..."></textarea>
+</div>
+<div class="journal-save-row journal-save-r2"><input id="journalTags" placeholder="tags opcionais"/><button class="primary" id="journalSave">Salvar página</button></div>
+</article>
+<article class="paper-card reveal cbt-record-card">
+<div class="card-head"><div><p class="eyebrow">REGISTRO DE PENSAMENTO / TCC</p><h3>Separar situação, pensamento e ação.</h3><p class="note">Exercício de auto-observação; não é diagnóstico nem substitui terapia.</p></div><span class="index">02</span></div>
+<label class="field full"><span>Situação objetiva</span><input id="cbtSituation" placeholder="O que aconteceu, sem interpretação?"/></label>
+<label class="field full"><span>Pensamento automático</span><input id="cbtThought" placeholder="O que passou pela cabeça?"/></label>
+<div class="form-grid"><label class="field"><span>Emoção</span><input id="cbtEmotion" placeholder="ansiedade, raiva, vergonha..."/></label><label class="field"><span>Intensidade 0–100</span><input id="cbtIntensity" max="100" min="0" type="number"/></label></div>
+<label class="field full"><span>Evidências a favor</span><textarea id="cbtFor"></textarea></label>
+<label class="field full"><span>Evidências contra / outras explicações</span><textarea id="cbtAgainst"></textarea></label>
+<label class="field full"><span>Pensamento mais útil e realista</span><textarea id="cbtAlternative"></textarea></label>
+<label class="field full"><span>Próxima ação pequena</span><input id="cbtAction" placeholder="Algo concreto que leva menos de 10 minutos"/></label>
+<button class="primary" id="cbtSave">Salvar registro</button>
+</article>
+</div>
+<article class="journal-history-card reveal"><div class="card-head"><div><p class="eyebrow">HISTÓRICO</p><h3>Entradas recentes.</h3></div><span class="index" id="journalCount">0</span></div><div class="journal-history" id="journalHistory"></div></article>
+<article class="care-card reveal">
+<div class="care-head"><div><p class="eyebrow">CUIDADO PROFISSIONAL</p><h3>Encontrar psicólogo ou psiquiatra por região.</h3><p class="note">O MyWay não escolhe profissional por você. Ele abre caminhos oficiais e buscas por cidade/UF.</p></div><span class="index">03</span></div>
+<div class="care-location"><input data-setting="careCity" id="careCity" placeholder="Cidade"/><select data-setting="careUF" id="careUF"><option value="">UF</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></div>
+<div class="care-actions"><button class="primary" data-care-search="psychologist">Psicólogos na região</button><button class="ghost" data-care-search="psychiatrist">Psiquiatras na região</button><a class="ghost link-button" href="https://www.gov.br/saude/pt-br/composicao/seidigi/meususdigital/meususdigital" rel="noopener" target="_blank">Meu SUS Digital ↗</a><a class="ghost link-button" href="https://estabelecimentos.saude.gov.br/" rel="noopener" target="_blank">CNES ↗</a><a class="ghost link-button" href="https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps/caps/caps" rel="noopener" target="_blank">CAPS / RAPS ↗</a></div>
+<div class="care-note"><b>Como usar</b><p>Para cuidado pelo SUS, a UBS é uma porta de entrada e CAPS pode fazer acolhimento direto em situações de sofrimento intenso. Em urgência, procure UPA/pronto-socorro ou SAMU 192.</p></div>
+</article>
+</section>

@@ -1,0 +1,49 @@
+<section class="view" id="view-notes">
+<header class="section-head reveal">
+<p class="eyebrow">NOTAS</p>
+<h2>Notas.</h2>
+<p>Notas de trabalho e vida ficam salvas automaticamente. As fixadas aparecem no mini-widget de desktop.</p>
+</header>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">NOVA NOTA</p><h3>Captura rápida.</h3></div><span class="index">01</span></div>
+<div class="note-meta-grid">
+<label class="field"><span>Área</span>
+<select id="noteArea"><option value="work">Trabalho</option><option value="life">Vida</option></select>
+</label>
+<label class="field"><span>Status</span>
+<select id="noteStatus">
+<option value="done">Feito</option><option value="waiting">Aguardando</option><option selected="" value="todo">A Fazer</option><option value="cancelled">Cancelado</option><option value="doing">Fazendo</option><option value="attention">Precisa de Atenção</option><option value="later">Sem Pressa / Por Último</option><option value="tomorrow">Para Amanhã</option>
+</select>
+</label>
+<label class="field"><span>Data</span><input id="noteDate" type="date"/></label>
+</div>
+<label class="field"><span>Título</span><textarea id="noteTitle" maxlength="160" placeholder="Ex.: Ajustar landing page" rows="2"></textarea></label>
+<label class="field full"><span>Nota</span><textarea id="noteBody" placeholder="Escreva e tire isso da memória de trabalho..."></textarea></label>
+<div class="note-create-actions">
+<button class="primary" id="addNote">Criar nota</button>
+<button class="ghost" id="openNotesWidget">Abrir widget flutuante</button>
+</div>
+</article>
+<article class="dark-card reveal">
+<p class="eyebrow light">WIDGET</p>
+<h3 class="dark-title">Notas flutuantes.</h3>
+<p class="light-copy">Fixe notas importantes e abra uma janela pequena do MyWay. Ela usa os mesmos dados desta instalação.</p>
+<button class="light-button" id="openNotesWidget2">Abrir notas agora</button>
+<small>No MyWay.exe, o widget abre em formato largo e fica acima das outras janelas. Fechar a janela não encerra o processo: ele continua na bandeja do Windows.</small>
+</article>
+</div>
+<div class="status-legend reveal" id="statusLegend">
+<span data-status-filter="done"><i class="status-dot done"></i>Feito</span><span data-status-filter="waiting"><i class="status-dot waiting"></i>Aguardando</span><span data-status-filter="todo"><i class="status-dot todo"></i>A Fazer</span><span data-status-filter="cancelled"><i class="status-dot cancelled"></i>Cancelado</span><span data-status-filter="doing"><i class="status-dot doing"></i>Fazendo</span><span data-status-filter="attention"><i class="status-dot attention"></i>Precisa de Atenção</span><span data-status-filter="later"><i class="status-dot later"></i>Sem Pressa / Por Último</span><span data-status-filter="tomorrow"><i class="status-dot tomorrow"></i>Para Amanhã</span>
+</div>
+<div class="notes-columns">
+<article class="notes-board reveal">
+<div class="notes-board-head"><span>TRABALHO</span><b id="workNotesCount">0</b></div>
+<div class="notes-grid" id="workNotes"></div>
+</article>
+<article class="notes-board reveal">
+<div class="notes-board-head"><span>VIDA</span><b id="lifeNotesCount">0</b></div>
+<div class="notes-grid" id="lifeNotes"></div>
+</article>
+</div>
+</section>

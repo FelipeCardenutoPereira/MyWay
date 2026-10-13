@@ -1,0 +1,108 @@
+/* v1.2.6 · Resiliência: fluxo simples, nodes menores e controles reunidos. */
+:root { --mw-node-w: 170px; --mw-node-min-h: 92px; }
+.resilience-how126 {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0 12px;
+}
+.resilience-how126 span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 11px;
+  color: var(--muted);
+  background: color-mix(in srgb,var(--paper) 94%,transparent);
+}
+.resilience-how126 b {
+  display: grid;
+  place-items: center;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-contrast,#fff);
+  font-size: 10px;
+}
+#triggerTree40 .tree-start42 { align-items: center !important; }
+#triggerTree40 .tree-start42 #paletteToggle61,
+#triggerTree40 .tree-start42 #organizeNodes61 {
+  min-height: 38px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+}
+#paletteToggle61::before { content: '' !important; }
+.node-palette61 { width: min(420px,calc(100vw - 36px)) !important; }
+.resilience-tabs126 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 6px;
+  margin: 12px 0;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb,var(--paper) 90%,transparent);
+}
+.resilience-tabs126 button {
+  min-height: 36px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--ink);
+  font: 650 12px/1 var(--font-body);
+}
+.resilience-tabs126 button.active {
+  background: var(--accent);
+  color: var(--accent-contrast,#fff);
+}
+.resilience-panel126[hidden] { display: none !important; }
+.resilience-panel126 { min-width: 0; }
+.resilience-panel126 .paper-card { box-shadow: none !important; }
+.resilience-panel126 .v34-form { gap: 9px !important; }
+.resilience-panel126 :is(input,select,textarea,button) { min-width: 0; }
+.resilience-panel126 textarea { min-height: 72px !important; }
+.resilience-panel126 .resilience-goals34 { gap: 6px !important; }
+.resilience-panel126 .palette-models61 { margin-top: 10px !important; }
+body[data-surface58] #treeCanvas40 .node61 {
+  width: var(--mw-node-w) !important;
+  min-width: var(--mw-node-w) !important;
+  max-width: var(--mw-node-w) !important;
+  min-height: var(--mw-node-min-h) !important;
+}
+#treeCanvas40 .node61 > header { min-height: 28px !important; padding: 4px 6px !important; }
+#treeCanvas40 .node61 > header > button[data-tree-drag40] { width: 23px !important; height: 23px !important; min-width: 23px !important; min-height: 23px !important; }
+#treeCanvas40 .node61 h4 { margin: 6px 8px 3px !important; font-size: 12px !important; -webkit-line-clamp: 2; }
+#treeCanvas40 .node61 .node-note61 { margin: 0 8px 6px !important; font-size: 10.5px !important; -webkit-line-clamp: 1; }
+.node-more124 { width: 24px !important; height: 24px !important; min-width: 24px !important; min-height: 24px !important; }
+.node-dialog126 .node-detail65 { display: grid; gap: 10px; }
+.node-dialog126 .eyebrow { margin: 0; }
+.node-dialog126 .node-summary126 { margin: 0; max-height: 4.4em; overflow: hidden; color: var(--muted); }
+.node-main-actions126 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+.node-main-actions126 button { min-height: 38px !important; margin: 0 !important; }
+.node-more-actions126 { margin-top: 2px; border-top: 1px solid var(--line); padding-top: 8px; }
+.node-more-actions126 summary { cursor: pointer; font-size: 12px; font-weight: 700; }
+.node-more-actions126 > div { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+.danger-text126 { color: var(--danger,#b13a3a) !important; }
+@media (max-width:800px) {
+  :root { --mw-node-w: 136px; --mw-node-min-h: 78px; }
+  .resilience-how126 span { flex: 1 1 30%; justify-content: center; padding-inline: 6px; }
+  .canvas-layout61.palette-open61 > .node-palette61 { overflow: hidden !important; }
+  .resilience-tabs126 { position: sticky; top: 0; z-index: 2; }
+  .node-main-actions126 { grid-template-columns: 1fr 1fr; }
+  .node-main-actions126 .primary { grid-column: 1 / -1; }
+}
+@media (max-width:480px) {
+  :root { --mw-node-w: 128px; --mw-node-min-h: 74px; }
+  .resilience-how126 { gap: 5px; }
+  .resilience-how126 span { font-size: 10px; }
+  .resilience-tabs126 button { font-size: 11px; }
+}

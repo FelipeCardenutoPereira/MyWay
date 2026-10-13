@@ -1,0 +1,24 @@
+/* v1.2.7 · contrato único de botões: primário, secundário e textual. */
+:root { --mw-button-h:40px; --mw-button-radius:10px; }
+body :is(button.primary,.primary[type="button"],.primary[type="submit"],.nv-primary) {
+  min-height:var(--mw-button-h)!important; padding:0 14px!important; border-radius:var(--mw-button-radius)!important; display:inline-flex!important; align-items:center!important; justify-content:center!important; gap:7px!important; margin:0!important; border:1px solid color-mix(in srgb,var(--accent) 70%,transparent)!important; background:var(--accent)!important; color:var(--accent-contrast,#fff)!important; font-weight:750!important; line-height:1.1!important;
+}
+body :is(button.ghost,.ghost[type="button"],.nv-ghost,.light-button,.utility-button) {
+  min-height:var(--mw-button-h)!important; padding:0 13px!important; border-radius:var(--mw-button-radius)!important; display:inline-flex!important; align-items:center!important; justify-content:center!important; gap:7px!important; margin:0!important; background:var(--mw-neutral-bg)!important; color:var(--mw-neutral-fg)!important; border:1px solid var(--mw-neutral-border)!important; font-weight:700!important; line-height:1.1!important;
+}
+body button.text-button { min-height:34px!important; padding:0 7px!important; margin:0!important; border:0!important; background:transparent!important; color:var(--accent)!important; border-radius:8px!important; display:inline-flex!important; align-items:center!important; justify-content:center!important; gap:5px!important; font-weight:700!important; }
+body button.text-button:hover { background:color-mix(in srgb,var(--accent) 9%,transparent)!important; }
+body :is(.card-head,.feature-head40,.nv-card-head,.section-head,.resilience-head34) { column-gap:12px!important; row-gap:8px!important; }
+body :is(.card-head,.feature-head40,.nv-card-head,.section-head,.resilience-head34)>:is(button,.button-group,.actions) { flex:0 0 auto; align-self:center!important; }
+body :is(.cloud-actions53,.control-actions55,.account-control-actions,.device-actions65,.one-action-buttons49,.dialog-page-actions68) { display:flex; flex-wrap:wrap; align-items:center!important; gap:8px!important; }
+body :is(.cloud-actions53,.control-actions55,.account-control-actions,.device-actions65,.one-action-buttons49,.dialog-page-actions68)>button { margin:0!important; }
+/* Popups paginados: zero scrollbar do mouse na caixa externa. */
+dialog.legacy-paged127,dialog.paged-dialog68 { overflow:hidden!important; scrollbar-width:none!important; }
+dialog.legacy-paged127::-webkit-scrollbar,dialog.paged-dialog68::-webkit-scrollbar { display:none!important; }
+dialog.legacy-paged127>:is(form,.tools-content49) { overflow:hidden!important; max-height:min(680px,calc(100dvh - 30px)); display:flex; flex-direction:column; }
+.legacy-pages127 { min-height:0; flex:1 1 auto; overflow:hidden; }
+.legacy-page127 { display:grid; gap:10px; align-content:start; }
+.legacy-page127[hidden] { display:none!important; }
+.legacy-dialog-nav127 { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:8px; padding-top:10px; margin-top:10px; border-top:1px solid var(--line); }
+.legacy-dialog-nav127 output { text-align:center; color:var(--muted); font-size:10px; }
+@media(max-width:640px){:root{--mw-button-h:42px}.card-head,.feature-head40{align-items:flex-start!important}.legacy-dialog-nav127{grid-template-columns:1fr auto 1fr}.legacy-dialog-nav127 button:last-child{justify-self:end}}

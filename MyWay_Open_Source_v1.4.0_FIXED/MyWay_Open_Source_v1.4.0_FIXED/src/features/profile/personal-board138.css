@@ -1,0 +1,14 @@
+/* v1.4.0 · quadro pessoal do dashboard */
+.profile-board138{margin-top:18px}
+.profile-board138 .card-head{align-items:center}
+.profile-board-intro138{margin:0 0 14px;color:var(--muted);font-size:12px;max-width:760px}
+.profile-board-grid138{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.profile-highlight138{position:relative;min-width:0;border:1px solid var(--line);border-radius:13px;background:var(--paper2);overflow:hidden}
+.profile-highlight-main138{width:100%;min-height:94px!important;padding:13px 38px 13px 13px!important;border:0!important;background:transparent!important;color:var(--ink)!important;text-align:left;display:grid!important;align-content:start;gap:7px}
+.profile-highlight-main138 small{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.profile-highlight-main138 b{font-size:13px;line-height:1.35;overflow-wrap:anywhere}
+.profile-highlight-remove138{position:absolute!important;right:7px;top:7px;width:26px!important;height:26px!important;min-width:26px!important;min-height:26px!important;padding:0!important;border:0!important;border-radius:50%!important;background:transparent!important;color:var(--muted)!important;font-size:17px!important}
+.profile-highlight-remove138:hover{background:color-mix(in srgb,var(--ink) 7%,transparent)!important;color:var(--ink)!important}
+.profile-board-empty138{grid-column:1/-1;min-height:88px!important;border:1px dashed var(--line)!important;border-radius:13px!important;background:transparent!important;color:var(--ink)!important;display:grid!important;place-items:center;text-align:center;gap:4px;padding:16px!important}
+.profile-board-empty138 span{font-size:11px;color:var(--muted)}
+@media(max-width:620px){.profile-board-grid138{grid-template-columns:1fr 1fr}.profile-highlight-main138{min-height:82px!important;padding:10px 34px 10px 10px!important}.profile-board-intro138{font-size:11px}}

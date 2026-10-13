@@ -1,0 +1,33 @@
+/* v1.2.7 · mapa compacto e explicável. */
+.resilience-v127 .tree-start42 { display:flex!important; align-items:center!important; gap:8px!important; }
+.resilience-v127 .tree-start42>#organizeNodes61 { display:none!important; }
+.quick-nodes127 { display:grid; gap:10px; margin-bottom:12px; }
+.quick-nodes-head127,.quick-theme-label127 { display:grid; gap:2px; }
+.quick-nodes-head127 small,.quick-theme-label127 small { color:var(--muted); line-height:1.35; }
+.quick-nodes-grid127 { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+.quick-nodes-grid127 button { min-height:70px; border:1px solid var(--line); border-radius:11px; padding:10px; background:var(--paper3); color:var(--ink); text-align:left; display:grid; align-content:center; gap:3px; }
+.quick-nodes-grid127 button:hover { border-color:color-mix(in srgb,var(--accent) 56%,var(--line)); transform:translateY(-1px); }
+.quick-nodes-grid127 small { color:var(--muted); font-size:10px; line-height:1.25; }
+.quick-theme-label127 { padding-top:4px; }
+.organize-inside127 { width:100%; margin-top:8px!important; }
+#nodePalette61 .palette-models61[hidden] { display:none!important; }
+#treeCanvas40 .node61 { width:152px!important; min-width:152px!important; max-width:152px!important; min-height:82px!important; border-radius:12px!important; }
+#treeCanvas40 .node61>header { position:relative; padding-right:30px!important; }
+#treeCanvas40 .node61>header::before { content:attr(data-step127); display:none; }
+#treeCanvas40 .node61>header span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:9px!important; }
+#treeCanvas40 .node61 h4 { font-size:11.5px!important; line-height:1.25!important; margin:6px 7px 3px!important; }
+#treeCanvas40 .node61 .node-note61 { font-size:9.5px!important; line-height:1.25!important; margin:0 7px 7px!important; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+#treeCanvas40 .node61 .node-entry61 { display:none!important; }
+#treeCanvas40 .node61 .node-actions61 { display:none!important; }
+#treeCanvas40 .node-more124 { position:absolute; right:3px; top:3px; }
+.node-dialog127 { overflow:hidden!important; }
+.node-dialog127 .node-detail65 { width:min(420px,calc(100vw - 26px)); display:grid; gap:10px; }
+.node-main-actions127 { display:grid; grid-template-columns:1.4fr 1fr; gap:8px; }
+.node-main-actions127 button { margin:0!important; min-height:40px!important; }
+.node-edit-more127 { border-top:1px solid var(--line); padding-top:8px; }
+.node-edit-more127 summary { cursor:pointer; color:var(--muted); font-size:11px; font-weight:700; }
+.node-edit-more127>div { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; }
+@media(max-width:700px){
+  #treeCanvas40 .node61 { width:116px!important; min-width:116px!important; max-width:116px!important; min-height:72px!important; }
+  #treeCanvas40 .node61 h4{font-size:10.5px!important}.quick-nodes-grid127{grid-template-columns:1fr 1fr}.quick-nodes-grid127 button{min-height:62px;padding:8px}.resilience-how126{display:grid!important;grid-template-columns:1fr!important}.resilience-how126 span{justify-content:flex-start!important}
+}

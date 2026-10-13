@@ -1,0 +1,53 @@
+/* v1.2.6 · menu rearranjável, psicanálise sem vazio lateral e alinhamentos consistentes. */
+.sidebar .nav-item { position: relative; }
+.menu-grip126 {
+  margin-left: auto;
+  opacity: 0;
+  width: 18px;
+  text-align: center;
+  color: var(--muted);
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  font-size: 12px;
+  letter-spacing: -2px;
+}
+.sidebar .nav-item:hover .menu-grip126,
+.sidebar .nav-item:focus-within .menu-grip126 { opacity: .68; }
+.sidebar .nav-item.nav-dragging126 { opacity: .45; }
+.sidebar .nav-group58 > div.nav-drop126 { outline: 1px dashed color-mix(in srgb,var(--accent) 58%,transparent); outline-offset: 3px; border-radius: 10px; }
+body.sidebar-collapsed .menu-grip126 { display: none; }
+
+/* Evita a coluna vazia na Psicanálise: formulário e histórico usam toda a largura. */
+.psycho-view67 { width: 100% !important; max-width: none !important; margin-inline: 0 !important; padding-inline: 0 !important; }
+.psycho-view67 .psycho-panel67 { width: 100%; min-width: 0; }
+.psycho-view67 .psycho-two67 { grid-template-columns: minmax(0,1fr) !important; width: 100%; }
+.psycho-view67 .psycho-card67,
+.psycho-view67 .psycho-history67 { width: 100%; margin-inline: 0 !important; }
+.psycho-view67 .psycho-history67 { margin-top: 2px; }
+.psycho-view67 .psycho-tabs67 { margin-left: 0 !important; }
+
+/* Botões e cabeçalhos alinhados sem “degraus” visuais. */
+.card-head,
+.feature-head40,
+.resilience-head34,
+.nv-card-head {
+  align-items: center !important;
+}
+.card-head > :is(button,.ghost,.primary,.text-button),
+.feature-head40 > :is(button,.ghost,.primary,.text-button),
+.resilience-head34 > :is(button,.ghost,.primary,.text-button) {
+  align-self: center !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+:is(.cloud-actions53,.control-actions55,.one-action-buttons49,.device-actions65,.v34-item-actions) {
+  align-items: center !important;
+  gap: 8px !important;
+}
+:is(.cloud-actions53,.control-actions55,.one-action-buttons49,.v34-item-actions) > button { margin: 0 !important; }
+@media (max-width:700px) {
+  .menu-grip126 { display: none; }
+  .psycho-view67 .psycho-principles67,
+  .psycho-view67 .psycho-safety67 { grid-template-columns: 1fr !important; }
+}

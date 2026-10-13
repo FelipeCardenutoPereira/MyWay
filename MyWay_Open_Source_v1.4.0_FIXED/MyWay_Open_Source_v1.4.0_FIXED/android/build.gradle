@@ -1,0 +1,63 @@
+plugins { id 'com.android.application' version '8.10.1' }
+def adProps = new Properties()
+file('admob.properties').withInputStream { adProps.load(it) }
+def productionAds = adProps.getProperty('productionAds', 'false').toBoolean()
+def appId = productionAds ? adProps.getProperty('appId', '') : 'ca-app-pub-3940256099942544~3347511713'
+def bannerId = productionAds ? adProps.getProperty('bannerId', '') : 'ca-app-pub-3940256099942544/9214589741'
+def rewardedId = productionAds ? adProps.getProperty('rewardedId', '') : 'ca-app-pub-3940256099942544/5224354917'
+def mywayApplicationId = project.findProperty('mywayApplicationId') ?: 'br.com.myway.open135'
+if (productionAds && (!(appId ==~ /ca-app-pub-\d{16}~\d{10}/) || !(bannerId ==~ /ca-app-pub-\d{16}\/\d{10}/) || !(rewardedId ==~ /ca-app-pub-\d{16}\/\d{10}/) || [appId, bannerId, rewardedId].any { it.contains('3940256099942544') })) {
+    throw new GradleException('Preencha os três IDs públicos reais do AdMob antes de ativar productionAds.')
+}
+if (productionAds) throw new GradleException('Release 1.0 permite apenas patrocínios revisados. AdMob automático não garante exclusividade temática.');
+android {
+    namespace 'br.com.myway.pessoal'
+    compileSdk 35
+    defaultConfig {
+        applicationId mywayApplicationId
+        minSdk 26
+        targetSdk 35
+        versionCode 88
+        versionName '1.4.0'
+        manifestPlaceholders = [admobAppId: appId]
+        buildConfigField 'boolean', 'THEMATIC_ONLY_57', 'true'
+        buildConfigField 'boolean', 'ADS_TEST_MODE', productionAds ? 'false' : 'true'
+        buildConfigField 'String', 'ADMOB_BANNER_ID', '"' + bannerId + '"'
+        buildConfigField 'String', 'ADMOB_REWARDED_ID', '"' + rewardedId + '"'
+    }
+    sourceSets { main { manifest.srcFile 'AndroidManifest.xml'; java.srcDirs = ['src']; res.srcDirs = ['res']; assets.srcDirs = ['assets'] } }
+    buildFeatures { buildConfig true }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+    // Chave externa tem prioridade. Na ausência dela, a chave DEV incluída no pacote local
+    // mantém os APKs de teste atualizáveis. Ela NÃO deve ser usada para Play Store.
+    def releaseKeystorePath = System.getenv('MYWAY_KEYSTORE_PATH')
+    def bundledDevKeystore = file('signing-dev/MyWay_Open_Development_Keystore_v135.jks')
+    def hasSigningKey = releaseKeystorePath || bundledDevKeystore.exists()
+    signingConfigs {
+        if (hasSigningKey) {
+            releaseKey {
+                storeFile releaseKeystorePath ? file(releaseKeystorePath) : bundledDevKeystore
+                storePassword System.getenv('MYWAY_KEYSTORE_PASSWORD') ?: 'MyWayDev135!'
+                keyAlias System.getenv('MYWAY_KEY_ALIAS') ?: 'mywayopen135'
+                keyPassword System.getenv('MYWAY_KEY_PASSWORD') ?: 'MyWayDev135!'
+                // Android 7+ verifies APK Signature Scheme v2; keep v3 enabled for modern Android.
+                // Explicit values avoid producing a JAR/v1-only APK in alternate build pipelines.
+                enableV1Signing true
+                enableV2Signing true
+                enableV3Signing true
+                enableV4Signing false
+            }
+        }
+    }
+    buildTypes {
+        debug { applicationIdSuffix '.debug' }
+        release {
+            if (hasSigningKey) signingConfig signingConfigs.releaseKey
+            minifyEnabled false
+        }
+    }
+}
+dependencies {
+    implementation 'com.google.android.gms:play-services-ads:25.5.0'
+    implementation 'com.google.android.ump:user-messaging-platform:4.0.0'
+}

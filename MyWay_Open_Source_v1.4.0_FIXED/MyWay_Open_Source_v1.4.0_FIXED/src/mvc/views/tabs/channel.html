@@ -1,0 +1,121 @@
+<section class="view nv-view" id="view-channel">
+<article class="nv-banner reveal">
+<img alt="Banner do canal" id="channelBannerImage" src="assets/nv-banner.png"/>
+<div class="nv-banner-overlay"></div>
+<div class="nv-channel-lockup">
+<img alt="Ícone do canal" class="nv-channel-icon" id="channelHeroIcon" src="assets/nv-icon-user.png"/>
+<div class="nv-channel-wordmark">
+<span>CREATOR STUDIO</span>
+<img alt="Logo do canal" class="nv-logo-user" id="channelHeroLogo" src="assets/nv-logo-user.png"/>
+<p id="channelHeroMeta">@canal · categorias</p>
+</div>
+</div>
+</article>
+<div class="nv-channel-snapshot reveal"><span id="channelSnapshotHandle">@canal</span><b id="channelSnapshotSubscribers">0 inscritos</b><i id="channelSnapshotVideos">0 vídeos</i><small id="channelSnapshotMeta">creator studio</small></div>
+<div class="nv-shortcuts reveal">
+<button data-nv-launch="youtube"><span>▶</span><b id="channelPlatformShortcut">YouTube</b><small id="channelHandleShortcut">@canal</small></button>
+<button data-nv-launch="photoshop"><span>Ps</span><b>Photoshop</b><small>abrir aplicativo</small></button>
+<button data-nv-launch="premiere"><span>Pr</span><b>Premiere</b><small>abrir aplicativo</small></button>
+<button data-nv-launch="aftereffects"><span>Ae</span><b>After Effects</b><small>abrir aplicativo</small></button>
+</div>
+<article class="nv-card v34-channel-card"><div class="card-head"><div><span class="nv-label">IDEIAS</span><h3>Guarde antes de esquecer.</h3></div><button class="ghost" id="channelAddIdea34">Salvar ideia</button></div><div class="v34-list" id="channelIdeas34"></div></article>
+<details class="nv-card v34-channel-card"><summary>Dicas e revisão do canal</summary><div class="v34-tip"><b id="channelTipTitle34"></b><p id="channelTipText34"></p><button class="ghost" id="channelNextTip34">Outra dica</button><a href="https://support.google.com/youtube/answer/12340300?hl=pt-BR" rel="noopener" target="_blank">Orientações do YouTube</a></div><form class="v34-form" id="channelHealthForm34"><p>Revisão da semana. As marcações são salvas ao enviar.</p><label class="v34-check"><input name="honest" type="checkbox"/>Título e thumbnail representam o vídeo</label><label class="v34-check"><input name="schedule" type="checkbox"/>Minha frequência de publicação é viável</label><label class="v34-check"><input name="analytics" type="checkbox"/>Revisei CTR e retenção no contexto do canal</label><label class="v34-check"><input name="community" type="checkbox"/>Li comentários e registrei dúvidas do público</label><label class="v34-check"><input name="security" type="checkbox"/>Revisei segurança da conta e direitos de uso</label><button class="primary" type="submit">Salvar revisão semanal</button><p class="v34-help" id="channelHealthResult34" role="status"></p></form></details>
+<div class="nv-stats reveal">
+<div><span>IDEIAS</span><strong id="nvIdeasCount">0</strong><small>na fila</small></div>
+<div><span>EM PRODUÇÃO</span><strong id="nvProductionCount">0</strong><small>pesquisa → edição</small></div>
+<div><span>PUBLICADOS</span><strong id="nvPublishedCount">0</strong><small>total registrado</small></div>
+<div><span>NO MÊS</span><strong id="nvPublishedMonth">0</strong><small>vídeos publicados</small></div>
+</div>
+<div class="nv-workbench reveal">
+<article class="nv-card nv-research-card">
+<div class="nv-card-head"><div><span class="nv-label">PESQUISA</span><h3>Pesquisa.</h3></div></div>
+<p class="nv-helper">Organize referências e links sem conectar uma conta externa de IA.</p>
+<label class="nv-field"><span>Pergunta / pauta</span><textarea id="nvResearchPrompt" placeholder="Ex.: pesquise contexto, referências, controvérsias e ganchos para este conteúdo..."></textarea></label>
+<div class="nv-research-actions">
+<button class="nv-primary" id="nvWebResearch">Pesquisar na web</button>
+<button class="nv-ghost" id="nvAttachResearchScript">Anexar roteiro</button>
+<input accept=".txt,.md,.rtf,.json,.csv,.pdf,.docx" hidden="" id="nvResearchScriptFile" type="file"/>
+</div>
+<div class="nv-research-response" id="nvResearchResponse"><span>Resultados da pesquisa aparecem aqui dentro do MyWay.</span></div>
+<div class="nv-research-saved">
+<div class="nv-research-saved-head"><span class="nv-label">LINKS FAVORITOS</span><b id="nvResearchFavoritesCount">0</b></div>
+<div class="nv-research-favorites" id="nvResearchFavorites"></div>
+</div>
+</article>
+<article class="nv-card nv-analytics-card">
+<div class="nv-card-head"><div><span class="nv-label" id="channelAnalyticsLabel">PLATAFORMA / ANALYTICS</span><h3>Analytics.</h3></div><b>YT</b></div>
+<div class="nv-analytics-kpis">
+<div><span>VIEWS</span><strong id="nvAnalyticsViews">82</strong></div>
+<div><span>IMPRESSÕES</span><strong id="nvAnalyticsImpressions">2.166</strong></div>
+<div><span>CTR THUMB</span><strong id="nvAnalyticsCTR">1,34%</strong></div>
+<div><span>INSCRITOS</span><strong id="nvAnalyticsSubs">+1</strong></div>
+</div>
+<div class="nv-daily-panel"><span class="nv-label">ÚLTIMOS 28 DIAS</span><div class="nv-daily-chart" id="nvDailyChart"></div></div>
+<div class="nv-top-videos" id="nvTopVideos"></div>
+<label class="nv-csv-upload">Atualizar com CSV do YouTube<input accept=".csv" id="nvAnalyticsImport" type="file"/></label>
+</article>
+</div>
+<div class="two-col nv-two-col">
+<article class="nv-card reveal">
+<div class="nv-card-head"><div><span class="nv-label">NOVO CONTEÚDO</span><h3>Novo conteúdo.</h3></div><b>01</b></div>
+<label class="nv-field"><span>Título / ideia</span><input id="nvTitle" placeholder="Ex.: Ideia para o próximo conteúdo"/></label>
+<div class="nv-form-grid">
+<label class="nv-field"><span>Pilar</span><select id="nvPillar"><option>Cinema</option><option>Games</option><option>HQs</option><option>Submundos</option></select></label>
+<label class="nv-field"><span>Status</span><select id="nvStatus"><option value="idea">Ideia</option><option value="research">Pesquisa</option><option value="script">Roteiro</option><option value="recording">Gravando</option><option value="editing">Editando</option><option value="thumbnail">Thumbnail</option><option value="published">Publicado</option></select></label>
+<label class="nv-field"><span>Prazo</span><input id="nvDueDate" type="date"/></label>
+</div>
+<label class="nv-field"><span>Gancho / observação</span><textarea id="nvNotes" placeholder="Abertura, referência, ideia de thumbnail, ponto que não pode faltar..."></textarea></label>
+<div class="nv-assets-grid">
+<label class="nv-script-drop" id="nvScriptDrop"><span>ROTEIRO</span><b id="nvScriptName">arraste ou escolha um arquivo</b><small>TXT, MD, RTF, PDF ou DOCX</small><input accept=".txt,.md,.rtf,.pdf,.docx" id="nvScriptFile" type="file"/></label>
+<label class="nv-thumb-drop" id="nvThumbDrop"><span>THUMBNAIL</span><b>arraste a thumb aqui</b><small>PNG / JPG / WEBP</small><input accept="image/*" id="nvThumbFile" type="file"/><img alt="" id="nvThumbPreview"/></label>
+</div>
+<button class="nv-primary" id="nvAddContent">Adicionar ao pipeline</button>
+</article>
+<article class="nv-card nv-brand-card reveal">
+<div class="nv-card-head"><div><span class="nv-label">DNA VISUAL</span><h3>Identidade visual.</h3></div><b>02</b></div>
+<div class="channel-config-panel">
+<div class="nv-form-grid">
+<label class="nv-field"><span>Nome do canal</span><input id="channelConfigName" placeholder="Meu Canal"/></label>
+<label class="nv-field"><span>@ / identificador</span><input id="channelConfigHandle" placeholder="@meucanal"/></label>
+<label class="nv-field"><span>Plataforma</span><select id="channelConfigPlatform"><option>YouTube</option><option>TikTok</option><option>Instagram</option><option>Twitch</option><option>Podcast</option><option>Outro</option></select></label>
+<label class="nv-field"><span>Pilares / categorias</span><input id="channelConfigPillars" placeholder="Cinema, Games, HQs"/></label><label class="nv-field"><span>URL do canal</span><input id="channelConfigUrl" placeholder="https://..."/></label>
+</div>
+<label class="nv-field"><span>Posicionamento / descrição</span><input id="channelConfigTagline" placeholder="O que define este canal?"/></label>
+<div class="channel-brand-controls">
+<label><span>Cor 1</span><input id="channelColorPrimary" type="color"/></label>
+<label><span>Cor 2</span><input id="channelColorAccent" type="color"/></label><label><span>Fonte do canal</span><select id="channelFontPreset"><option value="impact">Impact</option><option value="editorial">Editorial</option><option value="modern">Modern</option><option value="geometric">Geometric</option><option value="soft">Soft</option></select></label>
+<label class="channel-file">Logo<input accept="image/*" id="channelLogoUpload" type="file"/></label>
+<label class="channel-file">Ícone<input accept="image/*" id="channelIconUpload" type="file"/></label><label class="channel-file">Banner<input accept="image/*" id="channelBannerUpload" type="file"/></label>
+<button class="nv-ghost" id="channelBrandReset">restaurar visual</button>
+</div>
+</div>
+<div class="nv-brand-visual"><img alt="Ícone do canal" id="channelBrandIcon" src="assets/nv-icon-user.png"/><img alt="Logo / faixa do canal" id="channelBrandLogo" src="assets/nv-strip.png"/></div>
+<div class="nv-brand-grid"><div class="nv-color black"><span>#000000</span><small>PRETO DOMINANTE</small></div><div class="nv-color red"><span>#B01A1A</span><small>VERMELHO / IMPACTO</small></div><div class="nv-color ivory"><span>#A9A3A7</span><small>CINZA / MARFIM</small></div></div>
+<div class="nv-brand-rules"><p><b>01</b> defina logo e ícone reconhecíveis</p><p><b>02</b> mantenha duas cores principais</p><p><b>03</b> organize o conteúdo em pilares</p><p><b>04</b> ajuste o posicionamento conforme o projeto evoluir</p></div>
+</article>
+</div>
+<article class="nv-card nv-scratchpad reveal">
+<div class="nv-card-head"><div><span class="nv-label">NOTAS / DRAG &amp; DROP</span><h3>Notas do canal.</h3></div><button class="nv-ghost" id="nvQuickNoteAdd">+ nota</button></div>
+<div class="nv-quick-notes" id="nvQuickNotes"></div>
+</article>
+<article class="nv-card nv-insights reveal">
+<div class="nv-card-head">
+<div><span class="nv-label">INSIGHTS</span><h3>Post-its.</h3><p class="nv-helper">Ideias, observações de analytics, títulos, thumbnails e coisas que valem testar.</p></div>
+<button class="nv-ghost" id="nvInsightAdd">+ insight</button>
+</div>
+<div class="nv-insight-add">
+<input id="nvInsightTitle" placeholder="Título curto"/>
+<select id="nvInsightType"><option>Ideia</option><option>Analytics</option><option>Thumbnail</option><option>Título</option><option>Pesquisa</option><option>Outro</option></select>
+<button class="nv-primary" id="nvInsightCreate">Adicionar</button>
+</div>
+<div class="nv-insights-grid" id="nvInsights"></div>
+</article>
+<article class="nv-pipeline reveal">
+<div class="nv-pipeline-head"><div><span class="nv-label">PIPELINE</span><h3>Pipeline.</h3></div><div class="nv-filter-row" id="nvFilters"><button class="active" data-nv-filter="all">Todos</button><button data-nv-filter="idea">Ideias</button><button data-nv-filter="production">Produção</button><button data-nv-filter="published">Publicados</button></div></div>
+<div class="nv-content-list" id="nvContentList"></div>
+</article>
+<div class="two-col nv-two-col">
+<article class="nv-card reveal"><div class="nv-card-head"><div><span class="nv-label">CANAL</span><h3>Meta mensal.</h3></div><b>03</b></div><div class="nv-form-grid"><label class="nv-field"><span>Vídeos / mês</span><input data-setting="nvMonthlyTarget" id="nvMonthlyTarget" min="0" type="number"/></label><label class="nv-field"><span>Inscritos atuais</span><input data-setting="nvSubscribers" id="nvSubscribers" min="0" type="number"/></label><label class="nv-field"><span>Views no mês</span><input data-setting="nvMonthlyViews" id="nvMonthlyViews" min="0" type="number"/></label></div><div class="nv-month-progress"><i id="nvMonthProgress"></i></div><p id="nvMonthText">Registre publicações para acompanhar a meta.</p></article>
+<article class="nv-card nv-quote-card reveal"><span class="nv-label">POSICIONAMENTO</span><blockquote>MENOS MAINSTREAM.<br/><b>MAIS SUBMUNDO.</b></blockquote><p>Use esta área como sala de produção: ideias, pesquisa, roteiro, edição, thumb e publicação no mesmo sistema.</p></article>
+</div>
+</section>

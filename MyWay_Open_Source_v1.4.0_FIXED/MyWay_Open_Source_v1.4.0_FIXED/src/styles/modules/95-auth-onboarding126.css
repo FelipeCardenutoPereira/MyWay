@@ -1,0 +1,19 @@
+/* v1.2.6 · cadastro claro e Estudos opcional */
+.signup-confirm126 input,
+#onboardCredentials35 input { width: 100%; }
+.study-toggle126 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  margin: 12px 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: color-mix(in srgb,var(--paper) 92%,var(--accent) 8%);
+  cursor: pointer;
+}
+.study-toggle126 input { width: 20px; height: 20px; flex: 0 0 auto; }
+.study-toggle126 span { display: grid; gap: 3px; }
+.study-toggle126 small { color: var(--muted); line-height: 1.35; }
+#onboardStudyFields126[hidden] { display: none !important; }
+#onboardStudyFields126 { animation: none !important; }

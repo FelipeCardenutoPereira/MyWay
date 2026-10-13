@@ -1,0 +1,159 @@
+<section class="view" id="view-control">
+<header class="section-head reveal">
+<p class="eyebrow">CONTROLE</p>
+<h2>Painel de controle.</h2>
+<p>Escolha um assunto. Os ajustes relacionados ficam juntos em cada grupo.</p>
+</header>
+<div class="control-grid">
+<article class="profile-control-card reveal">
+<div class="profile-photo-shell">
+<div class="profile-photo-preview" id="profilePhotoPreview"><span id="profilePhotoInitials">FC</span><img alt="Foto de perfil" hidden="" id="profilePhotoImage"/></div>
+<label class="profile-photo-upload">Trocar foto<input accept="image/*" id="profilePhotoUpload" type="file"/></label>
+<button class="text-button" id="profilePhotoRemove">remover</button>
+</div>
+<div class="profile-control-copy">
+<p class="eyebrow">PERFIL</p>
+<h3>Identidade do MyWay.</h3>
+<div class="control-profile-fields">
+<label class="field"><span>Nome</span><input id="controlProfileName" placeholder="Seu nome"/></label>
+<label class="field"><span>Função / título</span><input id="controlProfileRole" placeholder="Analista de Marketing"/></label>
+</div>
+<p class="note">A foto é reduzida antes de ser salva e acompanha o state.json na sincronização do OneDrive.</p>
+<div class="account-security-row">
+<label class="field"><span>Bloqueio por inatividade</span><select id="controlAutoLock"><option value="0">Nunca</option><option value="15">15 minutos</option><option value="30">30 minutos</option><option value="60">1 hora</option></select></label>
+<div><span>ÚLTIMO ACESSO</span><b id="controlLastLogin">—</b></div>
+</div>
+<div class="account-control-actions"><button class="ghost" id="controlRerunOnboarding">Refazer configuração inicial</button><button class="ghost" id="controlLock">Bloquear agora</button><button class="ghost danger-outline" id="controlLogout">Sair neste dispositivo</button></div>
+</div>
+</article>
+<article class="control-card"><div class="card-head"><h3>Seu jeito de usar o MyWay</h3><button class="ghost" id="openPersonalization34">Personalizar</button></div><p class="v34-help">Escolha até três prioridades, nome do painel, densidade e módulos. Você pode mudar isso depois.</p></article>
+<article class="control-card" id="planCard34"><div class="card-head"><div><p class="eyebrow">MEU PLANO</p><h3>Pró gratuito</h3></div><b>R$ 0 / mês</b></div><p class="v34-help">Todos os módulos desta versão estão disponíveis. Sem cartão ou cobrança automática.</p><button class="ghost" id="activateFree34">Ativar plano gratuito</button><span class="v34-help" id="planStatus34" role="status"></span><details><summary>Sobre futuras assinaturas</summary><p class="v34-help">Planos pagos ainda não estão disponíveis. Nenhuma mudança para um plano pago ocorre sem uma nova escolha sua.</p></details></article>
+<article class="control-card" id="mobileCard34"><div class="card-head"><h3>MyWay no celular</h3><button class="primary" id="installApp34" type="button">Como instalar</button></div><p class="v34-help" id="mobileHelp34">O .exe é para Windows. No Android, use o endereço da versão móvel no Chrome e escolha “Instalar aplicativo”.</p><p class="v34-help">Para trazer dados do Windows: exporte um backup em Dados, transfira o JSON para o celular e importe no app móvel.</p></article>
+<article class="control-card reveal visual-panel-mvc" id="visualPanelMvc">
+<div class="card-head"><div><p class="eyebrow">VISUAL DO PAINEL</p><h3>Tema, cor e wallpaper.</h3></div><span class="index">01</span></div>
+<p class="note">Tudo fica neste mesmo bloco. Ao escolher um wallpaper, a imagem substitui o fundo de cor: não existe película colorida por cima.</p>
+<div class="visual-panel-grid-mvc">
+<section class="visual-group-mvc">
+<div><b>Tema do painel</b><small>Escolha um preset e ajuste fonte/destaques se quiser.</small></div>
+<div class="theme-preset-grid compact" id="controlThemePresets"></div>
+<div class="appearance-fields">
+<label class="field"><span>Fonte</span><select id="controlFontPreset"></select></label>
+<label class="field"><span>Cor principal</span><input id="controlPrimaryColor" type="color"/></label>
+<label class="field"><span>Destaque</span><input id="controlAccentColor" type="color"/></label>
+<button class="ghost" id="controlResetAppearance">Restaurar preset</button>
+</div>
+</section>
+<section class="visual-group-mvc">
+<div><b>Cor do painel</b><small>Sem wallpaper ela é o fundo; com wallpaper ela pode virar uma camada de cor com opacidade ajustável.</small></div>
+<div class="panel-color-r2">
+<label><span>Cor do fundo</span><input id="panelColorR2" type="color" aria-label="Cor do painel"></label>
+<button type="button" class="ghost" id="panelColorResetR2">Usar tema</button>
+<small>Com wallpaper ativo, use “Opacidade da cor” para decidir quanto dessa cor aparece sobre a imagem.</small>
+</div>
+</section>
+<section class="visual-group-mvc wallpaper-group-mvc" id="wallpaperControl127">
+<div class="wallpaper-title136"><div><b>Wallpaper</b><small id="wallpaperModeStatusMvc">Escolha uma imagem. O botão selecionado ficará marcado como ATIVO.</small></div><strong id="wallpaperActiveBadge136" class="wallpaper-active-badge136">SEM IMAGEM</strong></div>
+<div class="wallpaper-presets127" id="wallpaperPresets127">
+<button type="button" class="wallpaper-option127" data-wallpaper127="none" aria-label="Sem imagem"><span class="wallpaper-none127">×</span><small>Sem imagem</small></button>
+<button type="button" class="wallpaper-option127" data-wallpaper127="surreal" aria-label="Montanha surreal"><img src="assets/wallpapers/mountain-surreal.jpg" alt=""><small>Surreal</small></button>
+<button type="button" class="wallpaper-option127" data-wallpaper127="sunset" aria-label="Lago ao pôr do sol"><img src="assets/wallpapers/misurina-sunset.jpg" alt=""><small>Pôr do sol</small></button>
+<button type="button" class="wallpaper-option127" data-wallpaper127="lake" aria-label="Montanhas e lago"><img src="assets/wallpapers/mountain-lake.jpg" alt=""><small>Lago</small></button>
+</div>
+<div class="wallpaper-actions127">
+<label class="wallpaper-upload127">Usar minha imagem<input id="wallpaperUpload127" type="file" accept="image/png,image/jpeg,image/webp"></label>
+<label><span>Enquadramento</span><select id="wallpaperFit134"><option value="cover">Preencher a tela</option><option value="contain">Mostrar imagem inteira</option><option value="stretch">Esticar para a tela</option><option value="original">Tamanho original</option></select></label>
+<label><span>Posição</span><select id="wallpaperPosition134"><option value="center">Centro</option><option value="top">Topo</option><option value="bottom">Base</option><option value="left">Esquerda</option><option value="right">Direita</option><option value="top-left">Topo esquerdo</option><option value="top-right">Topo direito</option><option value="bottom-left">Base esquerda</option><option value="bottom-right">Base direita</option></select></label>
+<label><span>Comportamento</span><select id="wallpaperMotion134"><option value="fixed">Fixa na tela</option><option value="scroll">Acompanha a página</option></select></label>
+</div>
+<div class="wallpaper-tuning134">
+<label><span class="wallpaper-range-head134"><span>Zoom</span><output id="wallpaperZoomValue134">100%</output></span><input id="wallpaperZoom134" type="range" min="70" max="160" step="1" value="100"></label>
+<label><span>Desfoque</span><input id="wallpaperBlur127" type="range" min="0" max="14" step="1" value="0"></label>
+<label><span class="wallpaper-range-head134"><span>Opacidade da cor</span><output id="wallpaperTintValue135">0%</output></span><input id="wallpaperTintOpacity135" type="range" min="0" max="100" step="1" value="0" aria-label="Opacidade da cor sobre o wallpaper"><small>0% = sem cor sobre a imagem.</small></label>
+<label><span class="wallpaper-range-head134"><span>Opacidade dos painéis</span><output id="wallpaperPanelOpacityValue136">45%</output></span><input id="wallpaperPanelOpacity136" type="range" min="0" max="100" step="1" value="45" aria-label="Opacidade dos cartões e painéis sobre o wallpaper"><small>0% = cartões transparentes; 100% = sólidos.</small></label>
+</div>
+<p class="note" id="wallpaperStatus127">PNG, JPG ou WebP de até 12 MB. Você controla corte, posição, zoom, desfoque, tonalização e quanto os painéis deixam o wallpaper aparecer.</p>
+</section>
+</div>
+<div class="control-toggle-list">
+<div><div><b>Modo escuro</b><small>Alterna a paleta do aplicativo.</small></div><button class="toggle" id="controlDarkToggle"></button></div>
+<div><div><b>Frase do dia</b><small>Exibe a frase no canto superior direito.</small></div><button class="toggle" data-control-setting="dailyQuoteEnabled"></button></div>
+<div><div><b>Rotina no cabeçalho</b><small>Mostra horário e próximo compromisso no topo.</small></div><button class="toggle" data-control-setting="routineHeaderEnabled"></button></div>
+<div><div><b>Animações leves</b><small>Transições, hover e comemorações de 100%.</small></div><button class="toggle" data-control-setting="animationsEnabled"></button></div>
+<div><div><b>Menu lateral automático</b><small>Recolhe após navegar e abre ao passar o mouse.</small></div><button class="toggle" data-control-setting="sidebarAutoCollapse"></button></div>
+<div class="compact-mode-row137"><div><b>Modo enxuto</b><small>Esconde textos explicativos, exemplos e dicas para deixar a interface mais direta.</small><span class="compact-state137" id="controlCompactState137">Desativado</span></div><button class="toggle" id="controlCompactCopy134" type="button" aria-pressed="false" aria-label="Ativar modo enxuto"></button></div>
+</div>
+</article>
+</div>
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">MÓDULOS</p><h3>Módulos no modo Essencial.</h3><p class="v34-help">No modo Completo, todas as áreas permanecem acessíveis.</p><p class="note">No Essencial, desativar esconde o módulo e seus atalhos; os dados continuam salvos.</p></div><span class="index">02</span></div>
+<div class="module-toggle-grid">
+<label><span>Academia</span><button class="toggle" data-feature-toggle="gym"></button></label><label><span>Nutrição</span><button class="toggle" data-feature-toggle="nutrition"></button></label><label><span>Jogos</span><button class="toggle" data-feature-toggle="games"></button></label>
+<label><span>Trabalho</span><button class="toggle" data-feature-toggle="work"></button></label>
+<label><span id="educationModuleControlLabel">Estudos</span><button class="toggle" data-feature-toggle="puc"></button></label>
+<label><span>Hábitos</span><button class="toggle" data-feature-toggle="habits"></button></label>
+<label><span>Metas</span><button class="toggle" data-feature-toggle="future"></button></label>
+<label><span>Finanças</span><button class="toggle" data-feature-toggle="finance"></button></label>
+<label><span>Relacionamentos</span><button class="toggle" data-feature-toggle="relationships"></button></label>
+<label><span>Inglês</span><button class="toggle" data-feature-toggle="english"></button></label>
+<label><span>Meditação</span><button class="toggle" data-feature-toggle="meditation"></button></label>
+<label><span>Notas</span><button class="toggle" data-feature-toggle="notes"></button></label>
+<label><span>Diário</span><button class="toggle" data-feature-toggle="journal"></button></label>
+<label><span>Psicanálise</span><button class="toggle" data-feature-toggle="psychoanalysis"></button></label>
+<label><span>Inspiração</span><button class="toggle" data-feature-toggle="inspiration"></button></label>
+<label><span id="channelModuleControlLabel">Canal / Creator Studio</span><button class="toggle" data-feature-toggle="channel"></button></label>
+<label><span>Relatórios</span><button class="toggle" data-feature-toggle="reports"></button></label>
+<label><span>Lembretes</span><button class="toggle" data-feature-toggle="reminders"></button></label>
+</div>
+</article>
+<div class="control-grid product-config-grid">
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">ESTUDOS</p><h3>Instituição e curso.</h3></div><span class="index">03</span></div>
+<div class="control-profile-fields">
+<label class="field"><span>Nome no menu</span><input id="controlEducationLabel" placeholder="Estudos"/></label>
+<label class="field"><span>Instituição</span><input id="controlInstitutionName" placeholder="PUC, USP, Alura..."/></label>
+<label class="field"><span>Curso / programa</span><input id="controlProgramName" placeholder="Seu curso"/></label>
+<label class="field"><span>Estrutura</span><select id="controlStudyStructure"><option value="subjects">Matérias / disciplinas</option><option value="modules">Módulos</option><option value="courses">Cursos independentes</option><option value="custom">Personalizado</option></select></label>
+</div>
+<p class="note">A aba de estudos deixa de ser “PUC” e assume a identidade da instituição definida aqui.</p>
+</article>
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">CREATOR STUDIO</p><h3>Canal / projeto.</h3></div><span class="index">04</span></div>
+<div class="control-profile-fields">
+<label class="field"><span>Nome do módulo</span><input id="controlChannelLabel" placeholder="Canal"/></label>
+<label class="field"><span>Nome do canal</span><input id="controlChannelName" placeholder="Meu Canal"/></label>
+<label class="field"><span>Identificador</span><input id="controlChannelHandle" placeholder="@meucanal"/></label>
+<label class="field"><span>Plataforma</span><select id="controlChannelPlatform"><option>YouTube</option><option>TikTok</option><option>Instagram</option><option>Twitch</option><option>Podcast</option><option>Outro</option></select></label>
+</div>
+<p class="note">Nome, identidade visual, pilares e links também podem ser alterados dentro do Creator Studio.</p>
+</article>
+</div>
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">INTERESSES &amp; INSPIRAÇÃO</p><h3>O que alimenta seu mural.</h3><p class="note">Use palavras simples. O MyWay combina esses interesses para montar buscas e referências.</p></div><span class="index">05</span></div>
+<div class="interest-control-row">
+<input id="controlInterests" placeholder="Design, cinema, tecnologia, viagens..."/>
+<button class="primary" id="controlInterestsSave">Salvar interesses</button>
+</div>
+<div class="interest-chip-grid compact" id="controlInterestChips"></div>
+<div class="taste-control-summary">
+<div><span>APRENDIZADO DO FEED</span><b id="controlTasteSignals">0 sinais</b><small id="controlTasteSummary">Ainda aprendendo seu estilo.</small></div>
+<button class="ghost" id="controlTasteReset">Resetar aprendizado</button>
+</div>
+</article>
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">INTEGRAÇÕES</p><h3>Contas externas.</h3><p class="note">Seu acesso ao MyWay é interno. O Pinterest pode ser conectado para importar referências.</p></div><span class="index">06</span></div>
+<div class="integration-grid">
+<div><span class="integration-logo pinterest">P</span><div><b>Pinterest</b><small>pins e boards orgânicos</small></div><button class="ghost" id="controlPinterestConnect">conectar</button></div>
+</div>
+<p class="integration-status" id="integrationStatus">Login interno ativo. Verificando a conexão com o Pinterest…</p>
+</article>
+<article class="control-card reveal">
+<div class="card-head"><div><p class="eyebrow">WINDOWS / SISTEMA</p><h3>Recursos nativos.</h3></div><span class="index">07</span></div>
+<div class="system-control-grid">
+<div><div><b>Iniciar com o Windows</b><small>MyWay fica disponível na bandeja.</small></div><button class="toggle" id="controlStartupToggle"></button></div>
+<div><div><b>Notificações do Windows</b><small>Alertas da rotina funcionam com a janela fechada.</small></div><button class="toggle" id="controlNotificationsToggle"></button></div>
+<div><div><b>Abrir Notes ao iniciar</b><small>Abre o widget de notas junto com o processo.</small></div><button class="toggle" id="controlNotesStartupToggle"></button></div>
+<div><div><b>Sincronização OneDrive</b><small>Mantém o estado compartilhado entre computadores.</small></div><button class="toggle" id="controlCloudToggle"></button></div>
+</div>
+<div class="control-system-foot"><span id="controlSystemStatus">verificando recursos nativos...</span><button class="ghost" id="controlTestNotification">Testar notificação</button><button class="ghost" data-view-target="data">Dados e backup</button></div>
+</article>
+</section>

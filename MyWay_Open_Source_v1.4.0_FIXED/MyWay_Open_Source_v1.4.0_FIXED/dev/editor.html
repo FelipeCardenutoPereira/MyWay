@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MyWay · Editor visual</title>
+<style>
+:root{font-family:Inter,"Segoe UI",sans-serif;color:#e9eef3;background:#101820}*{box-sizing:border-box}body{margin:0;height:100vh;display:grid;grid-template-rows:54px 1fr;overflow:hidden}.bar{display:flex;align-items:center;gap:10px;padding:8px 14px;background:#182532;border-bottom:1px solid #2a3c4c}.brand{font-weight:700;margin-right:auto}.tag{font-size:12px;color:#93a8ba}.bar button,.bar a{border:1px solid #354b5e;background:#20384f;color:white;padding:8px 12px;border-radius:8px;text-decoration:none;cursor:pointer}.bar button:hover,.bar a:hover{background:#294b68}.stage{display:grid;place-items:center;background:#0d141b;padding:16px;overflow:auto}.device{width:100%;height:100%;background:white;border-radius:10px;overflow:hidden;box-shadow:0 18px 60px #0008;transition:.2s}.device.mobile{width:393px;height:852px;max-height:calc(100vh - 86px)}iframe{width:100%;height:100%;border:0;background:white}.status{font-size:12px;color:#9fb0be;min-width:120px;text-align:right}@media(max-width:780px){.tag{display:none}.bar{overflow:auto}.status{display:none}}
+</style>
+</head>
+<body>
+<header class="bar"><strong class="brand">MyWay · Editor visual</strong><span class="tag">fonte: /src</span><button id="desktop">Desktop</button><button id="mobile">Celular</button><button id="reload">Recarregar</button><a href="/src/index.html" target="_blank">Abrir separado ↗</a><span class="status" id="status">monitorando…</span></header>
+<main class="stage"><div class="device" id="device"><iframe id="preview" src="/src/index.html?dev=1"></iframe></div></main>
+<script>
+const frame=document.querySelector('#preview'),device=document.querySelector('#device'),status=document.querySelector('#status');
+document.querySelector('#desktop').onclick=()=>device.classList.remove('mobile');
+document.querySelector('#mobile').onclick=()=>device.classList.add('mobile');
+document.querySelector('#reload').onclick=()=>{frame.contentWindow.location.reload();status.textContent='recarregado'};
+const files=['/src/index.html','/src/styles/app.css','/src/js/app.js'];let stamp='';
+async function watch(){try{const parts=[];for(const file of files){const r=await fetch(file,{method:'HEAD',cache:'no-store'});parts.push(r.headers.get('last-modified')||'');}const next=parts.join('|');if(stamp&&next!==stamp){frame.contentWindow.location.reload();status.textContent='alteração carregada';}else status.textContent='monitorando…';stamp=next;}catch{status.textContent='servidor indisponível';}}
+setInterval(watch,1200);watch();
+</script>
+</body>
+</html>

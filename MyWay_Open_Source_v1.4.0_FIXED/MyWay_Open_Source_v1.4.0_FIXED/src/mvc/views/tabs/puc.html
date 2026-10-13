@@ -1,0 +1,118 @@
+<section class="view" id="view-puc">
+<header class="section-head reveal">
+<p class="eyebrow" id="educationEyebrow">ESTUDOS</p>
+<h2 id="educationHeading">Estudos.</h2>
+<p id="educationDescription">Organize disciplinas, módulos, aulas, leituras e sessões de estudo conforme sua instituição ou curso.</p>
+</header>
+<section class="puc-week-kpis reveal">
+<div><span>AULAS / VÍDEOS NA SEMANA</span><strong id="pucWeekLessons">0</strong></div>
+<div><span>MINUTOS NA SEMANA</span><strong id="pucWeekMinutes">0</strong></div>
+<div><span>SESSÕES NA SEMANA</span><strong id="pucWeekSessions">0</strong></div>
+</section>
+<article class="puc-courses-panel reveal">
+<div class="card-head">
+<div>
+<p class="eyebrow">MINHAS MATÉRIAS</p>
+<h3 id="educationTimelineTitle">Cronograma.</h3>
+<p class="note" id="educationTimelineNote">Adicione matérias e organize as tarefas. O progresso é calculado automaticamente.</p>
+</div>
+<div class="education-panel-actions"><button class="text-button" id="educationAddCourse">Adicionar matéria</button><span class="index" id="pucCurrentPeriod">cronograma</span></div>
+</div>
+<div class="puc-course-grid" id="pucCoursesBoard"></div>
+</article>
+<article class="puc-track-panel reveal">
+<div class="card-head">
+<div><p class="eyebrow">ESTUDOS</p><h3 id="pucTrackTitle">Trilha atual</h3><p class="note" id="pucTrackCourse">Nenhuma matéria selecionada.</p></div>
+<strong class="puc-track-percent" id="pucTrackPercent">0%</strong>
+</div>
+<div class="track-progress-control">
+<div class="study-progress-summary"><span>PROGRESSO DAS TAREFAS</span><progress aria-label="Progresso das tarefas da trilha" id="pucTrackProgressRange" max="100" value="0">0%</progress><b id="pucTrackProgressValue">0%</b></div>
+<button class="primary" disabled="" id="pucTrackAddTask" type="button">Adicionar tarefa</button>
+</div>
+<p aria-live="polite" class="note" id="pucTrackSummary">Adicione uma matéria para começar.</p>
+<div class="puc-track-modules" id="pucTrackModules"></div>
+</article>
+<section class="study-toolkit reveal">
+<article class="study-pomodoro">
+<div class="study-tool-head"><div><p class="eyebrow">POMODORO</p><h3>Estudo em ciclos.</h3></div><span id="studyPomodoroPhase">FOCO</span></div>
+<input id="studyPomodoroTask" placeholder="Uma tarefa para este ciclo"/>
+<div class="study-pomodoro-clock" id="studyPomodoroClock">25:00</div>
+<div class="study-pomodoro-controls"><button class="primary" id="studyPomodoroStart">Começar</button><button class="ghost" id="studyPomodoroPause">Pausar</button><button class="text-button" id="studyPomodoroReset">Resetar</button></div>
+<small id="studyPomodoroSessions">0 ciclos de foco hoje</small>
+</article>
+<article class="study-flashcards">
+<div class="study-tool-head"><div><p class="eyebrow">FLASH CARDS</p><h3>Revisão ativa.</h3></div><button class="text-button" id="flashcardAdd">+ cartão</button></div>
+<div aria-label="Virar cartão" aria-pressed="false" class="flashcard-stage flash-stage52" id="flashcardStage" role="button" tabindex="0"><div class="flash-inner52"><div class="flash-face52 flash-front52" id="flashFront52"><span>PERGUNTA</span><b id="flashcardQuestion">Crie seu primeiro cartão.</b><small>Toque para ver a resposta</small></div><div aria-hidden="true" class="flash-face52 flash-back52" id="flashBack52" inert=""><span>RESPOSTA</span><p id="flashcardAnswer"></p><small>Toque para voltar à pergunta</small></div></div></div>
+<div class="flashcard-controls"><button class="ghost" id="flashcardReveal">mostrar resposta</button><button class="ghost" id="flashcardAgain">rever</button><button class="primary" id="flashcardKnow">acertei</button></div>
+<div class="flashcard-list" id="flashcardList"></div>
+</article>
+</section>
+<article class="study-youtube reveal">
+<div class="card-head"><div><p class="eyebrow">YOUTUBE / REFERÊNCIAS</p><h3>Conteúdos salvos.</h3><p class="note">Guarde aulas, entrevistas e vídeos para rever junto da matéria.</p></div><span class="index" id="studyYoutubeCount">0</span></div>
+<div class="study-youtube-add"><input id="studyYoutubeUrl" placeholder="Cole um link do YouTube"/><input id="studyYoutubeTitle" placeholder="Título opcional"/><button class="primary" id="studyYoutubeAdd">Salvar vídeo</button></div>
+<div class="study-youtube-list" id="studyYoutubeList"></div>
+</article>
+<article class="week-card reveal">
+<div class="week-grid" id="weekGrid"></div>
+</article>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head">
+<div><p class="eyebrow">MATÉRIA ATUAL</p><h3>Aulas e leituras.</h3></div>
+<button class="text-button" id="newSubject">Adicionar matéria</button>
+</div>
+<label class="field">
+<span>Nome da matéria</span>
+<input data-setting="subjectName" id="subjectName" placeholder="Ex.: Estratégias de Negócios"/>
+</label>
+<p class="note form-save-note">Esses registros são salvos automaticamente. Marque as tarefas na trilha acima para atualizar o percentual.</p>
+<div class="series-list">
+<div class="series-row" data-series="1">
+<div><span>BLOCO 01</span><strong id="series1Text">0 / 4 vídeos</strong></div>
+<input data-setting="series1Done" id="series1Done" max="5" min="0" type="range" value="0"/>
+<label class="mini-check"><input data-setting="series1Reading" type="checkbox"/> leitura</label>
+<label class="field inline"><span>Total vídeos</span><input data-setting="series1Total" max="5" min="3" type="number" value="4"/></label>
+</div>
+<div class="series-row" data-series="2">
+<div><span>BLOCO 02</span><strong id="series2Text">0 / 4 vídeos</strong></div>
+<input data-setting="series2Done" id="series2Done" max="5" min="0" type="range" value="0"/>
+<label class="mini-check"><input data-setting="series2Reading" type="checkbox"/> leitura</label>
+<label class="field inline"><span>Total vídeos</span><input data-setting="series2Total" max="5" min="3" type="number" value="4"/></label>
+</div>
+<div class="series-row" data-series="3">
+<div><span>BLOCO 03</span><strong id="series3Text">0 / 4 vídeos</strong></div>
+<input data-setting="series3Done" id="series3Done" max="5" min="0" type="range" value="0"/>
+<label class="mini-check"><input data-setting="series3Reading" type="checkbox"/> leitura</label>
+<label class="field inline"><span>Total vídeos</span><input data-setting="series3Total" max="5" min="3" type="number" value="4"/></label>
+</div>
+</div>
+<div class="live-row">
+<span>ENCONTROS / LIVES</span>
+<label><input data-setting="live1" type="checkbox"/> 01</label>
+<label><input data-setting="live2" type="checkbox"/> 02</label>
+<label><input data-setting="live3" type="checkbox"/> 03</label>
+</div>
+<label class="field full">
+<span>Próximo passo exato</span>
+<input data-setting="nextLesson" placeholder="Ex.: Bloco 2 · vídeo 3 + leitura de 5 páginas"/>
+</label>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">SESSÃO</p><h3>Registrar estudo.</h3></div><span class="index">02</span></div>
+<label class="field">
+<span>Minutos estudados (obrigatório)</span>
+<input id="sessionMinutes" min="5" step="5" type="number" value="25"/>
+</label>
+<label class="field">
+<span>O que foi feito (opcional)</span>
+<input id="sessionDescription" placeholder="Ex.: 2 aulas do bloco 1"/>
+</label>
+<label class="field">
+<span>Aulas / vídeos concluídos (opcional)</span>
+<input id="sessionLessons" min="0" step="1" type="number" value="0"/>
+</label>
+<button class="primary" id="logStudySession">Registrar sessão</button>
+<div class="history-list compact-list" id="studyHistory"></div>
+</article>
+</div>
+</section>

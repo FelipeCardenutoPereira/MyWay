@@ -1,0 +1,49 @@
+# Segredos / assinatura
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+.env
+.env.*
+!*.example
+local.properties
+commercial-config62.json
+admob.local.properties
+
+# Build / cache
+
+# Espelhos gerados a partir de src/
+web/
+desktop/www/
+android/assets/www/
+installer/payload/
+**/build/
+**/.gradle/
+.gradle/
+node_modules/
+*.apk
+*.aab
+*.exe
+*.msi
+*.dmg
+*.zip
+
+# IDE / SO
+.DS_Store
+Thumbs.db
+.idea/
+.vs/
+*.user
+*.suo
+
+# VS Code faz parte do projeto: NAO ignorar .vscode
+
+# Saidas locais
+releases/*
+!releases/README.md
+
+# Android development signing keys
+*.jks
+*.keystore
+android/signing-dev/*.properties

@@ -1,0 +1,63 @@
+<section class="view" id="view-finance">
+<header class="section-head reveal">
+<p class="eyebrow">FINANÇAS</p><h2>Controle seu dinheiro.</h2><p>Saldo, recebimentos, gastos, reserva e investimentos em um só lugar.</p>
+</header>
+<section class="finance-overview reveal">
+<div><span>SALDO DISPONÍVEL</span><strong id="financeHubBalance">R$ 0,00</strong><small id="financeHubBalanceSub">conta / caixa atual</small></div>
+<div><span>RENDA DO MÊS</span><strong id="financeHubIncome">R$ 0,00</strong><small id="financeHubIncomeSub">recebimentos previstos</small></div>
+<div><span>GASTOS DO MÊS</span><strong id="financeHubSpent">R$ 0,00</strong><small id="financeHubSpentSub">fixos + lançamentos</small></div>
+<div><span>TAXA DE POUPANÇA</span><strong id="financeHubSaveRate">0%</strong><small id="financeHubSaveRateSub">meta configurável</small></div>
+<div class="finance-health" id="financeHealthCard"><span>SITUAÇÃO</span><strong id="financeHealthLabel">organizando</strong><small id="financeHealthText">adicione renda e gastos</small></div>
+</section>
+<div class="two-col finance-config-grid">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">RECEBIMENTOS</p><h3>Salário e datas.</h3></div><span class="index">01</span></div>
+<div class="form-grid">
+<label class="field"><span>Saldo atual da conta</span><input data-setting="cashBalance" step="0.01" type="number"/></label>
+<label class="field"><span>Salário-base</span><input data-setting="salaryBase" step="0.01" type="number"/></label>
+<label class="field"><span>Recebe adiantamento?</span><select data-setting="salaryHasAdvance"><option value="false">Não</option><option value="true">Sim</option></select></label>
+<label class="field"><span>Dia do adiantamento</span><input data-setting="salaryAdvanceDay" max="31" min="1" type="number"/></label>
+<label class="field"><span>Valor do adiantamento</span><input data-setting="salaryAdvance" step="0.01" type="number"/></label>
+<label class="field"><span>Dia do pagamento final</span><input data-setting="salarySecondDay" max="31" min="1" type="number"/></label>
+<label class="field"><span>Pagamento final</span><input data-setting="salarySecondPayment" step="0.01" type="number"/></label>
+<label class="field"><span>% que quero guardar</span><input data-setting="financeSavePercent" max="100" min="0" step="1" type="number"/></label>
+</div>
+<div class="finance-rule" id="financeSaveRule">—</div>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">LANÇAMENTO RÁPIDO</p><h3>Entrou ou saiu.</h3></div><span class="index">02</span></div>
+<div class="finance-quick-add">
+<select id="financeTxnType"><option value="expense">Gasto</option><option value="income">Entrada</option></select>
+<input id="financeTxnAmount" placeholder="Valor" step="0.01" type="number"/>
+<input id="financeTxnCategory" placeholder="Categoria: alimentação, lazer..."/>
+<input id="financeTxnDate" type="date"/>
+<input id="financeTxnNote" placeholder="Observação opcional"/>
+<label class="field"><span>Considerei esse gasto impulsivo? (opcional)</span><select id="financeImpulse34"><option value="">Ainda não avaliei</option><option value="yes">Sim, para mim foi impulsivo</option><option value="no">Não, foi planejado</option><option value="unsure">Ainda não tenho certeza</option></select></label><button class="primary" id="financeTxnAdd">Registrar</button>
+</div>
+<div class="finance-txn-list" id="financeTxnRecent"></div>
+</article>
+</div>
+<div class="two-col">
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">GASTOS FIXOS</p><h3>Compromissos do mês.</h3></div><button class="text-button" id="financeFixedAdd">+ gasto fixo</button></div>
+<div class="finance-fixed-list" id="financeFixedList"></div>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">DÍVIDAS / ALERTAS</p><h3>O que exige atenção.</h3></div><button class="text-button" id="financeDebtAdd">+ dívida</button></div>
+<div class="finance-debt-list" id="financeDebtList"></div>
+<div class="finance-alert" id="financeDebtAlert">Nenhuma dívida cadastrada.</div>
+</article>
+</div>
+<article class="finance-invest-card reveal">
+<div class="card-head"><div><p class="eyebrow">CDB / RESERVA</p><h3>Simulador educativo.</h3><p class="note">Compare liquidez, % do CDI, prazo, tributação e cobertura do emissor antes de decidir. Rentabilidade passada ou simulações não são garantia.</p></div><span class="index">03</span></div>
+<div class="finance-invest-grid">
+<label class="field"><span>Valor aplicado</span><input data-setting="currentSavings" type="number"/></label>
+<label class="field"><span>CDI anual de referência (%)</span><input data-setting="cdiAnnual" step="0.01" type="number"/></label>
+<label class="field"><span>CDB (% do CDI)</span><input data-setting="cdbPercent" step="1" type="number"/></label>
+<label class="field"><span>Prazo da simulação (meses)</span><input id="financeCdbMonths" max="120" min="1" type="number" value="12"/></label>
+</div>
+<div class="finance-cdb-result"><div><span>BRUTO ESTIMADO</span><strong id="financeCdbGross">—</strong></div><div><span>RENDIMENTO BRUTO</span><strong id="financeCdbYield">—</strong></div><div><span>APORTE AUTOMÁTICO SUGERIDO PELA SUA REGRA</span><strong id="financeSuggestedSave">—</strong></div></div>
+<div class="finance-tip-card"><span>DICA DO DIA</span><b id="financeTipTitle">Liquidez vem antes de alguns décimos de rentabilidade.</b><p id="financeTipText">Para reserva de emergência, verifique quando o dinheiro pode ser resgatado antes de comparar apenas o % do CDI.</p><button class="text-button" id="financeTipNext">outra dica</button></div>
+<div class="finance-source-links"><a href="https://www.fgc.org.br/sobre-garantia-fgc" rel="noopener" target="_blank">FGC ↗</a><a href="https://www.caixa.gov.br/voce/poupanca-e-investimentos/cdb/cdb-flex/paginas/default.aspx" rel="noopener" target="_blank">Entender CDB ↗</a></div>
+</article>
+</section>

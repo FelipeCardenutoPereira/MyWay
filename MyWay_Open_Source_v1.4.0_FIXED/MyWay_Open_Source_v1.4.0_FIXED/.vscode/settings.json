@@ -1,0 +1,27 @@
+{
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "editor.formatOnSave": false,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "html.format.wrapLineLength": 140,
+  "css.validate": true,
+  "javascript.validate.enable": true,
+  "javascript.suggest.autoImports": false,
+  "search.exclude": {
+    "**/desktop/www": true,
+    "**/android/assets/www": true,
+    "**/web": true,
+    "**/releases": true,
+    "**/src/js/app.js": true,
+    "**/src/styles/app.css": true
+  },
+  "files.exclude": {
+    "**/.gradle": true,
+    "**/build": true,
+    "src/js/app.js": true,
+    "src/styles/app.css": true
+  }
+}

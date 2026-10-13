@@ -1,0 +1,300 @@
+/* v1.2.4 · limpeza visual, botões coerentes, mapa compacto e espaçamento responsivo */
+:root {
+  --mw-neutral-bg: #edf1f3;
+  --mw-neutral-fg: #263945;
+  --mw-neutral-border: rgba(31,55,71,.16);
+  --mw-card-gap: 16px;
+  --mw-node-w: 194px;
+  --mw-node-min-h: 116px;
+}
+body[data-panel-tone-r2="dark"] {
+  --mw-neutral-bg: #10283a;
+  --mw-neutral-fg: #eef6fb;
+  --mw-neutral-border: rgba(229,241,249,.14);
+}
+body[data-panel-tone-r2="light"] {
+  --mw-neutral-bg: #edf1f3;
+  --mw-neutral-fg: #263945;
+  --mw-neutral-border: rgba(31,55,71,.16);
+}
+body[data-panel-custom-r2="true"] {
+  --mw-neutral-bg: var(--panel-control-r3);
+  --mw-neutral-fg: var(--panel-control-text-r3);
+  --mw-neutral-border: var(--panel-line-r2);
+}
+
+/* Botões neutros deixam de cair no cinza genérico do navegador/legado. */
+body :is(
+  .ghost,.utility-button,.text-button,.icon-button,.light-button,
+  .tree-zoom65 button,.palette-toggle61,.palette-close61,.modal-close,.close65,
+  .dialog-page-actions68 button:not(.primary),.node-more124,.map-add124,.map-organize124
+) {
+  background: var(--mw-neutral-bg) !important;
+  color: var(--mw-neutral-fg) !important;
+  border: 1px solid var(--mw-neutral-border) !important;
+  box-shadow: none !important;
+}
+body :is(.ghost,.utility-button,.text-button,.icon-button,.light-button):hover {
+  filter: brightness(.97);
+  transform: none !important;
+}
+body[data-panel-tone-r2="dark"] :is(.ghost,.utility-button,.text-button,.icon-button,.light-button):hover {
+  filter: brightness(1.12);
+}
+body :is(.ghost,.utility-button,.text-button,.icon-button,.light-button):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Espaçamento consistente entre caixas e blocos. */
+:is(.dashboard-grid,.dashboard-widgets58,.data-grid,.control-grid,.v34-two-col,.work-view-tools35,
+    .workspace-cards38,.english-dashboard,.system-grid,.notes-grid,.habit-grid,.housing-grid,
+    .puc-grid,.report-grid,.widget-grid58,.feature-gridR1) {
+  gap: var(--mw-card-gap) !important;
+}
+.view > :is(.paper-card,.control-card,.system-card,.widget-card58,.timeline-card,.chart-card,.report-summary) +
+:is(.paper-card,.control-card,.system-card,.widget-card58,.timeline-card,.chart-card,.report-summary) {
+  margin-top: var(--mw-card-gap) !important;
+}
+:is(.paper-card,.control-card,.system-card,.widget-card58,.timeline-card,.chart-card,.report-summary) {
+  box-sizing: border-box;
+}
+
+/* Mapa de gatilhos: canvas ganha espaço; a paleta vira painel sob demanda. */
+.canvas-layout61 {
+  grid-template-columns: minmax(0,1fr) !important;
+  gap: 12px !important;
+  margin-top: 12px !important;
+}
+.node-palette61 {
+  display: none !important;
+}
+.canvas-layout61.palette-open61 > .node-palette61 {
+  display: block !important;
+  position: absolute;
+  z-index: 70;
+  inset: 0 auto auto 0;
+  width: min(360px,calc(100vw - 36px));
+  max-height: min(620px,calc(100dvh - 40px));
+  overflow: hidden !important;
+  background: var(--surface-solid58,var(--paper)) !important;
+  box-shadow: 0 18px 52px rgba(0,0,0,.24);
+  padding: 14px !important;
+}
+#triggerTree40 .palette-toggle61 {
+  display: inline-flex !important;
+}
+.node-palette61 .palette-close61 {
+  display: grid !important;
+  place-items: center;
+  float: right;
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+}
+.palette-list61 {
+  max-height: none !important;
+  overflow: hidden !important;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 8px !important;
+  padding: 0 !important;
+}
+.palette-item61 {
+  min-height: 42px;
+  border-radius: 10px !important;
+}
+.palette-grip61 {
+  display: none !important;
+}
+.palette-add61 {
+  min-height: 42px !important;
+  padding: 8px 10px !important;
+  font-size: calc(.75rem * var(--text-scale53,1)) !important;
+}
+.palette-models61 > div {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 8px;
+}
+.palette-pagination124 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 10px 0 4px;
+}
+.palette-pagination124 output {
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+.palette-pagination124 button {
+  min-height: 34px !important;
+  padding: 6px 10px !important;
+}
+
+/* Menos controles espalhados: um único acesso para adicionar e um para organizar. */
+#triggerTree40 .tree-start42 {
+  gap: 8px !important;
+  margin-bottom: 10px;
+}
+#triggerTree40 .tree-start42 > button:not(#paletteToggle61):not(#organizeNodes61) {
+  display: none !important;
+}
+#paletteToggle61::before { content: '+ '; }
+#paletteToggle61 { font-weight: 650; }
+#organizeNodes61 { opacity: .88; }
+
+/* Nós menores e com leitura resumida. */
+body[data-surface58] #treeCanvas40 .node61 {
+  width: var(--mw-node-w) !important;
+  min-width: var(--mw-node-w) !important;
+  max-width: var(--mw-node-w) !important;
+  min-height: var(--mw-node-min-h) !important;
+  border-radius: 11px !important;
+  overflow: hidden !important;
+}
+#treeCanvas40 .node61 > header {
+  min-height: 34px;
+  padding: 5px 7px !important;
+  gap: 6px !important;
+}
+#treeCanvas40 .node61 > header > button[data-tree-drag40] {
+  width: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  min-height: 26px !important;
+  font-size: 17px !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+#treeCanvas40 .node61 > header > span {
+  flex: 1;
+  font-size: calc(.67rem * var(--text-scale53,1)) !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#treeCanvas40 .node61 h4 {
+  margin: 8px 10px 4px !important;
+  font-size: calc(.82rem * var(--text-scale53,1)) !important;
+  line-height: 1.32 !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+#treeCanvas40 .node61 .node-note61 {
+  margin: 0 10px 9px !important;
+  padding: 0 !important;
+  font-size: calc(.70rem * var(--text-scale53,1)) !important;
+  line-height: 1.4 !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--muted) !important;
+}
+#treeCanvas40 .node61 :is(.node-entry61,.node-status61,.tree-avoid41) {
+  display: none !important;
+}
+#treeCanvas40 .node61 .node-actions61 {
+  display: none !important;
+}
+.node-more124 {
+  width: 27px !important;
+  height: 27px !important;
+  min-width: 27px !important;
+  min-height: 27px !important;
+  padding: 0 !important;
+  border-radius: 8px !important;
+  font-size: 17px !important;
+  line-height: 1 !important;
+}
+#triggerTree40 .tree-viewport40 {
+  height: clamp(390px,62dvh,560px) !important;
+  min-height: 360px !important;
+  border-radius: 12px !important;
+}
+.canvas-pan61 { margin: 4px 0 8px !important; }
+.canvas-steps61 { display: none !important; }
+
+/* Detalhe do nó sem rolagem longa: ações compactas e conteúdo limitado. */
+.node-detail-dialog65 {
+  width: min(520px,calc(100vw - 24px)) !important;
+  max-height: min(640px,calc(100dvh - 24px)) !important;
+  overflow: hidden !important;
+}
+.node-detail65 {
+  padding: 18px !important;
+  overflow: hidden !important;
+}
+.node-detail65 h2 {
+  font-size: clamp(20px,3vw,24px) !important;
+  margin: 0 40px 8px 0 !important;
+}
+.node-detail65 p {
+  max-height: 7.2em;
+  overflow: hidden;
+}
+.node-detail65 .device-actions65 {
+  display: grid !important;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 8px !important;
+  margin-top: 12px;
+}
+.node-detail65 .device-actions65 button {
+  min-height: 38px !important;
+  padding: 7px 9px !important;
+  font-size: 12px !important;
+}
+
+/* Pop-ups: nenhuma rolagem na caixa. Páginas menores quando a altura é curta. */
+.myway-dialog,
+.myway-dialog > form,
+.myway-dialog-pages68,
+.myway-dialog-page68 {
+  overscroll-behavior: contain;
+}
+.myway-dialog.paged-dialog68,
+.myway-dialog.paged-dialog68 > form {
+  overflow: hidden !important;
+}
+
+@media (max-width:800px) {
+  :root { --mw-card-gap: 12px; --mw-node-w: 158px; --mw-node-min-h: 100px; }
+  .canvas-layout61 { margin-top: 8px !important; }
+  .canvas-layout61.palette-open61 > .node-palette61 {
+    position: fixed !important;
+    inset: 12px !important;
+    width: auto !important;
+    max-height: calc(100dvh - 24px) !important;
+    border-radius: 16px !important;
+  }
+  .palette-list61,
+  .palette-models61 > div {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+  #triggerTree40 .tree-viewport40 {
+    height: clamp(380px,58dvh,510px) !important;
+    min-height: 360px !important;
+  }
+  #treeCanvas40 .node61 > header { min-height: 30px; }
+  #treeCanvas40 .node61 h4 { margin: 6px 8px 3px !important; font-size: calc(.76rem * var(--text-scale53,1)) !important; }
+  #treeCanvas40 .node61 .node-note61 { margin: 0 8px 7px !important; font-size: calc(.66rem * var(--text-scale53,1)) !important; }
+  .tree-zoom65 { gap: 6px !important; }
+  .tree-zoom65 span { display: none; }
+  .tree-zoom65 button { min-width: 36px !important; min-height: 36px !important; padding: 6px 9px !important; }
+}
+
+@media (max-width:480px) {
+  :root { --mw-card-gap: 10px; --mw-node-w: 148px; --mw-node-min-h: 94px; }
+  .palette-list61,
+  .palette-models61 > div { grid-template-columns: 1fr 1fr; gap: 6px !important; }
+  .palette-add61 { font-size: 11px !important; }
+  .node-detail65 .device-actions65 { grid-template-columns: 1fr 1fr; }
+}

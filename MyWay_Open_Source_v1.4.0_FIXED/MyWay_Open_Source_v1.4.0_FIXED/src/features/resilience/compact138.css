@@ -1,0 +1,18 @@
+/* v1.4.0 · mapa mais compacto e legível */
+#triggerTree40{padding:14px!important}
+#triggerTree40 .feature-head40{margin-bottom:8px}
+#triggerTree40 .tree-viewport40{min-height:390px!important;max-height:58vh!important}
+#treeCanvas40 .tree-node40.node61{width:184px!important;min-height:0!important;padding:9px 10px!important;border-radius:11px!important;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+#treeCanvas40 .node61 header{gap:6px;margin-bottom:5px}
+#treeCanvas40 .node61 header span{font-size:8.5px!important;letter-spacing:.06em;text-transform:uppercase}
+#treeCanvas40 .node61 [data-tree-drag40]{padding:2px 5px!important;font-size:14px!important;border-radius:6px!important}
+#treeCanvas40 .node61 h4{margin:0 18px 5px 0!important;font-size:12px!important;line-height:1.2!important;overflow-wrap:anywhere}
+#treeCanvas40 .node61 .node-note61{margin:0!important;font-size:9.5px!important;line-height:1.3!important;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#treeCanvas40 .node61 .node-entry61{display:none!important}
+#treeCanvas40 .node-link-port129{right:-11px!important;width:23px!important;height:23px!important;min-width:23px!important;min-height:23px!important;font-size:14px!important}
+#triggerTree40 .map-dock129{width:min(224px,calc(100% - 16px));margin:7px;padding:6px;gap:5px;border-radius:10px}
+#triggerTree40 .map-dock-main129 button{height:30px!important;min-height:30px!important;font-size:9px!important;padding-inline:7px!important}
+#triggerTree40 .map-add-pop129 button{min-height:45px!important;padding:6px!important}
+#triggerTree40 .map-suggestions129>button{min-height:34px!important}
+#triggerTree40 #treeHint40{font-size:10px;margin:6px 0}
+@media(max-width:720px){#triggerTree40{padding:9px!important}#triggerTree40 .tree-viewport40{min-height:360px!important;max-height:62vh!important}#treeCanvas40 .tree-node40.node61{width:154px!important;padding:7px 8px!important}#treeCanvas40 .node61 h4{font-size:10.5px!important}#treeCanvas40 .node61 .node-note61{font-size:8.5px!important;-webkit-line-clamp:2}#treeCanvas40 .node-link-port129{right:-10px!important;width:21px!important;height:21px!important;min-width:21px!important;min-height:21px!important;font-size:13px!important}.edge-purpose129{max-width:92px!important;font-size:7px!important}}

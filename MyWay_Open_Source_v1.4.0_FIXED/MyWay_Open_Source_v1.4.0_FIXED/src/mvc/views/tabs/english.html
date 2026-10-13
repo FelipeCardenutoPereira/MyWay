@@ -1,0 +1,74 @@
+<section class="view" id="view-english">
+<header class="section-head reveal">
+<p class="eyebrow">ENGLISH LAB</p>
+<h2>Inglês.</h2>
+<p>Treino curto de vocabulário, gramática, leitura e escrita. Você escolhe o nível e registra a própria percepção de acerto.</p>
+</header>
+<div class="english-dashboard reveal">
+<div>
+<span>NÍVEL ATUAL</span>
+<strong id="englishLevelLabel">A1</strong>
+<small id="englishLevelName">Básico</small>
+</div>
+<div>
+<span>SESSÕES</span>
+<strong id="englishSessionsCount">0</strong>
+<small>registradas</small>
+</div>
+<div>
+<span>XP</span>
+<strong id="englishXP">0</strong>
+<small>progresso acumulado</small>
+</div>
+<div>
+<span>ACERTO PERCEBIDO</span>
+<strong id="englishAccuracy">—</strong>
+<small>com base nas autoavaliações</small>
+</div>
+</div>
+<div class="english-levels reveal">
+<button data-english-level="A1"><b>A1</b><span>sobrevivência</span></button>
+<button data-english-level="A2"><b>A2</b><span>rotina</span></button>
+<button data-english-level="B1"><b>B1</b><span>independência</span></button>
+<button data-english-level="B2"><b>B2</b><span>profissional</span></button>
+<button data-english-level="C1"><b>C1</b><span>nuance</span></button>
+</div>
+<div class="two-col">
+<article class="paper-card english-exercise-card reveal">
+<div class="card-head">
+<div><p class="eyebrow" id="englishExerciseType">VOCABULARY</p><h3 id="englishPrompt">Clique em “novo exercício”.</h3></div>
+<span class="index" id="englishExerciseLevel">A1</span>
+</div>
+<p class="exercise-instruction" id="englishInstruction">Escolha seu nível e faça uma rodada curta.</p>
+<label class="field full">
+<span>Sua resposta</span>
+<textarea id="englishUserAnswer" placeholder="Type your answer here..."></textarea>
+</label>
+<div class="exercise-actions">
+<button class="primary" id="newEnglishExercise">Novo exercício</button>
+<button class="ghost" id="speakEnglish">Ouvir</button>
+<button class="text-button" id="showEnglishAnswer">Ver resposta</button>
+</div>
+<div class="model-answer" hidden="" id="englishModelAnswer"></div>
+<div class="self-score" hidden="" id="englishSelfScore">
+<span>Como foi?</span>
+<button data-english-score="2">acertei</button>
+<button data-english-score="1">quase</button>
+<button data-english-score="0">errei</button>
+</div>
+</article>
+<article class="paper-card reveal">
+<div class="card-head"><div><p class="eyebrow">ROADMAP</p><h3>O que treinar.</h3></div><span class="index">02</span></div>
+<div class="english-roadmap" id="englishRoadmap"></div>
+<div class="english-book-link">
+<span>LEITURA EM INGLÊS</span>
+<strong>Texto no seu nível</strong>
+<small>Escolha uma leitura curta compatível com seu nível, marque poucas palavras novas e escreva um resumo de 2 ou 3 linhas.</small>
+</div>
+</article>
+</div>
+<article class="timeline-card reveal">
+<div class="card-head"><div><p class="eyebrow">HISTÓRICO</p><h3>Últimos treinos.</h3></div><span class="index">03</span></div>
+<div class="history-list" id="englishHistory"></div>
+</article>
+</section>

@@ -1,0 +1,149 @@
+/* v68 · Tema sem contraste quebrado. A cor do painel passa a controlar todo o contrato visual. */
+body[data-panel-custom-r2="true"] {
+  --ink: var(--panel-text-r2) !important;
+  --muted: var(--panel-muted-r2) !important;
+  --line: var(--panel-line-r2) !important;
+  --paper2: var(--panel-r2) !important;
+  --paper: var(--panel-surface-r2) !important;
+  --paper3: var(--panel-surface2-r2) !important;
+  --white: var(--panel-white-r2) !important;
+  --surface-solid58: var(--panel-surface-r2) !important;
+  --control-bg-r2: var(--panel-control-r3) !important;
+  --control-fg-r2: var(--panel-control-text-r3) !important;
+  background: var(--panel-r2) !important;
+  color: var(--panel-text-r2) !important;
+}
+body[data-panel-custom-r2="true"] .main,
+body[data-panel-custom-r2="true"] .view {
+  background-color: transparent !important;
+  color: var(--panel-text-r2) !important;
+}
+body[data-panel-custom-r2="true"] :is(
+  .paper-card,.timeline-card,.week-card,.chart-card,.report-summary,.control-card,.widget-card58,
+  .favorite-tool-r2,.notes-board,.note-card,.sticky-note,.kanban-column35,.workspace-cards38>article,
+  .habit-card,.habit-day,.housing-card,.property-importer,.saved-properties,.property-card,
+  .puc-courses-panel,.puc-track-panel,.puc-course-card,.puc-module,.english-dashboard,.english-exercise-card,
+  .focus-dock,.system-card,.profile-control-card,.cloud-sync-card,.amortization-compare,.bank-sim-panel,.bank-sim-card,
+  .routine-now,.routine-builder,.windows-notify-panel,.relationships-gallery,.v34-reward,.v34-two-col>article,
+  .nv-card,.nv-channel-snapshot,.nv-stats>div,.practice-card57,.exercise-row58,.video-card40,
+  .mobile-context43,.mobile-sheet43,.myway-dialog,.toolbar-more-panel44,.profile-assist49
+) {
+  background-color: var(--panel-surface-r2) !important;
+  border-color: var(--panel-line-r2) !important;
+  color: var(--panel-text-r2) !important;
+}
+body[data-panel-custom-r2="true"] :is(
+  .card-head h3,.paper-card>h3,.timeline-card h3,.control-card h3,.widget-card58 h4,
+  .favorite-tool-r2 strong,.habit-card strong,.housing-card h3,.property-card h4,.puc-course-card h4,
+  .puc-module b,.system-card h3,.system-card b,.profile-control-copy h3,.english-dashboard strong,
+  .myway-dialog h3,.mobile-sheet43 h2
+) {
+  color: var(--panel-text-r2) !important;
+}
+body[data-panel-custom-r2="true"] :is(
+  .note,.mini-label,.eyebrow,.field>span,.v34-help,small,.source-note,.history-row span,.history-row i,
+  .series-row span,.week-day p,.chart-head,.habit-card p,.habit-card>small,.property-import-status,
+  .english-dashboard span,.english-dashboard small,.system-card .note,.native-health
+) {
+  color: var(--panel-muted-r2) !important;
+}
+body[data-panel-custom-r2="true"] :is(input,select,textarea,[contenteditable="true"]) {
+  background-color: var(--panel-input-r3) !important;
+  color: var(--panel-input-text-r3) !important;
+  border-color: var(--panel-line-r2) !important;
+  caret-color: var(--panel-input-text-r3) !important;
+}
+body[data-panel-custom-r2="true"] :is(input,textarea)::placeholder {
+  color: color-mix(in srgb,var(--panel-muted-r2) 82%,transparent) !important;
+  opacity: 1 !important;
+}
+body[data-panel-custom-r2="true"][data-panel-tone-r2="dark"] :is(input,select,textarea) {
+  color-scheme: dark;
+}
+body[data-panel-custom-r2="true"][data-panel-tone-r2="light"] :is(input,select,textarea) {
+  color-scheme: light;
+}
+body[data-panel-custom-r2="true"] :is(.ghost,.utility-button,.text-button,.icon-button) {
+  color: var(--panel-control-text-r3) !important;
+  border-color: var(--panel-line-r2) !important;
+}
+body[data-panel-custom-r2="true"] :is(.ghost,.utility-button) {
+  background: var(--panel-control-r3) !important;
+}
+body[data-panel-custom-r2="true"] :is(.top-account-dropdown,.toolbar-menu,.dropdown-menu,.context-menu) {
+  background: var(--panel-surface2-r2) !important;
+  color: var(--panel-text-r2) !important;
+  border-color: var(--panel-line-r2) !important;
+}
+body[data-panel-custom-r2="true"] .sidebar {
+  background: var(--panel-sidebar-r2) !important;
+  color: var(--panel-sidebar-text-r2) !important;
+  border-color: var(--panel-line-r2) !important;
+}
+body[data-panel-custom-r2="true"] .sidebar :is(.nav-item,.feature-linkR1,.nav-group58 button) {
+  color: color-mix(in srgb,var(--panel-sidebar-text-r2) 76%,transparent) !important;
+}
+body[data-panel-custom-r2="true"] .sidebar :is(.nav-item.active,.nav-item:hover,.feature-linkR1:hover) {
+  color: var(--panel-sidebar-text-r2) !important;
+  background: color-mix(in srgb,var(--panel-sidebar-text-r2) 10%,transparent) !important;
+}
+body[data-panel-custom-r2="true"] .light-button {
+  background: var(--panel-surface2-r2) !important;
+  color: var(--panel-text-r2) !important;
+}
+/* Componentes intencionalmente claros, como o caderno, mantêm texto escuro em vez de herdar branco. */
+body[data-panel-tone-r2="dark"] :is(.journal-book-r2,.journal-page-r2,.paper-sheet,.paper-preview) {
+  color: #27333c !important;
+}
+
+/* Componentes antigos usavam --brand-navy tanto como texto quanto como fundo.
+   No tema personalizado, fundos fortes recebem uma variável própria para nunca virar
+   “quadro claro + texto claro” ou “quadro escuro + texto escuro”. */
+body[data-panel-custom-r2="true"] :is(
+  .navigation-modes34 button[aria-pressed="true"],
+  .week-day.today,
+  .days-picker button.selected,
+  .english-levels button.active,
+  .english-book-link,
+  .relationships-photo-upload,
+  .profile-photo-preview,
+  .profile-photo-upload,
+  .login-profile-avatar,
+  .top-account-avatar,
+  .psycho-tab67.active,
+  #view-channel .nv-primary,
+  .routine-days button.selected,
+  .inspiration-interest-strip button:hover,
+  .inspiration-interest-strip button.active,
+  .cloud-icon,
+  .oauth-guide b,
+  .attention-grid35 button.selected,
+  .attention-item i,
+  .day-compass-item>i,
+  .sticky-head button,
+  .v34-complete-toast,
+  .toast
+) {
+  background: var(--panel-strong-r3) !important;
+  color: var(--panel-strong-text-r3) !important;
+  border-color: color-mix(in srgb,var(--panel-strong-text-r3) 20%,transparent) !important;
+}
+body[data-panel-custom-r2="true"] .auth-brand-panel,
+body[data-panel-custom-r2="true"] .dark-card {
+  background: var(--panel-strong-r3) !important;
+  color: var(--panel-strong-text-r3) !important;
+}
+body[data-panel-custom-r2="true"] .vault-upload {
+  background: var(--panel-control-r3) !important;
+  color: var(--panel-control-text-r3) !important;
+  border: 1px solid var(--panel-line-r2) !important;
+}
+body[data-panel-custom-r2="true"] .brand:hover {
+  background: color-mix(in srgb,var(--panel-sidebar-text-r2) 13%,transparent) !important;
+  color: var(--panel-sidebar-text-r2) !important;
+}
+body[data-panel-custom-r2="true"] .sidebar-collapse-button {
+  background: var(--panel-strong-r3) !important;
+  color: var(--panel-strong-text-r3) !important;
+  border-color: color-mix(in srgb,var(--panel-strong-text-r3) 18%,transparent) !important;
+}

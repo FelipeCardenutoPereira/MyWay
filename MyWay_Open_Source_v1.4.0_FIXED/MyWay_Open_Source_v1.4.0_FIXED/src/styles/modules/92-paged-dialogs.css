@@ -1,0 +1,81 @@
+/* v68 · Pop-ups sem barra de rolagem: conteúdo longo é paginado. */
+.myway-dialog.paged-dialog68 {
+  width: min(620px,calc(100vw - 28px)) !important;
+  max-height: min(680px,calc(100dvh - 28px)) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+.myway-dialog.paged-dialog68>form {
+  display: grid;
+  grid-template-rows: auto auto minmax(0,1fr) auto auto;
+  max-height: min(680px,calc(100dvh - 28px));
+  min-height: 0;
+  padding: 22px;
+  overflow: hidden;
+}
+.myway-dialog.paged-dialog68 form>header {
+  position: static !important;
+  padding-top: 0 !important;
+  background: transparent !important;
+}
+.myway-dialog.paged-dialog68>form>#mywayDialogDescription {
+  margin: 12px 0 10px !important;
+  max-height: 3.2em;
+  overflow: hidden;
+}
+.myway-dialog-pages68 {
+  min-height: 0;
+  display: grid;
+  align-content: start;
+  overflow: hidden;
+  padding: 2px 2px 4px;
+}
+.myway-dialog-page68 {
+  display: grid;
+  gap: 12px;
+  min-height: 0;
+}
+.myway-dialog-page68[hidden] { display: none !important; }
+.paged-dialog68 .myway-dialog-field { gap: 6px; }
+.paged-dialog68 .myway-dialog-field textarea {
+  min-height: 92px !important;
+  max-height: 120px !important;
+  resize: none;
+}
+.paged-dialog68 .myway-dialog-error {
+  margin: 6px 0 0 !important;
+  min-height: 0;
+}
+.paged-dialog68 footer {
+  margin-top: 12px !important;
+  padding-top: 12px !important;
+  gap: 10px !important;
+}
+.dialog-page-status68 {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.dialog-page-actions68 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: nowrap !important;
+}
+.dialog-page-actions68 button { white-space: nowrap; }
+/* Outros dialogs não usam scroll na caixa inteira; quando precisam de área extensa, ela fica contida. */
+dialog.myway-dialog:not(.paged-dialog68) {
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+@media (max-width:640px),(max-height:700px) {
+  .myway-dialog.paged-dialog68>form { padding: 16px; }
+  .myway-dialog.paged-dialog68 h3 { font-size: calc(20px*var(--text-scale53,1)); }
+  .dialog-page-actions68 { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); width: 100%; }
+  .dialog-page-actions68 button { width: 100%; }
+  .paged-dialog68 footer { align-items: stretch !important; flex-direction: column !important; }
+  .paged-dialog68 .myway-dialog-field textarea { min-height: 76px !important; max-height: 96px !important; }
+}

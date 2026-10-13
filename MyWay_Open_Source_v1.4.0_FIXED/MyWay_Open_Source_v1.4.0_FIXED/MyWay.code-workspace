@@ -1,0 +1,66 @@
+{
+  "folders": [
+    {
+      "name": "⭐ 01 · MVC — mexa aqui primeiro",
+      "path": "src/mvc"
+    },
+    {
+      "name": "🧩 02 · Features isoladas",
+      "path": "src/features"
+    },
+    {
+      "name": "🧱 03 · Shell global",
+      "path": "src"
+    },
+    {
+      "name": "🖼️ 04 · Imagens e wallpapers",
+      "path": "src/assets"
+    },
+    {
+      "name": "🧠 05 · Base JavaScript — legado/avançado",
+      "path": "src/js/modules"
+    },
+    {
+      "name": "🎨 06 · Base CSS — legado/avançado",
+      "path": "src/styles/modules"
+    },
+    {
+      "name": "📱 Android",
+      "path": "android"
+    },
+    {
+      "name": "🪟 Windows",
+      "path": "desktop"
+    },
+    {
+      "name": "🧰 Build e ferramentas",
+      "path": "tools"
+    },
+    {
+      "name": "📚 Guias",
+      "path": "docs"
+    }
+  ],
+  "settings": {
+    "files.encoding": "utf8",
+    "editor.stickyScroll.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "explorer.compactFolders": false,
+    "search.exclude": {
+      "**/web": true,
+      "**/desktop/www": true,
+      "**/android/assets/www": true,
+      "**/src/js/app.js": true,
+      "**/src/styles/app.css": true,
+      "**/src/index.html": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ritwickdey.liveserver",
+      "golang.go",
+      "ms-vscode.powershell"
+    ]
+  }
+}

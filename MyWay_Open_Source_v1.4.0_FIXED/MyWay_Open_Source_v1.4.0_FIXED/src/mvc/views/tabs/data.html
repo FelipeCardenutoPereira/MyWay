@@ -1,0 +1,68 @@
+<section class="view" id="view-data">
+<header class="section-head reveal">
+<p class="eyebrow">DADOS</p>
+<h2>Dados e backup.</h2>
+<p>Seus registros são salvos neste computador. Exporte um backup para guardar uma cópia ou transferir seus dados para outro PC.</p>
+</header>
+<article class="system-card reveal">
+<div><p class="eyebrow">WINDOWS / SEGUNDO PLANO</p><h3>Executar com o computador.</h3><p class="note">O executável mantém um ícone na bandeja. Fechar o painel ou as notas fecha apenas a janela; o MyWay continua disponível em segundo plano.</p></div>
+<div class="system-actions"><button class="toggle wide-toggle" id="startupToggle"></button><span id="startupStatus">verificando...</span><button class="ghost" id="showNotesFromSystem">Abrir Notes</button><span class="native-health" id="nativeHealth">verificando recursos nativos...</span></div>
+</article>
+<article class="cloud-sync-card reveal" id="cloudSyncCard">
+<div class="cloud-sync-main">
+<div aria-hidden="true" class="cloud-icon">☁</div>
+<div>
+<p class="eyebrow">ONEDRIVE / CLOUD STORE</p>
+<h3>MyWay em qualquer computador.</h3>
+<p class="note">Estado, notas, metas, estudos, creator studio, imóveis e arquivos dos módulos usam a pasta sincronizada do OneDrive como fonte compartilhada.</p>
+</div>
+</div>
+<div class="cloud-sync-status">
+<span class="cloud-dot" id="cloudStateDot"></span>
+<div><small>STATUS</small><strong id="cloudStateLabel">verificando...</strong></div>
+<div><small>ÚLTIMA SINCRONIZAÇÃO</small><strong id="cloudLastSync">—</strong></div>
+<div><small>DISPOSITIVO</small><strong id="cloudDevice">—</strong></div>
+</div>
+<div class="cloud-path" id="cloudPath">procurando workspace do MyWay...</div>
+<div class="cloud-all-box">
+<div class="cloud-all-copy">
+<span>SINCRONIZAÇÃO COMPLETA</span>
+<b>Levar o MyWay para outro PC.</b>
+<small>Envia estado, notas, metas, estudos, creator studio, mídias dos módulos e uma cópia do executável para o OneDrive.</small>
+</div>
+<button class="primary cloud-all-button" id="cloudSyncAll">☁ Sincronizar tudo</button>
+</div>
+<div class="cloud-all-progress" hidden="" id="cloudAllProgress">
+<div data-cloud-step="state"><i></i><span>Dados do painel</span><b>aguardando</b></div>
+<div data-cloud-step="media"><i></i><span>Fotos e cofre</span><b>aguardando</b></div>
+<div data-cloud-step="app"><i></i><span>Aplicativo portátil</span><b>aguardando</b></div>
+</div>
+<div class="cloud-portable-path" id="cloudPortablePath">No outro PC, abra o workspace do OneDrive e execute <b>MyWay.exe</b>.</div>
+<div class="cloud-actions">
+<button class="ghost" id="cloudSyncNow">Sincronizar só os dados</button>
+<button class="ghost" id="cloudOpenFolder">Abrir pasta local</button>
+<button class="ghost" id="cloudOpenShare">Abrir no OneDrive ↗</button>
+</div>
+<p class="source-note" id="cloudSyncNote">Conflitos usam o registro com <b>updatedAt</b> mais recente. Configurações específicas do dispositivo não são copiadas para a nuvem.</p>
+</article>
+<div class="data-grid">
+<article class="paper-card reveal">
+<p class="eyebrow">BACKUP</p>
+<h3>Exportar tudo.</h3>
+<p class="note">Gera um arquivo JSON com configurações, histórico, matérias e lembretes.</p>
+<button class="primary" id="exportBackup">Baixar backup</button>
+</article>
+<article class="paper-card reveal">
+<p class="eyebrow">RESTAURAR</p>
+<h3>Importar backup.</h3>
+<p class="note">Substitui os dados atuais pelos dados do arquivo escolhido.</p>
+<label class="file-button">Escolher JSON<input accept="application/json" id="importBackup" type="file"/></label>
+</article>
+<article class="paper-card reveal">
+<p class="eyebrow">ARMAZENAMENTO</p>
+<h3 id="storageCount">0 dias registrados.</h3>
+<p class="note" id="storageInfo">Dados salvos automaticamente.</p>
+<button class="danger-button" id="resetAll">Apagar todos os dados</button>
+</article>
+</div>
+</section>

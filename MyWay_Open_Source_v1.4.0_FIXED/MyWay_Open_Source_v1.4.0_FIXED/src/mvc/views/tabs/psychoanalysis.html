@@ -1,0 +1,82 @@
+<section class="view psycho-view67" id="view-psychoanalysis">
+<header class="section-head psycho-head67 reveal"><p class="eyebrow">PSICANÁLISE · BASE FREUDIANA</p><h2>Observe o que se repete.</h2><p>Associação livre, sonhos, conflitos e experiências marcantes — sem transformar hipótese em diagnóstico.</p></header>
+<article class="psycho-principles67 reveal">
+<div><p class="eyebrow">COMO ESTA ÁREA FUNCIONA</p><h3>Freud como lente de reflexão, não como resposta pronta.</h3><p>O módulo usa ideias históricas da psicanálise freudiana — associação livre, atenção aos sonhos, resistência, defesas e repetição. Ele não usa dicionário de símbolos, não tenta recuperar memórias reprimidas e não afirma que uma interpretação seja verdadeira.</p></div>
+<div class="psycho-privacy67"><strong>Privacidade</strong><span>Estes registros seguem o salvamento e a sincronização da sua conta MyWay, além do backup manual. Não aparecem em XP, notificações ou resumos públicos do painel.</span></div>
+</article>
+<nav aria-label="Áreas de psicanálise" class="psycho-tabs67 reveal">
+<button class="psycho-tab67 active" data-psycho-tab67="association" type="button">Associação livre</button>
+<button class="psycho-tab67" data-psycho-tab67="dreams" type="button">Diário de sonhos</button>
+<button class="psycho-tab67" data-psycho-tab67="trauma" type="button">Área de traumas</button>
+<button class="psycho-tab67" data-psycho-tab67="concepts" type="button">Freud · conceitos</button>
+</nav>
+<div class="psycho-panel67" data-psycho-panel67="association" id="psychoAssociationPanel67">
+<div class="psycho-two67">
+<article class="paper-card psycho-card67 reveal">
+<div class="card-head"><div><p class="eyebrow">ASSOCIAÇÃO LIVRE</p><h3>Escreva antes de organizar.</h3></div><button class="text-button" id="psychoPrompt67" type="button">Nova pergunta</button></div>
+<p class="psycho-prompt67" id="psychoPromptText67">Comece por uma palavra, imagem, incômodo ou lembrança e deixe uma ideia puxar a próxima.</p>
+<form class="psycho-form67" id="psychoAssociationForm67">
+<label class="field full"><span>Ponto de partida · opcional</span><input id="psychoAssociationStart67" maxlength="160" placeholder="Ex.: uma conversa, um medo, uma frase que ficou na cabeça"/></label>
+<label class="field full psycho-lined67"><span>Fluxo livre</span><textarea id="psychoAssociationText67" maxlength="12000" placeholder="Escreva sem tentar ficar coerente ou bonito. Não precisa concluir nada." required=""></textarea></label>
+<label class="field full"><span>O que ficou difícil, repetido ou surpreendente? · opcional</span><textarea id="psychoAssociationNotice67" maxlength="2400" placeholder="Só registre o que você percebeu; não force uma explicação."></textarea></label>
+<div class="psycho-save67"><small>Sem pontuação, sem interpretação automática.</small><button class="primary" type="submit">Salvar associação</button></div>
+</form>
+</article>
+<article class="paper-card psycho-history67 reveal"><div class="card-head"><div><p class="eyebrow">HISTÓRICO</p><h3>Associações recentes.</h3></div><span class="index" id="psychoAssociationCount67">0</span></div><div id="psychoAssociationHistory67"></div></article>
+</div>
+</div>
+<div class="psycho-panel67" data-psycho-panel67="dreams" hidden="" id="psychoDreamsPanel67">
+<div class="psycho-two67">
+<article class="paper-card psycho-card67 dream-card67 reveal">
+<div class="card-head"><div><p class="eyebrow">DIÁRIO DE SONHOS</p><h3>Primeiro o sonho. Depois as associações.</h3></div><span class="index">SONHO</span></div>
+<p class="note">Na tradição freudiana, o relato lembrado é o conteúdo manifesto. Aqui, a análise parte das suas próprias associações — não de significados universais de símbolos.</p>
+<form class="psycho-form67" id="psychoDreamForm67">
+<div class="psycho-row67"><label class="field"><span>Data</span><input id="psychoDreamDate67" required="" type="date"/></label><label class="field"><span>Intensidade ao acordar · 0–10</span><input class="psycho-number67" id="psychoDreamIntensity67" inputmode="numeric" max="10" min="0" placeholder="—" step="1" type="number"/></label></div>
+<label class="field full"><span>Título · opcional</span><input id="psychoDreamTitle67" maxlength="140" placeholder="Ex.: a estação vazia"/></label>
+<label class="field full psycho-lined67"><span>O sonho como você lembra</span><textarea id="psychoDreamText67" maxlength="12000" placeholder="Anote cenas, falas e mudanças sem tentar explicar ainda." required=""></textarea></label>
+<label class="field full"><span>Como você acordou? · opcional</span><input id="psychoDreamEmotion67" maxlength="180" placeholder="Ex.: inquieto, aliviado, confuso"/></label>
+<label class="field full"><span>Restos do dia · opcional</span><textarea id="psychoDreamResidue67" maxlength="2400" placeholder="O que aconteceu no dia anterior e parece conectado ao sonho?"></textarea></label>
+<label class="field full"><span>Associações pessoais · opcional</span><textarea id="psychoDreamAssociations67" maxlength="5000" placeholder="Para cada pessoa, lugar ou objeto: o que isso lembra para você, especificamente?"></textarea></label>
+<label class="field full"><span>Elementos que se repetem · opcional</span><input id="psychoDreamRepeat67" maxlength="300" placeholder="Ex.: perder o horário, corredores, água, uma pessoa"/></label>
+<div class="psycho-save67"><small>O app não transforma sonho em previsão, memória ou diagnóstico.</small><button class="primary" type="submit">Salvar sonho</button></div>
+</form>
+</article>
+<article class="paper-card psycho-history67 reveal"><div class="card-head"><div><p class="eyebrow">SONHOS</p><h3>Registros recentes.</h3></div><span class="index" id="psychoDreamCount67">0</span></div><div id="psychoDreamHistory67"></div></article>
+</div>
+</div>
+<div class="psycho-panel67" data-psycho-panel67="trauma" hidden="" id="psychoTraumaPanel67">
+<article class="psycho-safety67 reveal">
+<div><p class="eyebrow">ÁREA DE TRAUMAS · ESCREVA NO SEU RITMO</p><h3>Você não precisa reviver nem provar nada.</h3><p>Registre somente o que já lembra e quer colocar em palavras. Não preencha lacunas, não tente provocar recordações e não use o app para decidir se uma lembrança é factual.</p></div>
+<button class="ghost" id="psychoGroundingToggle67" type="button">Voltar ao presente</button>
+</article>
+<div class="psycho-grounding67" hidden="" id="psychoGrounding67"><strong>Orientação breve</strong><ol><li>Olhe ao redor e nomeie 5 coisas que vê.</li><li>Perceba 4 pontos de contato do corpo com cadeira, chão ou roupa.</li><li>Nomeie 3 sons presentes.</li><li>Faça 2 expirações longas, sem prender o ar.</li><li>Escolha 1 ação concreta para agora: água, luz, caminhar ou falar com alguém.</li></ol><p>Se houver risco atual ou sofrimento intenso, interrompa o registro e procure apoio presencial ou serviço de urgência.</p></div>
+<div class="psycho-two67">
+<article class="paper-card psycho-card67 trauma-card67 reveal">
+<div class="card-head"><div><p class="eyebrow">EXPERIÊNCIA MARCANTE</p><h3>O que isso mobiliza hoje?</h3></div><span class="index">SEM XP</span></div>
+<form class="psycho-form67" id="psychoTraumaForm67">
+<label class="field full"><span>Nome curto para o registro</span><input id="psychoTraumaTitle67" maxlength="160" placeholder="Use um nome que só faça sentido para você" required=""/></label>
+<div class="psycho-row67"><label class="field"><span>Quando aconteceu? · opcional</span><input id="psychoTraumaWhen67" maxlength="120" placeholder="Ex.: infância, 2022, não sei ao certo"/></label><label class="field"><span>Intensidade agora · 0–10</span><input class="psycho-number67" id="psychoTraumaIntensity67" inputmode="numeric" max="10" min="0" placeholder="—" step="1" type="number"/></label></div>
+<label class="field full"><span>O que você lembra e quer registrar? · opcional</span><textarea id="psychoTraumaSummary67" maxlength="6000" placeholder="Não precisa entrar em detalhes. Não complete o que você não lembra."></textarea></label>
+<label class="field full"><span>O que costuma ativar isso hoje? · opcional</span><textarea id="psychoTraumaTrigger67" maxlength="2400" placeholder="Situações, frases, relações, lugares ou sensações atuais."></textarea></label>
+<div class="psycho-row67"><label class="field"><span>Emoções</span><input id="psychoTraumaEmotion67" maxlength="220" placeholder="Ex.: medo, raiva, vergonha"/></label><label class="field"><span>Corpo</span><input id="psychoTraumaBody67" maxlength="220" placeholder="Ex.: tensão, nó no estômago"/></label></div>
+<label class="field full"><span>O que eu precisava naquela época? · opcional</span><textarea id="psychoTraumaNeedThen67" maxlength="2400"></textarea></label>
+<label class="field full"><span>O que eu preciso hoje? · opcional</span><textarea id="psychoTraumaNeedNow67" maxlength="2400"></textarea></label>
+<label class="field full"><span>Existe algo que parece se repetir? · opcional</span><textarea id="psychoTraumaPattern67" maxlength="2400" placeholder="Observe o padrão sem concluir que ele tem uma única causa."></textarea></label>
+<div class="psycho-save67"><small>Este espaço é de auto-observação. Não faz tratamento de trauma nem substitui psicoterapia.</small><button class="primary" type="submit">Salvar registro</button></div>
+</form>
+</article>
+<article class="paper-card psycho-history67 reveal"><div class="card-head"><div><p class="eyebrow">REGISTROS</p><h3>Experiências marcantes.</h3></div><span class="index" id="psychoTraumaCount67">0</span></div><div id="psychoTraumaHistory67"></div></article>
+</div>
+</div>
+<div class="psycho-panel67" data-psycho-panel67="concepts" hidden="" id="psychoConceptsPanel67">
+<div class="psycho-concepts67 reveal">
+<article><span>01</span><h3>Associação livre</h3><p>Em vez de selecionar apenas ideias “lógicas”, registre o encadeamento espontâneo e observe onde aparecem repetições, interrupções ou desconforto.</p></article>
+<article><span>02</span><h3>Sonhos</h3><p>Freud distinguiu o relato lembrado do sonho e os sentidos construídos na associação. O MyWay preserva essa diferença e evita significados universais prontos.</p></article>
+<article><span>03</span><h3>Inconsciente e conflito</h3><p>A teoria freudiana propõe que parte da vida psíquica não é imediatamente consciente e que desejos, medos e regras internalizadas podem entrar em conflito.</p></article>
+<article><span>04</span><h3>Defesas e resistência</h3><p>Evitar, racionalizar, negar ou deslocar podem ser lidos, na tradição psicanalítica, como modos de proteção. Aqui eles servem como perguntas, não como rótulos.</p></article>
+<article><span>05</span><h3>Repetição</h3><p>Observe situações, relações ou escolhas que parecem retornar. O objetivo é ampliar consciência e alternativas, sem supor uma causa única.</p></article>
+<article><span>06</span><h3>Id, ego e superego</h3><p>São modelos teóricos de Freud para pensar impulso, mediação e exigências internalizadas — não regiões anatômicas do cérebro.</p></article>
+</div>
+<article class="paper-card psycho-evidence67 reveal"><p class="eyebrow">CONTEXTO</p><h3>Psicanálise e ciência não são a mesma coisa.</h3><p>As ideias de Freud tiveram grande influência histórica e clínica, mas vários conceitos não funcionam como achados neurocientíficos mensuráveis. Use esta área para reflexão e linguagem pessoal; diagnóstico, trauma e sofrimento persistente pedem avaliação profissional.</p></article>
+</div>
+</section>

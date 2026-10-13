@@ -1,0 +1,20 @@
+/* v1.4.0 · menu recolhido: Home + uma representação por seção. */
+.nav-group58>summary{display:flex;align-items:center;gap:9px;min-height:36px;cursor:pointer;user-select:none}
+.nav-group-icon58{display:grid;place-items:center;flex:0 0 auto;width:24px;height:24px}
+.nav-group-icon58 svg{width:20px;height:20px}
+.nav-group-label58{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (min-width:901px){
+ body.sidebar-collapsed .nav-groups58{display:grid!important;width:100%!important;gap:5px!important;min-width:0!important}
+ body.sidebar-collapsed .nav-group58{display:block!important;width:100%!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;overflow:visible!important}
+ body.sidebar-collapsed .nav-group58>summary{display:grid!important;place-items:center!important;width:46px!important;height:42px!important;min-width:46px!important;min-height:42px!important;margin:0 auto!important;padding:0!important;border-radius:12px!important;list-style:none!important;color:inherit!important}
+ body.sidebar-collapsed .nav-group58>summary::-webkit-details-marker{display:none!important}
+ body.sidebar-collapsed .nav-group58>summary::marker{content:""}
+ body.sidebar-collapsed .nav-group58>summary .nav-group-label58{display:none!important}
+ body.sidebar-collapsed .nav-group58>summary .nav-group-icon58{display:grid!important;width:24px!important;height:24px!important}
+ body.sidebar-collapsed .nav-group58>summary .nav-group-icon58 svg{display:block!important;width:22px!important;height:22px!important}
+ body.sidebar-collapsed .nav-group58>div,
+ body.sidebar-collapsed .nav-group58:not([open])>div,
+ body.sidebar-collapsed .nav-group58[open]>div{display:none!important}
+ body.sidebar-collapsed .nav-item:not([data-view-target="today"]){display:none!important}
+ body.sidebar-collapsed .nav-item[data-view-target="today"]{display:grid!important}
+}
